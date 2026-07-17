@@ -12,6 +12,7 @@ size = Vector3(1, 1, 0.13793945)
 script = ExtResource("1_kyqiw")
 
 [node name="Sprite" type="Sprite3D" parent="Collider"]
+billboard = 1
 texture = ExtResource("2_gntrk")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Collider"]
