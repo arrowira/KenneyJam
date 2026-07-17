@@ -3,6 +3,7 @@
 [sub_resource type="BoxMesh" id="BoxMesh_akaw4"]
 
 [node name="TreeTest" type="Node3D"]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 0, 0)
 
 [node name="Canopy" type="MeshInstance3D" parent="."]
 transform = Transform3D(1.1861849, 0, 0, 0, 0.71334904, 0, 0, 0, 1.2029729, 0, 0.8095588, 0)

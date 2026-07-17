@@ -6,15 +6,12 @@
 [sub_resource type="BoxShape3D" id="BoxShape3D_rpqav"]
 size = Vector3(1, 1, 0.13793945)
 
-[node name="Player" type="Node3D"]
-
-[node name="Collider" type="CharacterBody3D" parent="."]
+[node name="Player" type="CharacterBody3D"]
 script = ExtResource("1_kyqiw")
 
-[node name="Sprite" type="Sprite3D" parent="Collider"]
-billboard = 1
+[node name="Sprite" type="Sprite3D" parent="."]
 texture = ExtResource("2_gntrk")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Collider"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.026153684, 0.23519379, 0.048574895)
 shape = SubResource("BoxShape3D_rpqav")
