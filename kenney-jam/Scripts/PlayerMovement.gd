@@ -1,9 +1,10 @@
-extends CharacterBody2D
+extends CharacterBody3D
 
-var Speed = 60
+var Speed = 600
 
 func _physics_process(delta: float) -> void:
-	velocity += (Input.get_vector("left","right", "up", "down").normalized())*Speed
+	var vec2 = (Input.get_vector("left","right", "up", "down").normalized())*Speed
+	velocity += Vector3(vec2.x, 0, vec2.y)
 	velocity-=velocity*0.1
 	
 	move_and_slide()
