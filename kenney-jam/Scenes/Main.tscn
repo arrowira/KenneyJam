@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://bh2eknbs0py68"]
+[gd_scene load_steps=18 format=3 uid="uid://bh2eknbs0py68"]
 
 [ext_resource type="PackedScene" uid="uid://cbnglbm81uf2k" path="res://Scenes/Player.tscn" id="1_r150o"]
 [ext_resource type="Script" uid="uid://dgovh7333uys2" path="res://Scripts/LightFlicker.gd" id="2_50glp"]
@@ -8,6 +8,14 @@
 [ext_resource type="PackedScene" uid="uid://c0j7adwgu5owc" path="res://KayKit Dungeon Pack 1.0/Models/gltf/wallCorner.gltf.glb" id="5_jw32o"]
 [ext_resource type="PackedScene" uid="uid://cout26yjaa0hs" path="res://Scenes/CameraBorder.tscn" id="5_pbw6q"]
 [ext_resource type="PackedScene" uid="uid://be2y4e7glnu1q" path="res://KayKit Dungeon Pack 1.0/Models/gltf/wall_gateDoor.gltf.glb" id="6_v1gob"]
+[ext_resource type="PackedScene" uid="uid://cyknrmwfs74i1" path="res://KayKit Dungeon Pack 1.0/Models/gltf/potA.gltf.glb" id="7_1p5hy"]
+[ext_resource type="PackedScene" uid="uid://tnri1v811fb3" path="res://KayKit Dungeon Pack 1.0/Models/gltf/potB.gltf.glb" id="8_h1m7h"]
+[ext_resource type="PackedScene" uid="uid://dxbqpukh7icb7" path="res://KayKit Dungeon Pack 1.0/Models/gltf/potB_decorated.gltf.glb" id="9_erwvk"]
+[ext_resource type="PackedScene" uid="uid://cqct3vyo7tji6" path="res://KayKit Dungeon Pack 1.0/Models/gltf/potionSmall_green.gltf.glb" id="10_2w5on"]
+[ext_resource type="PackedScene" uid="uid://bgi27ub7hyx6x" path="res://KayKit Dungeon Pack 1.0/Models/gltf/potionSmall_red.gltf.glb" id="11_346fj"]
+[ext_resource type="PackedScene" uid="uid://cftwt0bxekx6u" path="res://KayKit Dungeon Pack 1.0/Models/gltf/quiver_half_full.gltf.glb" id="14_0sclb"]
+[ext_resource type="AudioStream" uid="uid://b51vlpq523nmo" path="res://Sounds/soundreality-wind-blowing-457954.mp3" id="15_h1m7h"]
+[ext_resource type="AudioStream" uid="uid://mc812laenst" path="res://Sounds/sspsurvival-campfire-by-the-lake-campfire-by-the-swamp-the-sound-of-a-campfire-539178.mp3" id="16_erwvk"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_idj7w"]
 
@@ -32,11 +40,23 @@ script = ExtResource("2_50glp")
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, -2.028839, 0)
 mesh = SubResource("PlaneMesh_idj7w")
 
-[node name="Scale" parent="." instance=ExtResource("3_kln2b")]
+[node name="Preplaced Scales" type="Node3D" parent="."]
 transform = Transform3D(0.4811589, 0.13596378, 5.9431686e-09, 0, -2.1855694e-08, 0.5, 0.13596378, -0.4811589, -2.1032122e-08, -1.2528763, 0.13876212, -1.6621348)
 
-[node name="Scale2" parent="." instance=ExtResource("3_kln2b")]
-transform = Transform3D(0.38661593, -0.31706172, -1.3859208e-08, 0, -2.1855694e-08, 0.5, -0.31706172, -0.38661593, -1.689952e-08, 0.64207983, 0.13876212, -3.6443496)
+[node name="Scale" parent="Preplaced Scales" instance=ExtResource("3_kln2b")]
+transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 0, 0, -3.5527137e-15, 1, 0, 0, 0)
+
+[node name="Scale3" parent="Preplaced Scales" instance=ExtResource("3_kln2b")]
+transform = Transform3D(0.9999997, 0, 0, 0, 0.9999997, 0, 1.7763568e-15, -2.1316282e-14, 1, 7.2760234, 54.40163, 2.3841858e-06)
+
+[node name="Scale4" parent="Preplaced Scales" instance=ExtResource("3_kln2b")]
+transform = Transform3D(-0.27454638, 0.96157324, 4.2031715e-08, -0.96157324, -0.27454638, -5.5712192e-08, -4.20317e-08, -5.5712206e-08, 1, -1.9766335, 46.48614, 2.026558e-06)
+
+[node name="Scale5" parent="Preplaced Scales" instance=ExtResource("3_kln2b")]
+transform = Transform3D(0.58257675, 0.8127748, 3.552753e-08, -0.8127748, 0.58257675, -1.8246137e-08, -3.5527517e-08, -1.8246165e-08, 1, -4.985665, 57.13473, 2.413988e-06)
+
+[node name="Scale2" parent="Preplaced Scales" instance=ExtResource("3_kln2b")]
+transform = Transform3D(0.57165897, -0.82049114, -3.5864815e-08, 0.82049114, 0.57165897, -1.8723373e-08, 3.5864808e-08, -1.872338e-08, 1, 2.5690618, 4.845622, 2.0861626e-07)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -77,11 +97,80 @@ transform = Transform3D(-3.934025e-08, 0, -0.9, 0, 0.9, 0, 0.9, 0, -3.934025e-08
 [node name="wall_gltf16" parent="Geometry" instance=ExtResource("4_rgh2o")]
 transform = Transform3D(-3.934025e-08, 0, -0.9, 0, 0.9, 0, 0.9, 0, -3.934025e-08, 18.79802, 0, -19.26527)
 
+[node name="wall_gltf19" parent="Geometry" instance=ExtResource("4_rgh2o")]
+transform = Transform3D(-3.934025e-08, 0, -0.9, 0, 0.9, 0, 0.9, 0, -3.934025e-08, 18.793354, 0, -22.82991)
+
+[node name="wall_gltf20" parent="Geometry" instance=ExtResource("4_rgh2o")]
+transform = Transform3D(-3.934025e-08, 0, -0.9, 0, 0.9, 0, 0.9, 0, -3.934025e-08, 18.79802, 0, -26.307688)
+
+[node name="wall_gltf21" parent="Geometry" instance=ExtResource("4_rgh2o")]
+transform = Transform3D(-3.934025e-08, 0, -0.9, 0, 0.9, 0, 0.9, 0, -3.934025e-08, 18.79802, 0, -29.866459)
+
+[node name="wall_gltf26" parent="Geometry" instance=ExtResource("4_rgh2o")]
+transform = Transform3D(-3.934025e-08, 0, -0.9, 0, 0.9, 0, 0.9, 0, -3.934025e-08, 18.79802, 0, -33.400635)
+
 [node name="wall_gltf17" parent="Geometry" instance=ExtResource("4_rgh2o")]
 transform = Transform3D(-3.934025e-08, 0, -0.9, 0, 0.9, 0, 0.9, 0, -3.934025e-08, 12.848602, 0, -15.706499)
 
 [node name="wall_gltf18" parent="Geometry" instance=ExtResource("4_rgh2o")]
 transform = Transform3D(-3.934025e-08, 0, -0.9, 0, 0.9, 0, 0.9, 0, -3.934025e-08, 12.848602, 0, -19.26527)
+
+[node name="wall_gltf22" parent="Geometry" instance=ExtResource("4_rgh2o")]
+transform = Transform3D(-3.934025e-08, 0, -0.9, 0, 0.9, 0, 0.9, 0, -3.934025e-08, 12.848602, 0, -22.8453)
+
+[node name="wall_gltf23" parent="Geometry" instance=ExtResource("4_rgh2o")]
+transform = Transform3D(-3.934025e-08, 0, -0.9, 0, 0.9, 0, 0.9, 0, -3.934025e-08, 12.848602, 0, -26.404072)
+
+[node name="wall_gltf24" parent="Geometry" instance=ExtResource("4_rgh2o")]
+transform = Transform3D(-3.934025e-08, 0, -0.9, 0, 0.9, 0, 0.9, 0, -3.934025e-08, 12.848602, 0, -29.60206)
+
+[node name="wall_gltf25" parent="Geometry" instance=ExtResource("4_rgh2o")]
+transform = Transform3D(-3.934025e-08, 0, -0.9, 0, 0.9, 0, 0.9, 0, -3.934025e-08, 12.848602, 0, -33.16083)
+
+[node name="wall_gltf37" parent="Geometry" instance=ExtResource("4_rgh2o")]
+transform = Transform3D(-3.934025e-08, 0, -0.9, 0, 0.9, 0, 0.9, 0, -3.934025e-08, 0.14670467, 0, -27.345034)
+
+[node name="wall_gltf38" parent="Geometry" instance=ExtResource("4_rgh2o")]
+transform = Transform3D(-3.934025e-08, 0, -0.9, 0, 0.9, 0, 0.9, 0, -3.934025e-08, 0.14670467, 0, -30.543022)
+
+[node name="wall_gltf39" parent="Geometry" instance=ExtResource("4_rgh2o")]
+transform = Transform3D(-3.934025e-08, 0, -0.9, 0, 0.9, 0, 0.9, 0, -3.934025e-08, 0.14670467, 0, -34.10179)
+
+[node name="wall_gltf30" parent="Geometry" instance=ExtResource("4_rgh2o")]
+transform = Transform3D(-3.934025e-08, 0, -0.9, 0, 0.9, 0, 0.9, 0, -3.934025e-08, -4.991352, 0, -23.54627)
+
+[node name="wall_gltf33" parent="Geometry" instance=ExtResource("4_rgh2o")]
+transform = Transform3D(-3.934025e-08, 0, -0.9, 0, 0.9, 0, 0.9, 0, -3.934025e-08, -4.991352, 0, -27.105042)
+
+[node name="wall_gltf34" parent="Geometry" instance=ExtResource("4_rgh2o")]
+transform = Transform3D(-3.934025e-08, 0, -0.9, 0, 0.9, 0, 0.9, 0, -3.934025e-08, -4.991352, 0, -30.30303)
+
+[node name="wall_gltf35" parent="Geometry" instance=ExtResource("4_rgh2o")]
+transform = Transform3D(-3.934025e-08, 0, -0.9, 0, 0.9, 0, 0.9, 0, -3.934025e-08, -4.991352, 0, -33.8618)
+
+[node name="wall_gltf41" parent="Geometry" instance=ExtResource("4_rgh2o")]
+transform = Transform3D(-3.934025e-08, 0, -0.9, 0, 0.9, 0, 0.9, 0, -3.934025e-08, -11.285173, 0, -18.16977)
+
+[node name="wall_gltf45" parent="Geometry" instance=ExtResource("4_rgh2o")]
+transform = Transform3D(-3.934025e-08, 0, -0.9, 0, 0.9, 0, 0.9, 0, -3.934025e-08, -11.285173, 0, -11.270364)
+
+[node name="wall_gltf46" parent="Geometry" instance=ExtResource("4_rgh2o")]
+transform = Transform3D(-3.934025e-08, 0, -0.9, 0, 0.9, 0, 0.9, 0, -3.934025e-08, -11.285173, 0, -14.755371)
+
+[node name="wall_gltf42" parent="Geometry" instance=ExtResource("4_rgh2o")]
+transform = Transform3D(-3.934025e-08, 0, -0.9, 0, 0.9, 0, 0.9, 0, -3.934025e-08, -11.285173, 0, -28.60205)
+
+[node name="wall_gltf43" parent="Geometry" instance=ExtResource("4_rgh2o")]
+transform = Transform3D(-3.934025e-08, 0, -0.9, 0, 0.9, 0, 0.9, 0, -3.934025e-08, -11.285173, 0, -32.14746)
+
+[node name="wall_gltf44" parent="Geometry" instance=ExtResource("4_rgh2o")]
+transform = Transform3D(-3.934025e-08, 0, -0.9, 0, 0.9, 0, 0.9, 0, -3.934025e-08, -11.285173, 0, -35.686703)
+
+[node name="wall_gltf47" parent="Geometry" instance=ExtResource("4_rgh2o")]
+transform = Transform3D(-3.934025e-08, 0, -0.9, 0, 0.9, 0, 0.9, 0, -3.934025e-08, -11.285173, 0, -21.702644)
+
+[node name="wall_gltf48" parent="Geometry" instance=ExtResource("4_rgh2o")]
+transform = Transform3D(-3.934025e-08, 0, -0.9, 0, 0.9, 0, 0.9, 0, -3.934025e-08, -11.285173, 0, -25.187653)
 
 [node name="wall_gltf9" parent="Geometry" instance=ExtResource("4_rgh2o")]
 transform = Transform3D(-0.9, 0, 7.86805e-08, 0, 0.9, 0, -7.86805e-08, 0, -0.9, 5.556762, 0, -8.931407)
@@ -92,11 +181,41 @@ transform = Transform3D(-0.9, 0, 7.86805e-08, 0, 0.9, 0, -7.86805e-08, 0, -0.9, 
 [node name="wall_gltf12" parent="Geometry" instance=ExtResource("4_rgh2o")]
 transform = Transform3D(-0.9, 0, 7.86805e-08, 0, 0.9, 0, -7.86805e-08, 0, -0.9, 12.674009, 0, -8.931407)
 
+[node name="wall_gltf27" parent="Geometry" instance=ExtResource("4_rgh2o")]
+transform = Transform3D(-0.9, 0, 7.86805e-08, 0, 0.9, 0, -7.86805e-08, 0, -0.9, 3.3565116, 0, -22.451092)
+
+[node name="wall_gltf28" parent="Geometry" instance=ExtResource("4_rgh2o")]
+transform = Transform3D(-0.9, 0, 7.86805e-08, 0, 0.9, 0, -7.86805e-08, 0, -0.9, 6.9277935, 0, -22.451092)
+
+[node name="wall_gltf29" parent="Geometry" instance=ExtResource("4_rgh2o")]
+transform = Transform3D(-0.9, 0, 7.86805e-08, 0, 0.9, 0, -7.86805e-08, 0, -0.9, 10.473759, 0, -22.451092)
+
+[node name="wall_gltf40" parent="Geometry" instance=ExtResource("4_rgh2o")]
+transform = Transform3D(-0.9, 0, 7.86805e-08, 0, 0.9, 0, -7.86805e-08, 0, -0.9, 3.3565116, 0, -31.968298)
+
+[node name="wall_gltf51" parent="Geometry" instance=ExtResource("4_rgh2o")]
+transform = Transform3D(-0.9, 0, 7.86805e-08, 0, 0.9, 0, -7.86805e-08, 0, -0.9, 2.5196612, 0, -31.968298)
+
+[node name="wall_gltf49" parent="Geometry" instance=ExtResource("4_rgh2o")]
+transform = Transform3D(-0.9, 0, 7.86805e-08, 0, 0.9, 0, -7.86805e-08, 0, -0.9, 6.9277935, 0, -31.968298)
+
+[node name="wall_gltf50" parent="Geometry" instance=ExtResource("4_rgh2o")]
+transform = Transform3D(-0.9, 0, 7.86805e-08, 0, 0.9, 0, -7.86805e-08, 0, -0.9, 10.473759, 0, -31.968298)
+
+[node name="wall_gltf31" parent="Geometry" instance=ExtResource("4_rgh2o")]
+transform = Transform3D(-0.9, 0, 7.86805e-08, 0, 0.9, 0, -7.86805e-08, 0, -0.9, -3.7447119, 0, -22.451092)
+
+[node name="wall_gltf32" parent="Geometry" instance=ExtResource("4_rgh2o")]
+transform = Transform3D(-0.9, 0, 7.86805e-08, 0, 0.9, 0, -7.86805e-08, 0, -0.9, -0.19874668, 0, -22.451092)
+
 [node name="wall_gltf13" parent="Geometry" instance=ExtResource("4_rgh2o")]
 transform = Transform3D(-0.9, 0, 7.86805e-08, 0, 0.9, 0, -7.86805e-08, 0, -0.9, 16.24529, 0, -8.931407)
 
 [node name="wall_gltf10" parent="Geometry" instance=ExtResource("4_rgh2o")]
 transform = Transform3D(-0.9, 0, 7.86805e-08, 0, 0.9, 0, -7.86805e-08, 0, -0.9, -6.123011, 0, -8.904314)
+
+[node name="wall_gltf36" parent="Geometry" instance=ExtResource("4_rgh2o")]
+transform = Transform3D(-0.9, 0, 7.86805e-08, 0, 0.9, 0, -7.86805e-08, 0, -0.9, -9.687098, 0, -8.904314)
 
 [node name="wall_gltf3" parent="Geometry" instance=ExtResource("4_rgh2o")]
 transform = Transform3D(-3.934025e-08, 0, -0.9, 0, 0.9, 0, 0.9, 0, -3.934025e-08, -2.5430694, 0, 1.5410271)
@@ -274,6 +393,51 @@ transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, -8.340098, -0.8351272, 
 
 [node name="tileBrickA_small_gltf60" parent="Geometry" instance=ExtResource("4_pbw6q")]
 transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, -6.554117, -0.8351272, -15.788043)
+
+[node name="tileBrickA_small_gltf224" parent="Geometry" instance=ExtResource("4_pbw6q")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, -4.793538, -0.8351272, -17.539614)
+
+[node name="tileBrickA_small_gltf225" parent="Geometry" instance=ExtResource("4_pbw6q")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, -4.793538, -0.8351272, -19.340385)
+
+[node name="tileBrickA_small_gltf226" parent="Geometry" instance=ExtResource("4_pbw6q")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, -8.340098, -0.8351272, -17.539614)
+
+[node name="tileBrickA_small_gltf227" parent="Geometry" instance=ExtResource("4_pbw6q")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, -6.554117, -0.8351272, -17.539614)
+
+[node name="tileBrickA_small_gltf228" parent="Geometry" instance=ExtResource("4_pbw6q")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, -8.340098, -0.8351272, -19.340385)
+
+[node name="tileBrickA_small_gltf229" parent="Geometry" instance=ExtResource("4_pbw6q")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, -6.554117, -0.8351272, -19.340385)
+
+[node name="tileBrickA_small_gltf230" parent="Geometry" instance=ExtResource("4_pbw6q")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, -4.793538, -0.8351272, -21.123043)
+
+[node name="tileBrickA_small_gltf231" parent="Geometry" instance=ExtResource("4_pbw6q")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, -4.793538, -0.8351272, -22.923817)
+
+[node name="tileBrickA_small_gltf295" parent="Geometry" instance=ExtResource("4_pbw6q")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, -4.793538, -0.8351272, -24.51831)
+
+[node name="tileBrickA_small_gltf232" parent="Geometry" instance=ExtResource("4_pbw6q")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, -8.340098, -0.8351272, -21.123043)
+
+[node name="tileBrickA_small_gltf233" parent="Geometry" instance=ExtResource("4_pbw6q")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, -6.554117, -0.8351272, -21.123043)
+
+[node name="tileBrickA_small_gltf234" parent="Geometry" instance=ExtResource("4_pbw6q")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, -8.340098, -0.8351272, -22.923817)
+
+[node name="tileBrickA_small_gltf293" parent="Geometry" instance=ExtResource("4_pbw6q")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, -8.340098, -0.8351272, -24.65204)
+
+[node name="tileBrickA_small_gltf235" parent="Geometry" instance=ExtResource("4_pbw6q")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, -6.554117, -0.8351272, -22.923817)
+
+[node name="tileBrickA_small_gltf294" parent="Geometry" instance=ExtResource("4_pbw6q")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, -6.554117, -0.8351272, -24.639124)
 
 [node name="tileBrickA_small_gltf61" parent="Geometry" instance=ExtResource("4_pbw6q")]
 transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 2.2760293, -0.8351272, -13.987271)
@@ -488,6 +652,462 @@ transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 18.054981, -0.8351272, 
 [node name="tileBrickA_small_gltf132" parent="Geometry" instance=ExtResource("4_pbw6q")]
 transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 18.054981, -0.8351272, -22.909977)
 
+[node name="tileBrickA_small_gltf133" parent="Geometry" instance=ExtResource("4_pbw6q")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, -1.2482378, -0.8351272, -24.643198)
+
+[node name="tileBrickA_small_gltf134" parent="Geometry" instance=ExtResource("4_pbw6q")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 0.5377438, -0.8351272, -24.643198)
+
+[node name="tileBrickA_small_gltf135" parent="Geometry" instance=ExtResource("4_pbw6q")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, -3.0075567, -0.8351272, -24.643198)
+
+[node name="tileBrickA_small_gltf136" parent="Geometry" instance=ExtResource("4_pbw6q")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 2.2760293, -0.8351272, -24.643198)
+
+[node name="tileBrickA_small_gltf137" parent="Geometry" instance=ExtResource("4_pbw6q")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 4.062011, -0.8351272, -24.643198)
+
+[node name="tileBrickA_small_gltf138" parent="Geometry" instance=ExtResource("4_pbw6q")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 5.844099, -0.8351272, -24.643198)
+
+[node name="tileBrickA_small_gltf139" parent="Geometry" instance=ExtResource("4_pbw6q")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 7.63008, -0.8351272, -24.643198)
+
+[node name="tileBrickA_small_gltf140" parent="Geometry" instance=ExtResource("4_pbw6q")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 9.364654, -0.8351272, -24.643198)
+
+[node name="tileBrickA_small_gltf141" parent="Geometry" instance=ExtResource("4_pbw6q")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 11.150635, -0.8351272, -24.643198)
+
+[node name="tileBrickA_small_gltf142" parent="Geometry" instance=ExtResource("4_pbw6q")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 12.914769, -0.8351272, -24.643198)
+
+[node name="tileBrickA_small_gltf143" parent="Geometry" instance=ExtResource("4_pbw6q")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 14.70075, -0.8351272, -24.643198)
+
+[node name="tileBrickA_small_gltf144" parent="Geometry" instance=ExtResource("4_pbw6q")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 16.365746, -0.8351272, -24.643198)
+
+[node name="tileBrickA_small_gltf145" parent="Geometry" instance=ExtResource("4_pbw6q")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 18.054981, -0.8351272, -24.643198)
+
+[node name="tileBrickA_small_gltf146" parent="Geometry" instance=ExtResource("4_pbw6q")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, -1.2482378, -0.8351272, -26.33199)
+
+[node name="tileBrickA_small_gltf147" parent="Geometry" instance=ExtResource("4_pbw6q")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 0.5377438, -0.8351272, -26.33199)
+
+[node name="tileBrickA_small_gltf148" parent="Geometry" instance=ExtResource("4_pbw6q")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, -3.0075567, -0.8351272, -26.33199)
+
+[node name="tileBrickA_small_gltf149" parent="Geometry" instance=ExtResource("4_pbw6q")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 2.2760293, -0.8351272, -26.33199)
+
+[node name="tileBrickA_small_gltf150" parent="Geometry" instance=ExtResource("4_pbw6q")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 4.062011, -0.8351272, -26.33199)
+
+[node name="tileBrickA_small_gltf151" parent="Geometry" instance=ExtResource("4_pbw6q")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 5.844099, -0.8351272, -26.33199)
+
+[node name="tileBrickA_small_gltf152" parent="Geometry" instance=ExtResource("4_pbw6q")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 7.63008, -0.8351272, -26.33199)
+
+[node name="tileBrickA_small_gltf153" parent="Geometry" instance=ExtResource("4_pbw6q")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 9.364654, -0.8351272, -26.33199)
+
+[node name="tileBrickA_small_gltf154" parent="Geometry" instance=ExtResource("4_pbw6q")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 11.150635, -0.8351272, -26.33199)
+
+[node name="tileBrickA_small_gltf155" parent="Geometry" instance=ExtResource("4_pbw6q")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 12.914769, -0.8351272, -26.33199)
+
+[node name="tileBrickA_small_gltf156" parent="Geometry" instance=ExtResource("4_pbw6q")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 14.70075, -0.8351272, -26.33199)
+
+[node name="tileBrickA_small_gltf157" parent="Geometry" instance=ExtResource("4_pbw6q")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 16.365746, -0.8351272, -26.33199)
+
+[node name="tileBrickA_small_gltf158" parent="Geometry" instance=ExtResource("4_pbw6q")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 18.054981, -0.8351272, -26.33199)
+
+[node name="tileBrickA_small_gltf159" parent="Geometry" instance=ExtResource("4_pbw6q")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, -1.2482378, -0.8351272, -28.06521)
+
+[node name="tileBrickA_small_gltf160" parent="Geometry" instance=ExtResource("4_pbw6q")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 0.5377438, -0.8351272, -28.06521)
+
+[node name="tileBrickA_small_gltf161" parent="Geometry" instance=ExtResource("4_pbw6q")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, -3.0075567, -0.8351272, -28.06521)
+
+[node name="tileBrickA_small_gltf162" parent="Geometry" instance=ExtResource("4_pbw6q")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 2.2760293, -0.8351272, -28.06521)
+
+[node name="tileBrickA_small_gltf163" parent="Geometry" instance=ExtResource("4_pbw6q")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 4.062011, -0.8351272, -28.06521)
+
+[node name="tileBrickA_small_gltf164" parent="Geometry" instance=ExtResource("4_pbw6q")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 5.844099, -0.8351272, -28.06521)
+
+[node name="tileBrickA_small_gltf165" parent="Geometry" instance=ExtResource("4_pbw6q")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 7.63008, -0.8351272, -28.06521)
+
+[node name="tileBrickA_small_gltf166" parent="Geometry" instance=ExtResource("4_pbw6q")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 9.364654, -0.8351272, -28.06521)
+
+[node name="tileBrickA_small_gltf167" parent="Geometry" instance=ExtResource("4_pbw6q")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 11.150635, -0.8351272, -28.06521)
+
+[node name="tileBrickA_small_gltf168" parent="Geometry" instance=ExtResource("4_pbw6q")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 12.914769, -0.8351272, -28.06521)
+
+[node name="tileBrickA_small_gltf169" parent="Geometry" instance=ExtResource("4_pbw6q")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 14.70075, -0.8351272, -28.06521)
+
+[node name="tileBrickA_small_gltf170" parent="Geometry" instance=ExtResource("4_pbw6q")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 16.365746, -0.8351272, -28.06521)
+
+[node name="tileBrickA_small_gltf171" parent="Geometry" instance=ExtResource("4_pbw6q")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 18.054981, -0.8351272, -28.06521)
+
+[node name="tileBrickA_small_gltf172" parent="Geometry" instance=ExtResource("4_pbw6q")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, -1.2482378, -0.8351272, -29.81197)
+
+[node name="tileBrickA_small_gltf173" parent="Geometry" instance=ExtResource("4_pbw6q")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 0.5377438, -0.8351272, -29.81197)
+
+[node name="tileBrickA_small_gltf174" parent="Geometry" instance=ExtResource("4_pbw6q")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, -3.0075567, -0.8351272, -29.81197)
+
+[node name="tileBrickA_small_gltf175" parent="Geometry" instance=ExtResource("4_pbw6q")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 2.2760293, -0.8351272, -29.81197)
+
+[node name="tileBrickA_small_gltf176" parent="Geometry" instance=ExtResource("4_pbw6q")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 4.062011, -0.8351272, -29.81197)
+
+[node name="tileBrickA_small_gltf177" parent="Geometry" instance=ExtResource("4_pbw6q")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 5.844099, -0.8351272, -29.81197)
+
+[node name="tileBrickA_small_gltf178" parent="Geometry" instance=ExtResource("4_pbw6q")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 7.63008, -0.8351272, -29.81197)
+
+[node name="tileBrickA_small_gltf179" parent="Geometry" instance=ExtResource("4_pbw6q")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 9.364654, -0.8351272, -29.81197)
+
+[node name="tileBrickA_small_gltf180" parent="Geometry" instance=ExtResource("4_pbw6q")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 11.150635, -0.8351272, -29.81197)
+
+[node name="tileBrickA_small_gltf181" parent="Geometry" instance=ExtResource("4_pbw6q")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 12.914769, -0.8351272, -29.81197)
+
+[node name="tileBrickA_small_gltf182" parent="Geometry" instance=ExtResource("4_pbw6q")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 14.70075, -0.8351272, -29.81197)
+
+[node name="tileBrickA_small_gltf183" parent="Geometry" instance=ExtResource("4_pbw6q")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 16.365746, -0.8351272, -29.81197)
+
+[node name="tileBrickA_small_gltf184" parent="Geometry" instance=ExtResource("4_pbw6q")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 18.054981, -0.8351272, -29.81197)
+
+[node name="tileBrickA_small_gltf185" parent="Geometry" instance=ExtResource("4_pbw6q")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, -1.2482378, -0.8351272, -31.54519)
+
+[node name="tileBrickA_small_gltf186" parent="Geometry" instance=ExtResource("4_pbw6q")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 0.5377438, -0.8351272, -31.54519)
+
+[node name="tileBrickA_small_gltf187" parent="Geometry" instance=ExtResource("4_pbw6q")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, -3.0075567, -0.8351272, -31.54519)
+
+[node name="tileBrickA_small_gltf188" parent="Geometry" instance=ExtResource("4_pbw6q")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 2.2760293, -0.8351272, -31.54519)
+
+[node name="tileBrickA_small_gltf189" parent="Geometry" instance=ExtResource("4_pbw6q")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 4.062011, -0.8351272, -31.54519)
+
+[node name="tileBrickA_small_gltf190" parent="Geometry" instance=ExtResource("4_pbw6q")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 5.844099, -0.8351272, -31.54519)
+
+[node name="tileBrickA_small_gltf191" parent="Geometry" instance=ExtResource("4_pbw6q")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 7.63008, -0.8351272, -31.54519)
+
+[node name="tileBrickA_small_gltf192" parent="Geometry" instance=ExtResource("4_pbw6q")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 9.364654, -0.8351272, -31.54519)
+
+[node name="tileBrickA_small_gltf193" parent="Geometry" instance=ExtResource("4_pbw6q")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 11.150635, -0.8351272, -31.54519)
+
+[node name="tileBrickA_small_gltf194" parent="Geometry" instance=ExtResource("4_pbw6q")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 12.914769, -0.8351272, -31.54519)
+
+[node name="tileBrickA_small_gltf195" parent="Geometry" instance=ExtResource("4_pbw6q")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 14.70075, -0.8351272, -31.54519)
+
+[node name="tileBrickA_small_gltf196" parent="Geometry" instance=ExtResource("4_pbw6q")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 16.365746, -0.8351272, -31.54519)
+
+[node name="tileBrickA_small_gltf197" parent="Geometry" instance=ExtResource("4_pbw6q")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 18.054981, -0.8351272, -31.54519)
+
+[node name="tileBrickA_small_gltf198" parent="Geometry" instance=ExtResource("4_pbw6q")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, -1.2482378, -0.8351272, -33.28298)
+
+[node name="tileBrickA_small_gltf199" parent="Geometry" instance=ExtResource("4_pbw6q")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 0.5377438, -0.8351272, -33.28298)
+
+[node name="tileBrickA_small_gltf200" parent="Geometry" instance=ExtResource("4_pbw6q")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, -3.0075567, -0.8351272, -33.28298)
+
+[node name="tileBrickA_small_gltf207" parent="Geometry" instance=ExtResource("4_pbw6q")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 12.914769, -0.8351272, -33.28298)
+
+[node name="tileBrickA_small_gltf208" parent="Geometry" instance=ExtResource("4_pbw6q")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 14.70075, -0.8351272, -33.28298)
+
+[node name="tileBrickA_small_gltf209" parent="Geometry" instance=ExtResource("4_pbw6q")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 16.365746, -0.8351272, -33.28298)
+
+[node name="tileBrickA_small_gltf210" parent="Geometry" instance=ExtResource("4_pbw6q")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 18.054981, -0.8351272, -33.28298)
+
+[node name="tileBrickA_small_gltf211" parent="Geometry" instance=ExtResource("4_pbw6q")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, -1.2482378, -0.8351272, -35.016205)
+
+[node name="tileBrickA_small_gltf212" parent="Geometry" instance=ExtResource("4_pbw6q")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 0.5377438, -0.8351272, -35.016205)
+
+[node name="tileBrickA_small_gltf213" parent="Geometry" instance=ExtResource("4_pbw6q")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, -3.0075567, -0.8351272, -35.016205)
+
+[node name="tileBrickA_small_gltf236" parent="Geometry" instance=ExtResource("4_pbw6q")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, -1.2482378, -0.8351272, -24.643198)
+
+[node name="tileBrickA_small_gltf237" parent="Geometry" instance=ExtResource("4_pbw6q")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 0.5377438, -0.8351272, -24.643198)
+
+[node name="tileBrickA_small_gltf238" parent="Geometry" instance=ExtResource("4_pbw6q")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, -3.0075567, -0.8351272, -24.643198)
+
+[node name="tileBrickA_small_gltf239" parent="Geometry" instance=ExtResource("4_pbw6q")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, -1.2482378, -0.8351272, -26.33199)
+
+[node name="tileBrickA_small_gltf240" parent="Geometry" instance=ExtResource("4_pbw6q")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 0.5377438, -0.8351272, -26.33199)
+
+[node name="tileBrickA_small_gltf241" parent="Geometry" instance=ExtResource("4_pbw6q")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, -3.0075567, -0.8351272, -26.33199)
+
+[node name="tileBrickA_small_gltf242" parent="Geometry" instance=ExtResource("4_pbw6q")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, -1.2482378, -0.8351272, -28.06521)
+
+[node name="tileBrickA_small_gltf243" parent="Geometry" instance=ExtResource("4_pbw6q")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 0.5377438, -0.8351272, -28.06521)
+
+[node name="tileBrickA_small_gltf244" parent="Geometry" instance=ExtResource("4_pbw6q")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, -3.0075567, -0.8351272, -28.06521)
+
+[node name="tileBrickA_small_gltf245" parent="Geometry" instance=ExtResource("4_pbw6q")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, -1.2482378, -0.8351272, -29.81197)
+
+[node name="tileBrickA_small_gltf246" parent="Geometry" instance=ExtResource("4_pbw6q")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 0.5377438, -0.8351272, -29.81197)
+
+[node name="tileBrickA_small_gltf247" parent="Geometry" instance=ExtResource("4_pbw6q")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, -3.0075567, -0.8351272, -29.81197)
+
+[node name="tileBrickA_small_gltf248" parent="Geometry" instance=ExtResource("4_pbw6q")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, -1.2482378, -0.8351272, -31.54519)
+
+[node name="tileBrickA_small_gltf249" parent="Geometry" instance=ExtResource("4_pbw6q")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 0.5377438, -0.8351272, -31.54519)
+
+[node name="tileBrickA_small_gltf250" parent="Geometry" instance=ExtResource("4_pbw6q")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, -3.0075567, -0.8351272, -31.54519)
+
+[node name="tileBrickA_small_gltf251" parent="Geometry" instance=ExtResource("4_pbw6q")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, -1.2482378, -0.8351272, -33.28298)
+
+[node name="tileBrickA_small_gltf252" parent="Geometry" instance=ExtResource("4_pbw6q")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 0.5377438, -0.8351272, -33.28298)
+
+[node name="tileBrickA_small_gltf253" parent="Geometry" instance=ExtResource("4_pbw6q")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, -3.0075567, -0.8351272, -33.28298)
+
+[node name="tileBrickA_small_gltf254" parent="Geometry" instance=ExtResource("4_pbw6q")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, -1.2482378, -0.8351272, -35.016205)
+
+[node name="tileBrickA_small_gltf255" parent="Geometry" instance=ExtResource("4_pbw6q")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 0.5377438, -0.8351272, -35.016205)
+
+[node name="tileBrickA_small_gltf256" parent="Geometry" instance=ExtResource("4_pbw6q")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, -3.0075567, -0.8351272, -35.016205)
+
+[node name="tileBrickA_small_gltf257" parent="Geometry" instance=ExtResource("4_pbw6q")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, -6.5010953, -0.8351272, -26.33199)
+
+[node name="tileBrickA_small_gltf258" parent="Geometry" instance=ExtResource("4_pbw6q")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, -4.715114, -0.8351272, -26.33199)
+
+[node name="tileBrickA_small_gltf259" parent="Geometry" instance=ExtResource("4_pbw6q")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, -8.260414, -0.8351272, -26.33199)
+
+[node name="tileBrickA_small_gltf260" parent="Geometry" instance=ExtResource("4_pbw6q")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, -6.5010953, -0.8351272, -28.06521)
+
+[node name="tileBrickA_small_gltf261" parent="Geometry" instance=ExtResource("4_pbw6q")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, -4.715114, -0.8351272, -28.06521)
+
+[node name="tileBrickA_small_gltf262" parent="Geometry" instance=ExtResource("4_pbw6q")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, -8.260414, -0.8351272, -28.06521)
+
+[node name="tileBrickA_small_gltf263" parent="Geometry" instance=ExtResource("4_pbw6q")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, -6.5010953, -0.8351272, -29.81197)
+
+[node name="tileBrickA_small_gltf264" parent="Geometry" instance=ExtResource("4_pbw6q")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, -4.715114, -0.8351272, -29.81197)
+
+[node name="tileBrickA_small_gltf265" parent="Geometry" instance=ExtResource("4_pbw6q")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, -8.260414, -0.8351272, -29.81197)
+
+[node name="tileBrickA_small_gltf266" parent="Geometry" instance=ExtResource("4_pbw6q")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, -6.5010953, -0.8351272, -31.54519)
+
+[node name="tileBrickA_small_gltf267" parent="Geometry" instance=ExtResource("4_pbw6q")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, -4.715114, -0.8351272, -31.54519)
+
+[node name="tileBrickA_small_gltf268" parent="Geometry" instance=ExtResource("4_pbw6q")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, -8.260414, -0.8351272, -31.54519)
+
+[node name="tileBrickA_small_gltf269" parent="Geometry" instance=ExtResource("4_pbw6q")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, -6.5010953, -0.8351272, -33.28298)
+
+[node name="tileBrickA_small_gltf270" parent="Geometry" instance=ExtResource("4_pbw6q")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, -4.715114, -0.8351272, -33.28298)
+
+[node name="tileBrickA_small_gltf271" parent="Geometry" instance=ExtResource("4_pbw6q")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, -8.260414, -0.8351272, -33.28298)
+
+[node name="tileBrickA_small_gltf272" parent="Geometry" instance=ExtResource("4_pbw6q")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, -6.5010953, -0.8351272, -35.016205)
+
+[node name="tileBrickA_small_gltf273" parent="Geometry" instance=ExtResource("4_pbw6q")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, -4.715114, -0.8351272, -35.016205)
+
+[node name="tileBrickA_small_gltf274" parent="Geometry" instance=ExtResource("4_pbw6q")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, -8.260414, -0.8351272, -35.016205)
+
+[node name="tileBrickA_small_gltf275" parent="Geometry" instance=ExtResource("4_pbw6q")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, -6.5010953, -0.8351272, -26.33199)
+
+[node name="tileBrickA_small_gltf276" parent="Geometry" instance=ExtResource("4_pbw6q")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, -4.715114, -0.8351272, -26.33199)
+
+[node name="tileBrickA_small_gltf277" parent="Geometry" instance=ExtResource("4_pbw6q")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, -8.260414, -0.8351272, -26.33199)
+
+[node name="tileBrickA_small_gltf278" parent="Geometry" instance=ExtResource("4_pbw6q")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, -6.5010953, -0.8351272, -28.06521)
+
+[node name="tileBrickA_small_gltf279" parent="Geometry" instance=ExtResource("4_pbw6q")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, -4.715114, -0.8351272, -28.06521)
+
+[node name="tileBrickA_small_gltf280" parent="Geometry" instance=ExtResource("4_pbw6q")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, -8.260414, -0.8351272, -28.06521)
+
+[node name="tileBrickA_small_gltf281" parent="Geometry" instance=ExtResource("4_pbw6q")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, -6.5010953, -0.8351272, -29.81197)
+
+[node name="tileBrickA_small_gltf282" parent="Geometry" instance=ExtResource("4_pbw6q")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, -4.715114, -0.8351272, -29.81197)
+
+[node name="tileBrickA_small_gltf283" parent="Geometry" instance=ExtResource("4_pbw6q")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, -8.260414, -0.8351272, -29.81197)
+
+[node name="tileBrickA_small_gltf284" parent="Geometry" instance=ExtResource("4_pbw6q")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, -6.5010953, -0.8351272, -31.54519)
+
+[node name="tileBrickA_small_gltf285" parent="Geometry" instance=ExtResource("4_pbw6q")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, -4.715114, -0.8351272, -31.54519)
+
+[node name="tileBrickA_small_gltf286" parent="Geometry" instance=ExtResource("4_pbw6q")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, -8.260414, -0.8351272, -31.54519)
+
+[node name="tileBrickA_small_gltf287" parent="Geometry" instance=ExtResource("4_pbw6q")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, -6.5010953, -0.8351272, -33.28298)
+
+[node name="tileBrickA_small_gltf288" parent="Geometry" instance=ExtResource("4_pbw6q")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, -4.715114, -0.8351272, -33.28298)
+
+[node name="tileBrickA_small_gltf289" parent="Geometry" instance=ExtResource("4_pbw6q")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, -8.260414, -0.8351272, -33.28298)
+
+[node name="tileBrickA_small_gltf290" parent="Geometry" instance=ExtResource("4_pbw6q")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, -6.5010953, -0.8351272, -35.016205)
+
+[node name="tileBrickA_small_gltf291" parent="Geometry" instance=ExtResource("4_pbw6q")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, -4.715114, -0.8351272, -35.016205)
+
+[node name="tileBrickA_small_gltf292" parent="Geometry" instance=ExtResource("4_pbw6q")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, -8.260414, -0.8351272, -35.016205)
+
+[node name="tileBrickA_small_gltf296" parent="Geometry" instance=ExtResource("4_pbw6q")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, -10.012752, -0.8351272, -10.403841)
+
+[node name="tileBrickA_small_gltf297" parent="Geometry" instance=ExtResource("4_pbw6q")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, -10.012752, -0.8351272, -12.204613)
+
+[node name="tileBrickA_small_gltf298" parent="Geometry" instance=ExtResource("4_pbw6q")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 2.3893576, -0.8351272, -10.403841)
+
+[node name="tileBrickA_small_gltf299" parent="Geometry" instance=ExtResource("4_pbw6q")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, -10.012752, -0.8351272, -13.987271)
+
+[node name="tileBrickA_small_gltf300" parent="Geometry" instance=ExtResource("4_pbw6q")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, -10.012752, -0.8351272, -15.788043)
+
+[node name="tileBrickA_small_gltf301" parent="Geometry" instance=ExtResource("4_pbw6q")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, -10.012752, -0.8351272, -17.539614)
+
+[node name="tileBrickA_small_gltf302" parent="Geometry" instance=ExtResource("4_pbw6q")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, -10.012752, -0.8351272, -19.340385)
+
+[node name="tileBrickA_small_gltf303" parent="Geometry" instance=ExtResource("4_pbw6q")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, -10.012752, -0.8351272, -21.123043)
+
+[node name="tileBrickA_small_gltf304" parent="Geometry" instance=ExtResource("4_pbw6q")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, -10.012752, -0.8351272, -22.923817)
+
+[node name="tileBrickA_small_gltf305" parent="Geometry" instance=ExtResource("4_pbw6q")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, -10.012752, -0.8351272, -24.65204)
+
+[node name="tileBrickA_small_gltf306" parent="Geometry" instance=ExtResource("4_pbw6q")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, -9.933067, -0.8351272, -29.81197)
+
+[node name="tileBrickA_small_gltf307" parent="Geometry" instance=ExtResource("4_pbw6q")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, -9.933067, -0.8351272, -33.28298)
+
+[node name="tileBrickA_small_gltf308" parent="Geometry" instance=ExtResource("4_pbw6q")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, -9.933067, -0.8351272, -26.33199)
+
+[node name="tileBrickA_small_gltf309" parent="Geometry" instance=ExtResource("4_pbw6q")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, -9.933067, -0.8351272, -28.06521)
+
+[node name="tileBrickA_small_gltf310" parent="Geometry" instance=ExtResource("4_pbw6q")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, -9.933067, -0.8351272, -31.54519)
+
+[node name="tileBrickA_small_gltf311" parent="Geometry" instance=ExtResource("4_pbw6q")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, -9.933067, -0.8351272, -35.016205)
+
+[node name="tileBrickA_small_gltf220" parent="Geometry" instance=ExtResource("4_pbw6q")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 12.914769, -0.8351272, -35.016205)
+
+[node name="tileBrickA_small_gltf221" parent="Geometry" instance=ExtResource("4_pbw6q")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 14.70075, -0.8351272, -35.016205)
+
+[node name="tileBrickA_small_gltf222" parent="Geometry" instance=ExtResource("4_pbw6q")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 16.365746, -0.8351272, -35.016205)
+
+[node name="tileBrickA_small_gltf223" parent="Geometry" instance=ExtResource("4_pbw6q")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 18.054981, -0.8351272, -35.016205)
+
 [node name="tileBrickA_small_gltf80" parent="Geometry" instance=ExtResource("4_pbw6q")]
 transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 18.151728, -0.8351272, -15.788043)
 
@@ -512,6 +1132,24 @@ transform = Transform3D(-0.007681149, 0, 0.8999672, 0, 0.9, 0, -0.8999672, 0, -0
 [node name="wallCorner_gltf4" parent="Geometry" instance=ExtResource("5_jw32o")]
 transform = Transform3D(-0.023669036, 0, -0.8996886, 0, 0.9, 0, 0.8996886, 0, -0.023669036, 18.728455, 9.536743e-07, -8.926356)
 
+[node name="potA_gltf" parent="Geometry" instance=ExtResource("7_1p5hy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.186951, 0, -30.321945)
+
+[node name="potB_gltf" parent="Geometry" instance=ExtResource("8_h1m7h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.921402, 0, -30.276478)
+
+[node name="potB_decorated_gltf" parent="Geometry" instance=ExtResource("9_erwvk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.448037, 0, -28.807302)
+
+[node name="potionSmall_green_gltf" parent="Geometry" instance=ExtResource("10_2w5on")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.1285746, 0, -31.111645)
+
+[node name="potionSmall_red_gltf" parent="Geometry" instance=ExtResource("11_346fj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.1837689, 0, -30.260773)
+
+[node name="quiver_half_full_gltf" parent="Geometry" instance=ExtResource("14_0sclb")]
+transform = Transform3D(1, 0, 0, 0, 0.9469806, -0.3212907, 0, 0.3212907, 0.9469806, 9.021695, 0.41300392, -23.122742)
+
 [node name="Border" type="Node3D" parent="."]
 
 [node name="CameraBorder" parent="Border" instance=ExtResource("5_pbw6q")]
@@ -523,8 +1161,19 @@ transform = Transform3D(-4.0723776e-07, 0, -10.923646, 0, 1, 0, 9.316514, 0, -4.
 [node name="CameraBorder2" parent="Border" instance=ExtResource("5_pbw6q")]
 transform = Transform3D(9.316514, 0, 0, 0, 1, 0, 0, 0, 10.923646, 7.120455, 3.354456, 0)
 
-[node name="CameraBorder4" parent="Border" instance=ExtResource("5_pbw6q")]
-transform = Transform3D(9.316514, 0, 0, 0, -4.3711385e-08, -10.923646, 0, 0.99999994, -4.7748773e-07, -9.845914, 3.354456, -4.568829)
-
 [node name="wall_gateDoor_gltf" parent="Border" instance=ExtResource("6_v1gob")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.22048521, -0.38724375, -5.334772)
+
+[node name="Audio" type="Node" parent="."]
+
+[node name="Wind" type="AudioStreamPlayer" parent="Audio"]
+stream = ExtResource("15_h1m7h")
+volume_db = -8.0
+autoplay = true
+parameters/looping = false
+
+[node name="Torch" type="AudioStreamPlayer" parent="Audio"]
+stream = ExtResource("16_erwvk")
+volume_db = -15.0
+autoplay = true
+parameters/looping = false
