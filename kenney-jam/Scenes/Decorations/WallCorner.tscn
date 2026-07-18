@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://clhf7suosn316"]
+
+[ext_resource type="PackedScene" uid="uid://c0j7adwgu5owc" path="res://KayKit Dungeon Pack 1.0/Models/gltf/wallCorner.gltf.glb" id="1_tevg7"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_g8yjt"]
+size = Vector3(1.4366913, 4.092041, 2.6637268)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_n6jfb"]
+size = Vector3(1.2659302, 4.083008, 1.3813477)
+
+[node name="WallCorner" type="Node3D"]
+
+[node name="wallCorner_gltf" parent="." instance=ExtResource("1_tevg7")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.021400452, 2.0257568, 0.6324005)
+shape = SubResource("BoxShape3D_g8yjt")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.3405068, 2.0298467, 0.0026855469)
+shape = SubResource("BoxShape3D_n6jfb")
