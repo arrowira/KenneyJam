@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://b24m11ishcol7"]
+[gd_scene load_steps=7 format=3 uid="uid://b24m11ishcol7"]
 
 [ext_resource type="Texture2D" uid="uid://becxa8wiyjubp" path="res://Sprites/icon.svg" id="1_6voqi"]
+[ext_resource type="Script" uid="uid://c7fxmaeqc8ec7" path="res://Scripts/snake.gd" id="1_sprpx"]
 
 [sub_resource type="Animation" id="Animation_sprpx"]
 resource_name = "idle"
@@ -93,6 +94,7 @@ _data = {
 }
 
 [node name="snake" type="Node3D"]
+script = ExtResource("1_sprpx")
 
 [node name="Node" type="Node" parent="."]
 
@@ -112,3 +114,9 @@ texture = ExtResource("1_6voqi")
 libraries = {
 &"": SubResource("AnimationLibrary_eb2fn")
 }
+
+[node name="mood" type="Timer" parent="."]
+wait_time = 0.5
+autostart = true
+
+[connection signal="timeout" from="mood" to="." method="_on_mood_timeout"]
