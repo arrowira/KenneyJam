@@ -1,7 +1,7 @@
 extends Node3D
 
 
-var dir = Vector2(1,0)
+var dir = Vector2(-1,0)
 var behavior = "idle"
 var SPEED = 0.01
 
@@ -23,3 +23,9 @@ func _on_mood_timeout() -> void:
 	if behavior == "idle":
 		if randf()<0.1:
 			dir *= -1
+
+
+func _on_wall_detection_body_entered(body: Node3D) -> void:
+	dir = dir.orthogonal()
+	if randf()<0.5:
+		dir *= -1

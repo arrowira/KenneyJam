@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://bh2eknbs0py68"]
+[gd_scene load_steps=21 format=3 uid="uid://bh2eknbs0py68"]
 
 [ext_resource type="PackedScene" uid="uid://cbnglbm81uf2k" path="res://Scenes/Player.tscn" id="1_r150o"]
 [ext_resource type="Script" path="res://Scripts/LightFlicker.gd" id="2_50glp"]
@@ -14,6 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://cqct3vyo7tji6" path="res://KayKit Dungeon Pack 1.0/Models/gltf/potionSmall_green.gltf.glb" id="10_2w5on"]
 [ext_resource type="PackedScene" uid="uid://bgi27ub7hyx6x" path="res://KayKit Dungeon Pack 1.0/Models/gltf/potionSmall_red.gltf.glb" id="11_346fj"]
 [ext_resource type="PackedScene" uid="uid://cftwt0bxekx6u" path="res://KayKit Dungeon Pack 1.0/Models/gltf/quiver_half_full.gltf.glb" id="14_0sclb"]
+[ext_resource type="PackedScene" uid="uid://b72krwxb2njg1" path="res://Scenes/wall.tscn" id="14_sxkr1"]
 [ext_resource type="AudioStream" uid="uid://b51vlpq523nmo" path="res://Sounds/soundreality-wind-blowing-457954.mp3" id="15_h1m7h"]
 [ext_resource type="AudioStream" uid="uid://mc812laenst" path="res://Sounds/sspsurvival-campfire-by-the-lake-campfire-by-the-swamp-the-sound-of-a-campfire-539178.mp3" id="16_erwvk"]
 [ext_resource type="PackedScene" uid="uid://cpp5ehejmhh71" path="res://KayKit Dungeon Pack 1.0/Models/gltf/bookcaseWide.gltf.glb" id="17_2w5on"]
@@ -1178,6 +1179,9 @@ transform = Transform3D(1, 0, 0, 0, 0.9469806, -0.3212907, 0, 0.3212907, 0.94698
 
 [node name="bookcaseWide_gltf" parent="Geometry" instance=ExtResource("17_2w5on")]
 transform = Transform3D(0.94195795, 0, -0.3357311, 0, 1, 0, 0.3357311, 0, 0.94195795, -2.469521, 0, -11.300618)
+
+[node name="wall_gltf54" parent="Geometry" instance=ExtResource("14_sxkr1")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -3.246788, 0, -14.532382)
 
 [node name="Border" type="Node3D" parent="."]
 
