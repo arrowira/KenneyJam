@@ -6,6 +6,7 @@ var behavior = "idle"
 var SPEED = 0.01
 
 func _physics_process(delta: float) -> void:
+	rotation.y=dir.angle_to(Vector2(-1,0))
 	if behavior == "walk":
 		position.x += dir.x*SPEED
 		position.z += dir.y*SPEED
