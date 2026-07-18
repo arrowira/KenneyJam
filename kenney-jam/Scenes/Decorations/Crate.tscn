@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://cpq34opj30b16"]
+
+[ext_resource type="PackedScene" uid="uid://dawykwekp340q" path="res://KayKit Dungeon Pack 1.0/Models/gltf/cratePlatform_large.gltf.glb" id="1_3waoo"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_syggo"]
+size = Vector3(2.0151978, 2.2523828, 2.0275397)
+
+[node name="Bookshelf" type="Node3D"]
+
+[node name="cratePlatform_large_gltf" parent="." instance=ExtResource("1_3waoo")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.013600439, 1.1215475, 0.008095741)
+shape = SubResource("BoxShape3D_syggo")

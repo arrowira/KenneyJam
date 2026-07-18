@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://bc2oogky4gdny"]
+
+[ext_resource type="PackedScene" uid="uid://cd5fi3h7yat7h" path="res://KayKit Dungeon Pack 1.0/Models/gltf/pillar_broken.gltf.glb" id="1_1syj0"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_syggo"]
+size = Vector3(1.5286331, 3.13015, 2.0275397)
+
+[node name="Bookshelf" type="Node3D"]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.05184278, 1.769241, 0.008095741)
+shape = SubResource("BoxShape3D_syggo")
+
+[node name="pillar_broken_gltf" parent="." instance=ExtResource("1_1syj0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.1031121, -1.1920929e-07, -0.062342644)

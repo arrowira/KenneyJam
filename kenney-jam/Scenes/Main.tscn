@@ -25531,6 +25531,9 @@ transform = Transform3D(-3.934025e-08, 0, 0.9, 0, 0.9, 0, -0.9, 0, -3.934025e-08
 [node name="WallCorner" parent="Geometry" instance=ExtResource("16_sxkr1")]
 transform = Transform3D(-3.9340247e-08, 0, 0.8999999, 0, 0.9, 0, -0.8999999, 0, -3.9340247e-08, 1.9725637, 0, -8.9214945)
 
+[node name="WallCorner3" parent="Geometry" instance=ExtResource("16_sxkr1")]
+transform = Transform3D(-0.89999986, 0, 7.8680486e-08, 0, 0.89999986, 0, -7.8680486e-08, 0, -0.89999986, 19.448582, 0, -14.869773)
+
 [node name="WallCorner2" parent="Geometry" instance=ExtResource("16_sxkr1")]
 transform = Transform3D(0.8999999, 0, 0, 0, 0.8999999, 0, 0, 0, 0.8999999, -2.5910034, 0, -8.9214945)
 
@@ -25582,13 +25585,13 @@ transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 3.080082, 0, -32.50833)
 [node name="Border" type="Node3D" parent="."]
 
 [node name="CameraBorder" parent="Border" instance=ExtResource("5_pbw6q")]
-transform = Transform3D(9.316514, 0, 0, 0, 1, 0, 0, 0, 10.923646, -7.7130127, 3.354456, 0)
+transform = Transform3D(9.316514, 0, 0, 0, 1, 0, 0, 0, 10.923646, -37.713013, 3.354456, 0)
 
 [node name="CameraBorder3" parent="Border" instance=ExtResource("5_pbw6q")]
-transform = Transform3D(-4.0723776e-07, 0, -10.923646, 0, 1, 0, 9.316514, 0, -4.7748773e-07, -0.40998602, 3.354456, 9.421962)
+transform = Transform3D(-4.0723776e-07, 0, -10.923646, 0, 1, 0, 9.316514, 0, -4.7748773e-07, -0.40998602, 3.354456, 23.421963)
 
 [node name="CameraBorder2" parent="Border" instance=ExtResource("5_pbw6q")]
-transform = Transform3D(9.316514, 0, 0, 0, 1, 0, 0, 0, 10.923646, 7.120455, 3.354456, 0)
+transform = Transform3D(9.316514, 0, 0, 0, 1, 0, 0, 0, 10.923646, 41.120453, 3.354456, 0)
 
 [node name="Audio" type="Node" parent="."]
 
