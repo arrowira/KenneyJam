@@ -47,6 +47,8 @@ func _on_mood_timeout() -> void:
 	if randf()<0.05:
 		var newScale = pScale.instantiate()
 		newScale.position=position
+		newScale.position.y-=0.2
+		newScale.rotation.y = randf()*360
 		get_parent().get_parent().add_child(newScale)
 	
 	#mood swings
