@@ -2,8 +2,113 @@
 
 [node name="Merchant" type="Control"]
 layout_mode = 3
-anchor_right = 0.39000002
-anchor_bottom = 0.287
-offset_left = -2.0
-offset_right = 594.72
-offset_bottom = 287.024
+anchor_left = -0.113000005
+anchor_top = -0.14
+anchor_right = 1.0300001
+anchor_bottom = 0.79600006
+offset_left = 3.1760101
+offset_top = -0.27999878
+offset_right = 3.4399414
+offset_bottom = 0.19195557
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = -57.0
+offset_top = -148.0
+offset_right = 1677.0
+offset_bottom = 919.0
+color = Color(0.49019608, 0.5137255, 1, 1)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 459.0
+offset_top = -132.0
+offset_right = 1243.0
+offset_bottom = 221.0
+theme_override_colors/default_color = Color(0.34901962, 0.03529412, 0.14509805, 1)
+theme_override_font_sizes/normal_font_size = 100
+bbcode_enabled = true
+text = "Merchant shop"
+
+[node name="HBoxContainer" type="GridContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.223
+anchor_bottom = 1.366
+offset_top = 17.0
+offset_right = 0.30895996
+offset_bottom = -0.16204834
+grow_horizontal = 2
+theme_override_constants/h_separation = 8
+columns = 2
+
+[node name="ColorRect" type="ColorRect" parent="HBoxContainer"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+size_flags_horizontal = 3
+color = Color(0, 0.49803922, 1, 1)
+
+[node name="ColorRect9" type="ColorRect" parent="HBoxContainer"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+size_flags_horizontal = 3
+color = Color(0, 0.49803922, 1, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="HBoxContainer"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+size_flags_horizontal = 3
+color = Color(0, 0.49803922, 1, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="HBoxContainer"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+size_flags_horizontal = 3
+color = Color(0, 0.49803922, 1, 1)
+
+[node name="ColorRect4" type="ColorRect" parent="HBoxContainer"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+size_flags_horizontal = 3
+color = Color(0, 0.49803922, 1, 1)
+
+[node name="ColorRect5" type="ColorRect" parent="HBoxContainer"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+size_flags_horizontal = 3
+color = Color(0, 0.49803922, 1, 1)
+
+[node name="ColorRect6" type="ColorRect" parent="HBoxContainer"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+size_flags_horizontal = 3
+color = Color(0, 0.49803922, 1, 1)
+
+[node name="ColorRect7" type="ColorRect" parent="HBoxContainer"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+size_flags_horizontal = 3
+color = Color(0, 0.49803922, 1, 1)
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.135
+anchor_right = 0.614
+anchor_bottom = 0.36200002
+offset_left = 1.0000005
+offset_top = 5.0550003
+offset_right = -0.6380005
+offset_bottom = 0.2659912
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 50
+text = "Stealth:   Level 1:  "
+
+[node name="Button" type="Button" parent="RichTextLabel2"]
+layout_mode = 0
+offset_left = 448.0
+offset_top = 1.0
+offset_right = 805.0
+offset_bottom = 81.0
+theme_override_font_sizes/font_size = 45
+text = "Buy: 5 Scales"
