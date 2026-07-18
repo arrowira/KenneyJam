@@ -12,6 +12,16 @@ var angerDir = Vector2(1,0)
 var angerSpeedMod = 2
 
 var pScale = preload("res://Scenes/Scale.tscn")
+var color
+
+func _ready() -> void:
+	color = Color.WHITE
+	color.r = randf()
+	color.b = randf()
+	color.g = randf()
+	for piece in $Node.get_children():
+		piece.modulate = color
+	
 
 func _physics_process(delta: float) -> void:
 	if byPlayer:

@@ -143,14 +143,17 @@ transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, -0.6
 
 [node name="head" type="Sprite3D" parent="Node"]
 transform = Transform3D(0.42801765, 0, 0, 0, 0.855409, 0, 0, 0, 1, 0, 0.2, 0)
+modulate = Color(0.556953, 0.556953, 0.556953, 1)
 texture = ExtResource("1_6voqi")
 
 [node name="middle" type="Sprite3D" parent="Node"]
 transform = Transform3D(0.42801765, 0, 0, 0, 0.855409, 0, 0, 0, 1, 0.59833646, 0, 0)
+modulate = Color(0.5449743, 0.54497427, 0.54497427, 1)
 texture = ExtResource("1_6voqi")
 
 [node name="tail" type="Sprite3D" parent="Node"]
 transform = Transform3D(0.42801765, 0, 0, 0, 0.855409, 0, 0, 0, 1, 1.214, 0.2, 0)
+modulate = Color(0.52906674, 0.5290667, 0.5290667, 1)
 texture = ExtResource("1_6voqi")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
