@@ -1,7 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://b24m11ishcol7"]
+[gd_scene load_steps=8 format=3 uid="uid://b24m11ishcol7"]
 
 [ext_resource type="Texture2D" uid="uid://becxa8wiyjubp" path="res://Sprites/icon.svg" id="1_6voqi"]
 [ext_resource type="Script" uid="uid://c7fxmaeqc8ec7" path="res://Scripts/snake.gd" id="1_sprpx"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_sprpx"]
+size = Vector3(2.7324219, 1, 1)
 
 [sub_resource type="Animation" id="Animation_sprpx"]
 resource_name = "idle"
@@ -133,10 +136,20 @@ _data = {
 script = ExtResource("1_sprpx")
 
 [node name="Node" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.60025674, 0, 0)
 
 [node name="head" type="Sprite3D" parent="Node"]
 transform = Transform3D(0.42801765, 0, 0, 0, 0.855409, 0, 0, 0, 1, 0, 0.2, 0)
 texture = ExtResource("1_6voqi")
+
+[node name="eyes" type="Area3D" parent="Node/head"]
+transform = Transform3D(2.3363523, 0, 0, 0, 1.1690315, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="WallDetection" type="Area3D" parent="Node/head"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Node/head/WallDetection"]
+transform = Transform3D(1, 0, 0, 0, 1.000013, 0, 0, 0, 1, -0.86621094, 0, 0)
+shape = SubResource("BoxShape3D_sprpx")
 
 [node name="middle" type="Sprite3D" parent="Node"]
 transform = Transform3D(0.42801765, 0, 0, 0, 0.855409, 0, 0, 0, 1, 0.59833646, 0, 0)

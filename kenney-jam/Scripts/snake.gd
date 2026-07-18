@@ -21,5 +21,5 @@ func _on_mood_timeout() -> void:
 		behavior = "idle"
 		$idleTime.start()
 	if behavior == "idle":
-		if randf()<0.3:
+		if randf()<0.1:
 			dir *= -1

@@ -1210,4 +1210,4 @@ parameters/looping = false
 [node name="EnemyManager" type="Node3D" parent="."]
 
 [node name="snake" parent="EnemyManager" instance=ExtResource("18_346fj")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -14.299597)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.46373558, -14.299597)
