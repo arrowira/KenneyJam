@@ -4,10 +4,15 @@ var DScale #Default sprite scale
 
 var Speed = 1
 
+var Scales = 0
+
 func _ready():
 	DScale = $Sprite.scale
 
 func _physics_process(delta: float) -> void:
+	
+	get_parent().get_node("CanvasLayer/ScaleCount").text = str(Scales)
+	
 	var dir = Vector3.ZERO
 	
 	if(Input.is_action_pressed("left")):
@@ -31,3 +36,6 @@ func _physics_process(delta: float) -> void:
 	velocity += dir
 	velocity-=velocity*0.2
 	move_and_slide()
+	
+	
+	
