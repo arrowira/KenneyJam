@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://ditc3wweafh43"]
+
+[ext_resource type="PackedScene" uid="uid://be2y4e7glnu1q" path="res://KayKit Dungeon Pack 1.0/Models/gltf/wall_gateDoor.gltf.glb" id="1_v0oil"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_pl56b"]
+size = Vector3(0.98846436, 3.686493, 1.2348633)
+
+[node name="Gate" type="Node3D"]
+
+[node name="wall_gateDoor_gltf" parent="." instance=ExtResource("1_v0oil")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 0, 0, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.3368225, 1.8177643, -0.0234375)
+shape = SubResource("BoxShape3D_pl56b")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3530278, 1.8177643, -0.0234375)
+shape = SubResource("BoxShape3D_pl56b")
