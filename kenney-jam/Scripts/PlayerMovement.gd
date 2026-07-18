@@ -15,7 +15,7 @@ func _ready():
 	TPos = $Camera.position
 
 func _physics_process(delta: float) -> void:
-	
+	print(position)
 	get_parent().get_node("CanvasLayer/ScaleCount").text = str(Scales)
 	
 	var dir = Vector3.ZERO

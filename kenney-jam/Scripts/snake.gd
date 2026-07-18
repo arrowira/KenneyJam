@@ -12,12 +12,10 @@ func _physics_process(delta: float) -> void:
 	if byPlayer:
 		$eyes/RayCast3D.target_position=player.position
 	if byPlayer:
-		print("1")
 		if !$eyes/RayCast3D.is_colliding():
 			behavior = "angry"
 		elif $eyes/RayCast3D.get_collider().name == "Player" :
 			behavior = "angry"
-	rotation.y=dir.angle_to(Vector2(-1,0))
 	if behavior == "walk":
 		position.x += dir.x*SPEED
 		position.z += dir.y*SPEED
@@ -25,6 +23,10 @@ func _physics_process(delta: float) -> void:
 		$AnimationPlayer.speed_scale = $idleTime.time_left/$idleTime.wait_time
 	elif behavior == "angry":
 		pass
+	if behavior == "angry":
+		look_at(get_parent().get_parent().playerPos)
+	else:
+		rotation.y=dir.angle_to(Vector2(-1,0))
 
 func _on_mood_timeout() -> void:
 	if randf()<0.8:
@@ -47,7 +49,6 @@ func _on_wall_detection_body_entered(body: Node3D) -> void:
 
 func _on_eyes_body_entered(body: Node3D) -> void:
 	if body.name == "Player":
-		print("player")
 		byPlayer = true
 		player = body.get_parent()
 
