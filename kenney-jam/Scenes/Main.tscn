@@ -1,30 +1,36 @@
-[gd_scene load_steps=5 format=3 uid="uid://bh2eknbs0py68"]
+[gd_scene load_steps=7 format=3 uid="uid://bh2eknbs0py68"]
 
-[ext_resource type="PackedScene" uid="uid://pnraj6qmngjw" path="res://Scenes/TreeTest.tscn" id="1_idj7w"]
 [ext_resource type="PackedScene" uid="uid://cbnglbm81uf2k" path="res://Scenes/Player.tscn" id="1_r150o"]
 [ext_resource type="PackedScene" uid="uid://d2h435v7gaf08" path="res://Scenes/Scale.tscn" id="3_kln2b"]
+[ext_resource type="PackedScene" uid="uid://bctxnf3prktpb" path="res://KayKit Dungeon Pack 1.0/Models/gltf/tileBrickA_small.gltf.glb" id="4_pbw6q"]
+[ext_resource type="PackedScene" uid="uid://pjdgpl58qdry" path="res://KayKit Dungeon Pack 1.0/Models/gltf/wall.gltf.glb" id="4_rgh2o"]
+[ext_resource type="PackedScene" uid="uid://cout26yjaa0hs" path="res://Scenes/CameraBorder.tscn" id="5_pbw6q"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_idj7w"]
 
 [node name="Main" type="Node3D"]
 
 [node name="Player" parent="." instance=ExtResource("1_r150o")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.43128633, 1.8036817)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.97557783, 1.8036817)
 
 [node name="Camera3D" type="Camera3D" parent="Player"]
 transform = Transform3D(1, 0, 0, 0, 0.7071068, 0.7071068, 0, -0.7071068, 0.7071068, 0, 3.34025, 3.389681)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Player"]
-
-[node name="TreeTest" parent="." instance=ExtResource("1_idj7w")]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 1.4513493, 0, -2.4523904)
+light_color = Color(1, 0.7019608, 0, 1)
+light_energy = 0.5
+light_size = 2.0
+shadow_enabled = true
 
 [node name="Floor" type="MeshInstance3D" parent="."]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, -2.028839, 0)
 mesh = SubResource("PlaneMesh_idj7w")
 
 [node name="Scale" parent="." instance=ExtResource("3_kln2b")]
-transform = Transform3D(0.5, 0, 0, 0, 0.1273938, 0.4834985, 0, -0.4834985, 0.1273938, -1.2051768, 0, 2.3561418)
+transform = Transform3D(0.4811589, 0.13596378, 5.9431686e-09, 0, -2.1855694e-08, 0.5, 0.13596378, -0.4811589, -2.1032122e-08, -1.2528763, 0.13876212, -2.5492656)
+
+[node name="Scale2" parent="." instance=ExtResource("3_kln2b")]
+transform = Transform3D(0.38661593, -0.31706172, -1.3859208e-08, 0, -2.1855694e-08, 0.5, -0.31706172, -0.38661593, -1.689952e-08, 0.64207983, 0.13876212, -3.6443496)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -38,3 +44,73 @@ offset_bottom = 41.0
 offset_right = 62.0
 offset_bottom = 40.0
 text = "Scales: "
+
+[node name="Geometry" type="Node3D" parent="."]
+
+[node name="wall_gltf" parent="Geometry" instance=ExtResource("4_rgh2o")]
+transform = Transform3D(-3.934025e-08, 0, -0.9, 0, 0.9, 0, 0.9, 0, -3.934025e-08, 2.0355458, 0, 1.5410271)
+
+[node name="wall_gltf5" parent="Geometry" instance=ExtResource("4_rgh2o")]
+transform = Transform3D(-0.8999999, 0, -7.868049e-08, 0, 0.9, 0, 7.868049e-08, 0, -0.8999999, -1.9390559, 0, 3.9646564)
+
+[node name="wall_gltf6" parent="Geometry" instance=ExtResource("4_rgh2o")]
+transform = Transform3D(-0.8999999, 0, -7.868049e-08, 0, 0.9, 0, 7.868049e-08, 0, -0.8999999, 1.2896547, 0, 3.9631953)
+
+[node name="wall_gltf2" parent="Geometry" instance=ExtResource("4_rgh2o")]
+transform = Transform3D(-3.934025e-08, 0, -0.9, 0, 0.9, 0, 0.9, 0, -3.934025e-08, 2.0402105, 0, -1.9367504)
+
+[node name="wall_gltf3" parent="Geometry" instance=ExtResource("4_rgh2o")]
+transform = Transform3D(-3.934025e-08, 0, -0.9, 0, 0.9, 0, 0.9, 0, -3.934025e-08, -2.5430694, 0, 1.5410271)
+
+[node name="wall_gltf4" parent="Geometry" instance=ExtResource("4_rgh2o")]
+transform = Transform3D(-3.934025e-08, 0, -0.9, 0, 0.9, 0, 0.9, 0, -3.934025e-08, -2.5520487, 0, -1.9367504)
+
+[node name="tileBrickA_small_gltf" parent="Geometry" instance=ExtResource("4_pbw6q")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, -1.2482378, -0.8351272, 0.29827416)
+
+[node name="tileBrickA_small_gltf2" parent="Geometry" instance=ExtResource("4_pbw6q")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 0.5377438, -0.8351272, 0.29827416)
+
+[node name="tileBrickA_small_gltf5" parent="Geometry" instance=ExtResource("4_pbw6q")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, -1.2482378, -0.8351272, -1.5024987)
+
+[node name="tileBrickA_small_gltf6" parent="Geometry" instance=ExtResource("4_pbw6q")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 0.5377438, -0.8351272, -1.5024987)
+
+[node name="tileBrickA_small_gltf9" parent="Geometry" instance=ExtResource("4_pbw6q")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, -1.2482378, -0.8351272, -3.2075868)
+
+[node name="tileBrickA_small_gltf10" parent="Geometry" instance=ExtResource("4_pbw6q")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 0.5377438, -0.8351272, -3.2075868)
+
+[node name="tileBrickA_small_gltf11" parent="Geometry" instance=ExtResource("4_pbw6q")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, -1.2482378, -0.8351272, -5.0083594)
+
+[node name="tileBrickA_small_gltf12" parent="Geometry" instance=ExtResource("4_pbw6q")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 0.5377438, -0.8351272, -5.0083594)
+
+[node name="tileBrickA_small_gltf3" parent="Geometry" instance=ExtResource("4_pbw6q")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, -1.2482378, -0.8351272, 2.108419)
+
+[node name="tileBrickA_small_gltf4" parent="Geometry" instance=ExtResource("4_pbw6q")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 0.5377438, -0.8351272, 2.108419)
+
+[node name="tileBrickA_small_gltf7" parent="Geometry" instance=ExtResource("4_pbw6q")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, -1.2482378, -0.8351272, 3.8686886)
+
+[node name="tileBrickA_small_gltf8" parent="Geometry" instance=ExtResource("4_pbw6q")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 0.5377438, -0.8351272, 3.8686886)
+
+[node name="Border" type="Node3D" parent="."]
+
+[node name="CameraBorder" parent="Border" instance=ExtResource("5_pbw6q")]
+transform = Transform3D(9.316514, 0, 0, 0, 1, 0, 0, 0, 10.923646, -7.7130127, 3.354456, 0)
+
+[node name="CameraBorder3" parent="Border" instance=ExtResource("5_pbw6q")]
+transform = Transform3D(-4.0723776e-07, 0, -10.923646, 0, 1, 0, 9.316514, 0, -4.7748773e-07, -0.40998602, 3.354456, 9.421962)
+
+[node name="CameraBorder2" parent="Border" instance=ExtResource("5_pbw6q")]
+transform = Transform3D(9.316514, 0, 0, 0, 1, 0, 0, 0, 10.923646, 7.120455, 3.354456, 0)
+
+[node name="CameraBorder4" parent="Border" instance=ExtResource("5_pbw6q")]
+transform = Transform3D(9.316514, 0, 0, 0, -4.3711385e-08, -10.923646, 0, 0.99999994, -4.7748773e-07, -0.030797243, 3.354456, -4.568829)

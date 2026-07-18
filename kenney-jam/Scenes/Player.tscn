@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://becxa8wiyjubp" path="res://Sprites/icon.svg" id="2_gntrk"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_rpqav"]
-size = Vector3(1, 1.0806274, 0.14172363)
+size = Vector3(1, 1.8738098, 0.14172363)
 
 [node name="Player" type="CharacterBody3D"]
 script = ExtResource("1_kyqiw")
@@ -14,5 +14,5 @@ transform = Transform3D(0.42801765, 0, 0, 0, 0.855409, 0, 0, 0, 1, 0, 0, 0)
 texture = ExtResource("2_gntrk")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.026153684, 0.009943545, 0.050466985)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.026153684, -0.38664764, 0.050466985)
 shape = SubResource("BoxShape3D_rpqav")
