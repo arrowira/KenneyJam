@@ -25475,8 +25475,38 @@ transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, -1.155446, -0.8351272, 
 [node name="wall_gltf212" parent="Geometry" instance=ExtResource("14_sxkr1")]
 transform = Transform3D(-3.934025e-08, 0, 0.9, 0, 0.9, 0, -0.9, 0, -3.934025e-08, 0.70515156, 0, -51.552837)
 
+[node name="wall_gltf283" parent="Geometry" instance=ExtResource("14_sxkr1")]
+transform = Transform3D(-3.934025e-08, 0, 0.9, 0, 0.9, 0, -0.9, 0, -3.934025e-08, -19.493446, 0, -44.474236)
+
+[node name="wall_gltf284" parent="Geometry" instance=ExtResource("14_sxkr1")]
+transform = Transform3D(-3.934025e-08, 0, 0.9, 0, 0.9, 0, -0.9, 0, -3.934025e-08, -19.493446, 0, -48.03889)
+
 [node name="wall_gltf213" parent="Geometry" instance=ExtResource("14_sxkr1")]
 transform = Transform3D(-3.934025e-08, 0, 0.9, 0, 0.9, 0, -0.9, 0, -3.934025e-08, 0.70515156, 0, -55.117493)
+
+[node name="wall_gltf290" parent="Geometry" instance=ExtResource("14_sxkr1")]
+transform = Transform3D(-3.934025e-08, 0, 0.9, 0, 0.9, 0, -0.9, 0, -3.934025e-08, -4.370639, 0, -43.99126)
+
+[node name="wall_gltf291" parent="Geometry" instance=ExtResource("14_sxkr1")]
+transform = Transform3D(-3.934025e-08, 0, 0.9, 0, 0.9, 0, -0.9, 0, -3.934025e-08, -4.370639, 0, -47.505207)
+
+[node name="wall_gltf292" parent="Geometry" instance=ExtResource("14_sxkr1")]
+transform = Transform3D(-3.934025e-08, 0, 0.9, 0, 0.9, 0, -0.9, 0, -3.934025e-08, -4.370639, 0, -51.069862)
+
+[node name="wall_gltf300" parent="Geometry" instance=ExtResource("14_sxkr1")]
+transform = Transform3D(-3.934025e-08, 0, 0.9, 0, 0.9, 0, -0.9, 0, -3.934025e-08, -4.370639, 0, -69.57908)
+
+[node name="wall_gltf308" parent="Geometry" instance=ExtResource("14_sxkr1")]
+transform = Transform3D(-3.934025e-08, 0, 0.9, 0, 0.9, 0, -0.9, 0, -3.934025e-08, -4.370639, 0, -73.093025)
+
+[node name="wall_gltf309" parent="Geometry" instance=ExtResource("14_sxkr1")]
+transform = Transform3D(-3.934025e-08, 0, 0.9, 0, 0.9, 0, -0.9, 0, -3.934025e-08, -4.370639, 0, -76.657684)
+
+[node name="wall_gltf310" parent="Geometry" instance=ExtResource("14_sxkr1")]
+transform = Transform3D(-3.934025e-08, 0, 0.9, 0, 0.9, 0, -0.9, 0, -3.934025e-08, -4.370639, 0, -80.23861)
+
+[node name="wall_gltf311" parent="Geometry" instance=ExtResource("14_sxkr1")]
+transform = Transform3D(-3.934025e-08, 0, 0.9, 0, 0.9, 0, -0.9, 0, -3.934025e-08, -4.370639, 0, -83.752556)
 
 [node name="wall_gltf214" parent="Geometry" instance=ExtResource("14_sxkr1")]
 transform = Transform3D(-3.934025e-08, 0, 0.9, 0, 0.9, 0, -0.9, 0, -3.934025e-08, 0.70515156, 0, -58.567795)
@@ -25501,6 +25531,18 @@ transform = Transform3D(-3.934025e-08, 0, 0.9, 0, 0.9, 0, -0.9, 0, -3.934025e-08
 
 [node name="wall_gltf221" parent="Geometry" instance=ExtResource("14_sxkr1")]
 transform = Transform3D(-3.934025e-08, 0, 0.9, 0, 0.9, 0, -0.9, 0, -3.934025e-08, 0.70515156, 0, -87.15939)
+
+[node name="wall_gltf296" parent="Geometry" instance=ExtResource("14_sxkr1")]
+transform = Transform3D(-3.934025e-08, 0, 0.9, 0, 0.9, 0, -0.9, 0, -3.934025e-08, 0.70515156, 0, -90.665276)
+
+[node name="wall_gltf297" parent="Geometry" instance=ExtResource("14_sxkr1")]
+transform = Transform3D(-3.934025e-08, 0, 0.9, 0, 0.9, 0, -0.9, 0, -3.934025e-08, 0.70515156, 0, -93.665276)
+
+[node name="wall_gltf298" parent="Geometry" instance=ExtResource("14_sxkr1")]
+transform = Transform3D(-3.934025e-08, 0, 0.9, 0, 0.9, 0, -0.9, 0, -3.934025e-08, 8.151493, 0, -98.864815)
+
+[node name="wall_gltf299" parent="Geometry" instance=ExtResource("14_sxkr1")]
+transform = Transform3D(-3.934025e-08, 0, 0.9, 0, 0.9, 0, -0.9, 0, -3.934025e-08, -6.319618, 0, -98.90743)
 
 [node name="wall_gltf65" parent="Geometry" instance=ExtResource("14_sxkr1")]
 transform = Transform3D(-3.934025e-08, 0, 0.9, 0, 0.9, 0, -0.9, 0, -3.934025e-08, -10.90172, 9.536743e-07, -11.261286)
@@ -25946,6 +25988,9 @@ transform = Transform3D(-3.9340243e-08, 0, 0.89999986, 0, 0.89999986, 0, -0.8999
 [node name="WallCorner14" parent="Geometry" instance=ExtResource("16_sxkr1")]
 transform = Transform3D(-3.934024e-08, 0, -0.8999998, 0, 0.89999986, 0, 0.8999998, 0, -3.934024e-08, 22.966135, 0, -32.671005)
 
+[node name="WallCorner17" parent="Geometry" instance=ExtResource("16_sxkr1")]
+transform = Transform3D(-3.934024e-08, 0, 0.8999998, 0, 0.89999986, 0, -0.8999998, 0, -3.934024e-08, -24.418154, 0, -67.31122)
+
 [node name="WallCorner15" parent="Geometry" instance=ExtResource("16_sxkr1")]
 transform = Transform3D(0.89999986, 0, 0, 0, 0.89999986, 0, 0, 0, 0.89999986, -4.984839, 0, -37.78672)
 
@@ -26210,6 +26255,9 @@ transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, -9.930666, 0, -100.8376
 [node name="wall_gltf236" parent="Geometry" instance=ExtResource("14_sxkr1")]
 transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, -23.737963, 0, -100.83357)
 
+[node name="wall_gltf282" parent="Geometry" instance=ExtResource("14_sxkr1")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, -26.914997, 0, -100.83357)
+
 [node name="wall_gltf237" parent="Geometry" instance=ExtResource("14_sxkr1")]
 transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, -16.550043, 0, -100.83357)
 
@@ -26236,6 +26284,54 @@ transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, -9.954145, 0, -42.35449
 
 [node name="wall_gltf204" parent="Geometry" instance=ExtResource("14_sxkr1")]
 transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, -17.12581, 0, -42.35449)
+
+[node name="wall_gltf285" parent="Geometry" instance=ExtResource("14_sxkr1")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, -23.480324, 0, -58.168617)
+
+[node name="wall_gltf287" parent="Geometry" instance=ExtResource("14_sxkr1")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, -16.292404, 0, -58.168617)
+
+[node name="wall_gltf288" parent="Geometry" instance=ExtResource("14_sxkr1")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, -19.896107, 0, -58.168617)
+
+[node name="wall_gltf289" parent="Geometry" instance=ExtResource("14_sxkr1")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, -27.067772, 0, -58.168617)
+
+[node name="wall_gltf286" parent="Geometry" instance=ExtResource("14_sxkr1")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, -7.961452, 0, -67.313484)
+
+[node name="wall_gltf293" parent="Geometry" instance=ExtResource("14_sxkr1")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, -0.7735324, 0, -67.313484)
+
+[node name="wall_gltf294" parent="Geometry" instance=ExtResource("14_sxkr1")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, -4.377235, 0, -67.313484)
+
+[node name="wall_gltf295" parent="Geometry" instance=ExtResource("14_sxkr1")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, -11.548901, 0, -67.313484)
+
+[node name="wall_gltf312" parent="Geometry" instance=ExtResource("14_sxkr1")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, -18.117498, 0, -67.313484)
+
+[node name="wall_gltf301" parent="Geometry" instance=ExtResource("14_sxkr1")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, -7.961452, 0, -91.12909)
+
+[node name="wall_gltf302" parent="Geometry" instance=ExtResource("14_sxkr1")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, -0.7735324, 0, -91.12909)
+
+[node name="wall_gltf303" parent="Geometry" instance=ExtResource("14_sxkr1")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, -4.377235, 0, -91.12909)
+
+[node name="wall_gltf304" parent="Geometry" instance=ExtResource("14_sxkr1")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, -11.548901, 0, -91.12909)
+
+[node name="wall_gltf305" parent="Geometry" instance=ExtResource("14_sxkr1")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, -22.295935, 0, -91.12909)
+
+[node name="wall_gltf306" parent="Geometry" instance=ExtResource("14_sxkr1")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, -15.108015, 0, -91.12909)
+
+[node name="wall_gltf307" parent="Geometry" instance=ExtResource("14_sxkr1")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, -18.711718, 0, -91.12909)
 
 [node name="wall_gltf205" parent="Geometry" instance=ExtResource("14_sxkr1")]
 transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, -20.729513, 0, -42.35449)
