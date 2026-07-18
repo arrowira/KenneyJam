@@ -5,6 +5,9 @@ var dir = Vector2(-1,0)
 var behavior = "idle"
 var SPEED = 0.01
 
+var player
+var byPlayer = false
+
 func _physics_process(delta: float) -> void:
 	rotation.y=dir.angle_to(Vector2(-1,0))
 	if behavior == "walk":
@@ -30,3 +33,15 @@ func _on_wall_detection_body_entered(body: Node3D) -> void:
 	dir = dir.orthogonal()
 	if randf()<0.5:
 		dir *= -1
+
+
+func _on_eyes_body_entered(body: Node3D) -> void:
+	if body.get_parent().name == "Player":
+		byPlayer = true
+		player = body.get_parent()
+
+
+
+func _on_eyes_body_exited(body: Node3D) -> void:
+	if body.get_parent().name == "Player":
+		byPlayer = false

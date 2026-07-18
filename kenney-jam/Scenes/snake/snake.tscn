@@ -1,7 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://b24m11ishcol7"]
+[gd_scene load_steps=9 format=3 uid="uid://b24m11ishcol7"]
 
 [ext_resource type="Texture2D" uid="uid://becxa8wiyjubp" path="res://Sprites/icon.svg" id="1_6voqi"]
 [ext_resource type="Script" uid="uid://c7fxmaeqc8ec7" path="res://Scripts/snake.gd" id="1_sprpx"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_s8mkf"]
+size = Vector3(2.1323242, 0.64697266, 0.9793701)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_sprpx"]
 size = Vector3(0.7956543, 0.34106445, 0.43188477)
@@ -138,6 +141,16 @@ script = ExtResource("1_sprpx")
 [node name="Node" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.60025674, 0, 0)
 
+[node name="eyes" type="Area3D" parent="Node"]
+transform = Transform3D(1, 0, 0, 0, 1.0000001, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Node/eyes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.3521543, 0.17651367, -0.010314941)
+shape = SubResource("BoxShape3D_s8mkf")
+
+[node name="RayCast3D" type="RayCast3D" parent="Node/eyes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4010989, 0, 0)
+
 [node name="WallDetection" type="Area3D" parent="Node"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Node/WallDetection"]
@@ -147,9 +160,6 @@ shape = SubResource("BoxShape3D_sprpx")
 [node name="head" type="Sprite3D" parent="Node"]
 transform = Transform3D(0.42801765, 0, 0, 0, 0.855409, 0, 0, 0, 1, 0, 0.2, 0)
 texture = ExtResource("1_6voqi")
-
-[node name="eyes" type="Area3D" parent="Node/head"]
-transform = Transform3D(2.3363523, 0, 0, 0, 1.1690315, 0, 0, 0, 1, 0, 0, 0)
 
 [node name="middle" type="Sprite3D" parent="Node"]
 transform = Transform3D(0.42801765, 0, 0, 0, 0.855409, 0, 0, 0, 1, 0.59833646, 0, 0)
@@ -172,5 +182,7 @@ autostart = true
 wait_time = 0.2
 one_shot = true
 
+[connection signal="body_entered" from="Node/eyes" to="." method="_on_eyes_body_entered"]
+[connection signal="body_exited" from="Node/eyes" to="." method="_on_eyes_body_exited"]
 [connection signal="body_entered" from="Node/WallDetection" to="." method="_on_wall_detection_body_entered"]
 [connection signal="timeout" from="mood" to="." method="_on_mood_timeout"]
