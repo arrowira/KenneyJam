@@ -173,6 +173,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.60025674, 0, 0)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.2598341, 0.3294731, -0.0736084)
 shape = SubResource("BoxShape3D_sprpx")
 
+[node name="SpotLight3D" type="SpotLight3D" parent="WallDetection"]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 0)
+spot_angle = 17.16
+
 [node name="eyes" type="Area3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1.0000001, 0, 0, 0, 1, -0.60025674, 0, 0)
 
