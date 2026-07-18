@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://n85n8vu77c31"]
+
+[node name="Merchant" type="Control"]
+layout_mode = 3
+anchor_right = 0.39000002
+anchor_bottom = 0.287
+offset_left = -2.0
+offset_right = 594.72
+offset_bottom = 287.024
