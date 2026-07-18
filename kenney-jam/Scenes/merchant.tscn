@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://n85n8vu77c31"]
+[gd_scene load_steps=0 format=3 uid="uid://n85n8vu77c31"]
 
 [node name="Merchant" type="Control"]
 layout_mode = 3

@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://ceo3p164x1bsp"]
+
+[ext_resource type="Texture2D" uid="uid://cpfbcem0wmyva" path="res://Sprites/rem.png" id="1_kjnfx"]
+
+[node name="Avery" type="Node3D"]
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+texture = ExtResource("1_kjnfx")

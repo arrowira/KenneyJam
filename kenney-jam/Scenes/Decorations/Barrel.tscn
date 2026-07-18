@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://6b4bshaddybu"]
+
+[ext_resource type="PackedScene" uid="uid://dt60kqgs1otxi" path="res://KayKit Dungeon Pack 1.0/Models/gltf/barrel.gltf.glb" id="1_gjff6"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_tyrhr"]
+radius = 0.49829102
+height = 1.2473145
+
+[node name="Bookshelf" type="Node3D"]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.372568, 0.10126197, 1.0970479)
+shape = SubResource("CapsuleShape3D_tyrhr")
+
+[node name="barrel_gltf" parent="." instance=ExtResource("1_gjff6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.353706, 0, 1.1015207)
