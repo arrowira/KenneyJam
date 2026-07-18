@@ -13,6 +13,7 @@ var angerSpeedMod = 2
 
 var pScale = preload("res://Scenes/Scale.tscn")
 var color
+var rarity = 3
 
 func _ready() -> void:
 	color = Color.WHITE
@@ -56,6 +57,7 @@ func _on_mood_timeout() -> void:
 	#scale drop
 	if randf()<0.05:
 		var newScale = pScale.instantiate()
+		newScale.configure(color, rarity)
 		newScale.position=position
 		newScale.position.y-=0.2
 		newScale.rotation.y = randf()*360
