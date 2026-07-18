@@ -54,7 +54,7 @@ func _physics_process(delta: float) -> void:
 	if(Input.is_action_pressed("run") && !Input.is_action_pressed("crouch")):
 		dir = Vector3(dir.x*2, dir.y, dir.z*2)
 	
-	velocity += dir
+	velocity += dir.normalized()
 	velocity-=velocity*0.2
 	move_and_slide()
 	
