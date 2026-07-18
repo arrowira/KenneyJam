@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://b72krwxb2njg1"]
+[gd_scene load_steps=3 format=3 uid="uid://ollbhgqv15eu"]
 
 [ext_resource type="PackedScene" uid="uid://pjdgpl58qdry" path="res://KayKit Dungeon Pack 1.0/Models/gltf/wall.gltf.glb" id="1_d155t"]
 
@@ -6,6 +6,7 @@
 size = Vector3(4.003662, 3.920105, 1.3479004)
 
 [node name="wall_gltf" instance=ExtResource("1_d155t")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 0, 0, 0)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." index="1"]
 
