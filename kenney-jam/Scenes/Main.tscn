@@ -1,14 +1,23 @@
-[gd_scene load_steps=3 format=3 uid="uid://bh2eknbs0py68"]
+[gd_scene load_steps=4 format=3 uid="uid://bh2eknbs0py68"]
 
 [ext_resource type="PackedScene" uid="uid://pnraj6qmngjw" path="res://Scenes/TreeTest.tscn" id="1_idj7w"]
 [ext_resource type="PackedScene" uid="uid://cbnglbm81uf2k" path="res://Scenes/Player.tscn" id="1_r150o"]
 
+[sub_resource type="PlaneMesh" id="PlaneMesh_idj7w"]
+
 [node name="Main" type="Node3D"]
 
 [node name="Player" parent="." instance=ExtResource("1_r150o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.43128633, 1.8036817)
 
 [node name="Camera3D" type="Camera3D" parent="Player"]
 transform = Transform3D(1, 0, 0, 0, 0.7071068, 0.7071068, 0, -0.7071068, 0.7071068, 0, 3.34025, 3.389681)
 
+[node name="OmniLight3D" type="OmniLight3D" parent="Player"]
+
 [node name="TreeTest" parent="." instance=ExtResource("1_idj7w")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 1.4513493, 0, -2.4523904)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, -2.028839, 0)
+mesh = SubResource("PlaneMesh_idj7w")
