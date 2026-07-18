@@ -1,4 +1,10 @@
-[gd_scene load_steps=0 format=3 uid="uid://n85n8vu77c31"]
+[gd_scene load_steps=6 format=3 uid="uid://n85n8vu77c31"]
+
+[ext_resource type="Texture2D" uid="uid://djtvjsug888fp" path="res://UI elements/PNG/panelInset_beige.png" id="1_82brx"]
+[ext_resource type="Texture2D" uid="uid://bjh82ndl32fmj" path="res://UI elements/PNG/buttonLong_grey.png" id="2_k41ok"]
+[ext_resource type="Texture2D" uid="uid://cnh870q88o1mh" path="res://UI elements/PNG/buttonLong_brown.png" id="3_1xyb1"]
+[ext_resource type="Texture2D" uid="uid://blchv0gxt4cgo" path="res://UI elements/PNG/arrowBeige_right.png" id="4_hc42i"]
+[ext_resource type="Texture2D" uid="uid://bot37ybrbqek5" path="res://UI elements/PNG/panelInset_blue.png" id="5_vegbm"]
 
 [node name="Merchant" type="Control"]
 layout_mode = 3
@@ -12,6 +18,7 @@ offset_right = 3.4399414
 offset_bottom = 0.19195557
 
 [node name="ColorRect" type="ColorRect" parent="."]
+visible = false
 layout_mode = 0
 offset_left = -57.0
 offset_top = -148.0
@@ -20,6 +27,7 @@ offset_bottom = 919.0
 color = Color(0.49019608, 0.5137255, 1, 1)
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
+visible = false
 layout_mode = 0
 offset_left = 459.0
 offset_top = -132.0
@@ -35,62 +43,72 @@ layout_mode = 1
 anchors_preset = -1
 anchor_right = 1.223
 anchor_bottom = 1.366
-offset_top = 17.0
-offset_right = 0.30895996
-offset_bottom = -0.16204834
+offset_left = -499.0
+offset_top = 29.0
+offset_right = -479.69104
+offset_bottom = 11.837952
 grow_horizontal = 2
 theme_override_constants/h_separation = 8
 columns = 2
 
 [node name="ColorRect" type="ColorRect" parent="HBoxContainer"]
+visible = false
 custom_minimum_size = Vector2(200, 200)
 layout_mode = 2
 size_flags_horizontal = 3
 color = Color(0, 0.49803922, 1, 1)
 
 [node name="ColorRect9" type="ColorRect" parent="HBoxContainer"]
+visible = false
 custom_minimum_size = Vector2(200, 200)
 layout_mode = 2
 size_flags_horizontal = 3
 color = Color(0, 0.49803922, 1, 1)
 
 [node name="ColorRect2" type="ColorRect" parent="HBoxContainer"]
+visible = false
 custom_minimum_size = Vector2(200, 200)
 layout_mode = 2
 size_flags_horizontal = 3
 color = Color(0, 0.49803922, 1, 1)
 
 [node name="ColorRect3" type="ColorRect" parent="HBoxContainer"]
+visible = false
 custom_minimum_size = Vector2(200, 200)
 layout_mode = 2
 size_flags_horizontal = 3
 color = Color(0, 0.49803922, 1, 1)
 
 [node name="ColorRect4" type="ColorRect" parent="HBoxContainer"]
+visible = false
 custom_minimum_size = Vector2(200, 200)
 layout_mode = 2
 size_flags_horizontal = 3
 color = Color(0, 0.49803922, 1, 1)
 
 [node name="ColorRect5" type="ColorRect" parent="HBoxContainer"]
+visible = false
 custom_minimum_size = Vector2(200, 200)
 layout_mode = 2
 size_flags_horizontal = 3
 color = Color(0, 0.49803922, 1, 1)
 
 [node name="ColorRect6" type="ColorRect" parent="HBoxContainer"]
+visible = false
 custom_minimum_size = Vector2(200, 200)
 layout_mode = 2
 size_flags_horizontal = 3
 color = Color(0, 0.49803922, 1, 1)
 
 [node name="ColorRect7" type="ColorRect" parent="HBoxContainer"]
+visible = false
 custom_minimum_size = Vector2(200, 200)
 layout_mode = 2
 size_flags_horizontal = 3
 color = Color(0, 0.49803922, 1, 1)
 
 [node name="RichTextLabel2" type="RichTextLabel" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = -1
 anchor_top = 0.135
@@ -112,3 +130,125 @@ offset_right = 805.0
 offset_bottom = 81.0
 theme_override_font_sizes/font_size = 45
 text = "Buy: 5 Scales"
+
+[node name="PanelInsetBeige" type="Sprite2D" parent="."]
+position = Vector2(327.00003, 205)
+scale = Vector2(4.295699, 2.5744681)
+texture = ExtResource("1_82brx")
+
+[node name="Title" type="Sprite2D" parent="."]
+position = Vector2(330, 123)
+texture = ExtResource("2_k41ok")
+
+[node name="merchant_Shop" type="RichTextLabel" parent="Title"]
+offset_left = -73.0
+offset_top = -17.0
+offset_right = 100.0
+offset_bottom = 23.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 20
+text = "Merchant Shop"
+
+[node name="speed" type="Sprite2D" parent="."]
+position = Vector2(429.75, 174.99998)
+texture = ExtResource("3_1xyb1")
+
+[node name="speed_Text" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 337.0
+offset_top = 146.0
+offset_right = 524.0
+offset_bottom = 199.0
+text = "Speed                   1        2"
+vertical_alignment = 1
+
+[node name="stealth" type="Sprite2D" parent="."]
+position = Vector2(227.74994, 174.99998)
+texture = ExtResource("3_1xyb1")
+
+[node name="stealth_Text" type="RichTextLabel" parent="stealth"]
+offset_left = -92.74994
+offset_top = -28.999985
+offset_right = 94.25006
+offset_bottom = 24.000015
+text = "Stealth                 1        2"
+vertical_alignment = 1
+
+[node name="scale_Dupe_Button" type="Sprite2D" parent="."]
+position = Vector2(228.24994, 235.99998)
+scale = Vector2(0.99473685, 1)
+texture = ExtResource("3_1xyb1")
+
+[node name="more_Scale_Text" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 135.0
+offset_top = 209.0
+offset_right = 322.0
+offset_bottom = 262.0
+text = "More Scales        1        2"
+vertical_alignment = 1
+
+[node name="torch_Light_Button" type="Sprite2D" parent="."]
+position = Vector2(428.75, 236.99998)
+texture = ExtResource("3_1xyb1")
+
+[node name="torch_Intensity_Text" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 336.0
+offset_top = 208.0
+offset_right = 523.0
+offset_bottom = 261.0
+text = "Torch Intensity  1        2"
+vertical_alignment = 1
+
+[node name="torch_Time_Button" type="Sprite2D" parent="."]
+position = Vector2(228.74994, 297)
+texture = ExtResource("3_1xyb1")
+
+[node name="torch_Time_Text" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 135.0
+offset_top = 268.0
+offset_right = 322.0
+offset_bottom = 321.0
+text = "Torch Fuel          1        2"
+vertical_alignment = 1
+
+[node name="open_Shorcut_Button" type="Sprite2D" parent="."]
+position = Vector2(430.75, 297)
+texture = ExtResource("3_1xyb1")
+
+[node name="torch_Time_Text2" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 337.0
+offset_top = 268.0
+offset_right = 524.0
+offset_bottom = 321.0
+text = "Shortcut Access"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ArrowBeigeRight" type="Sprite2D" parent="."]
+position = Vector2(285, 173)
+texture = ExtResource("4_hc42i")
+
+[node name="ArrowBeigeRight2" type="Sprite2D" parent="."]
+position = Vector2(287, 237)
+texture = ExtResource("4_hc42i")
+
+[node name="ArrowBeigeRight3" type="Sprite2D" parent="."]
+position = Vector2(488, 173)
+texture = ExtResource("4_hc42i")
+
+[node name="ArrowBeigeRight4" type="Sprite2D" parent="."]
+position = Vector2(487, 235)
+texture = ExtResource("4_hc42i")
+
+[node name="ArrowBeigeRight6" type="Sprite2D" parent="."]
+position = Vector2(283, 296)
+texture = ExtResource("4_hc42i")
+
+[node name="PanelInsetBlue" type="Sprite2D" parent="."]
+position = Vector2(-116, 413.00003)
+scale = Vector2(0.5322581, 0.3723404)
+texture = ExtResource("5_vegbm")
