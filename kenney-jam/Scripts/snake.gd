@@ -11,6 +11,8 @@ var byPlayer = false
 var angerDir = Vector2(1,0)
 var angerSpeedMod = 2
 
+var pScale = preload("res://Scenes/Scale.tscn")
+
 func _physics_process(delta: float) -> void:
 	if byPlayer:
 		$eyes/RayCast3D.target_position=player.position
@@ -41,6 +43,13 @@ func _physics_process(delta: float) -> void:
 		rotation.y=dir.angle_to(Vector2(-1,0))
 
 func _on_mood_timeout() -> void:
+	#scale drop
+	if randf()<0.05:
+		var newScale = pScale.instantiate()
+		newScale.position=position
+		get_parent().get_parent().add_child(newScale)
+	
+	#mood swings
 	if randf()<0.8:
 		behavior = "walk"
 		$AnimationPlayer.speed_scale=1
