@@ -1,6 +1,7 @@
-[gd_scene load_steps=21 format=3 uid="uid://bh2eknbs0py68"]
+[gd_scene load_steps=22 format=3 uid="uid://bh2eknbs0py68"]
 
 [ext_resource type="PackedScene" uid="uid://cbnglbm81uf2k" path="res://Scenes/Player.tscn" id="1_r150o"]
+[ext_resource type="Script" uid="uid://bios8bcaiuha6" path="res://Scripts/main.gd" id="1_sxkr1"]
 [ext_resource type="Script" path="res://Scripts/LightFlicker.gd" id="2_50glp"]
 [ext_resource type="PackedScene" path="res://Scenes/Scale.tscn" id="3_kln2b"]
 [ext_resource type="PackedScene" uid="uid://bctxnf3prktpb" path="res://KayKit Dungeon Pack 1.0/Models/gltf/tileBrickA_small.gltf.glb" id="4_pbw6q"]
@@ -23,6 +24,7 @@
 [sub_resource type="PlaneMesh" id="PlaneMesh_idj7w"]
 
 [node name="Main" type="Node3D"]
+script = ExtResource("1_sxkr1")
 
 [node name="Player" parent="." instance=ExtResource("1_r150o")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.97557783, 1.8036817)
