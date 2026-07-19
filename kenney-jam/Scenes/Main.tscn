@@ -1,9 +1,10 @@
-[gd_scene load_steps=20 format=3 uid="uid://bh2eknbs0py68"]
+[gd_scene load_steps=21 format=3 uid="uid://bh2eknbs0py68"]
 
 [ext_resource type="PackedScene" uid="uid://cbnglbm81uf2k" path="res://Scenes/Player.tscn" id="1_r150o"]
 [ext_resource type="Script" uid="uid://bios8bcaiuha6" path="res://Scripts/main.gd" id="1_sxkr1"]
-[ext_resource type="Script" uid="uid://dgovh7333uys2" path="res://Scripts/LightFlicker.gd" id="2_50glp"]
+[ext_resource type="Script" path="res://Scripts/LightFlicker.gd" id="2_50glp"]
 [ext_resource type="PackedScene" uid="uid://x8b7eyub7idr" path="res://Scenes/Scale.tscn" id="3_kln2b"]
+[ext_resource type="Script" uid="uid://c0w3au876ibcu" path="res://Scripts/wallvision.gd" id="3_sxkr1"]
 [ext_resource type="PackedScene" uid="uid://bctxnf3prktpb" path="res://KayKit Dungeon Pack 1.0/Models/gltf/tileBrickA_small.gltf.glb" id="4_pbw6q"]
 [ext_resource type="PackedScene" uid="uid://cout26yjaa0hs" path="res://Scenes/CameraBorder.tscn" id="5_pbw6q"]
 [ext_resource type="PackedScene" uid="uid://cyknrmwfs74i1" path="res://KayKit Dungeon Pack 1.0/Models/gltf/potA.gltf.glb" id="7_1p5hy"]
@@ -12,7 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://cqct3vyo7tji6" path="res://KayKit Dungeon Pack 1.0/Models/gltf/potionSmall_green.gltf.glb" id="10_2w5on"]
 [ext_resource type="PackedScene" uid="uid://bgi27ub7hyx6x" path="res://KayKit Dungeon Pack 1.0/Models/gltf/potionSmall_red.gltf.glb" id="11_346fj"]
 [ext_resource type="PackedScene" uid="uid://cftwt0bxekx6u" path="res://KayKit Dungeon Pack 1.0/Models/gltf/quiver_half_full.gltf.glb" id="14_0sclb"]
-[ext_resource type="PackedScene" uid="uid://ceo3p164x1bsp" path="res://Scenes/Avery.tscn" id="14_346fj"]
+[ext_resource type="PackedScene" path="res://Scenes/Avery.tscn" id="14_346fj"]
 [ext_resource type="PackedScene" uid="uid://ollbhgqv15eu" path="res://Scenes/Decorations/wall.tscn" id="14_sxkr1"]
 [ext_resource type="PackedScene" uid="uid://ditc3wweafh43" path="res://Scenes/Decorations/Gate.tscn" id="15_0sclb"]
 [ext_resource type="AudioStream" uid="uid://b51vlpq523nmo" path="res://Sounds/soundreality-wind-blowing-457954.mp3" id="15_h1m7h"]
@@ -40,6 +41,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.39, 3.3399997, -3.5762787e-
 
 [node name="Camera" type="Camera3D" parent="Player"]
 transform = Transform3D(1, 0, 0, 0, 0.7071068, 0.7071068, 0, -0.7071068, 0.7071068, 0, 3.34025, 3.389681)
+
+[node name="RayCast3D" type="RayCast3D" parent="Player/Camera"]
+target_position = Vector3(0, 0, -3)
+script = ExtResource("3_sxkr1")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Player"]
 light_color = Color(0.959099, 0.67127705, 5.2366257e-05, 1)
