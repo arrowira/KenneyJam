@@ -26723,6 +26723,9 @@ transform = Transform3D(0.49654248, 0, 0.33681685, 0, 0.6, 0, -0.33681685, 0, 0.
 [node name="Bookshelf11" parent="Geometry" instance=ExtResource("12_2w5on")]
 transform = Transform3D(0.49654248, 0, 0.33681685, 0, 0.6, 0, -0.33681685, 0, 0.49654248, -26.242233, 2.116776, -33.747536)
 
+[node name="Bookshelf15" parent="Geometry" instance=ExtResource("12_2w5on")]
+transform = Transform3D(0.32826626, 0, 0.5022363, 0, 0.59999996, 0, -0.5022363, 0, 0.32826626, -9.99281, 2.116774, -85.528725)
+
 [node name="Bookshelf8" parent="Geometry" instance=ExtResource("12_2w5on")]
 transform = Transform3D(0.49654248, 0, 0.33681685, 0, 0.6, 0, -0.33681685, 0, 0.49654248, 12.6106825, 0, 7.3179264)
 
@@ -26734,6 +26737,9 @@ transform = Transform3D(0.9195748, 0, -0.39291498, 0, 1, 0, 0.39291498, 0, 0.919
 
 [node name="Bookshelf4" parent="Geometry" instance=ExtResource("14_jyqft")]
 transform = Transform3D(0.77660745, 0, -0.6299848, 0, 1, 0, 0.6299848, 0, 0.77660745, 24.494778, 0, -24.175907)
+
+[node name="Bookshelf16" parent="Geometry" instance=ExtResource("14_jyqft")]
+transform = Transform3D(0.8379379, 0, 0.54576564, 0, 1, 0, -0.54576564, 0, 0.8379379, -10.23233, -1.9073486e-06, -72.56396)
 
 [node name="Bookshelf6" parent="Geometry" instance=ExtResource("14_jyqft")]
 transform = Transform3D(0.931875, 0.36277935, 0.0004495335, 0, 0.0012391366, -0.9999992, -0.36277962, 0.9318743, 0.0011547203, 29.436348, 0.73832655, -4.234974)
@@ -26753,8 +26759,20 @@ transform = Transform3D(0.9537904, 0.30047274, -1.31340805e-08, 0, -4.371139e-08
 [node name="Bookshelf12" parent="Geometry" instance=ExtResource("17_c4ay3")]
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -16.579823, 0.7154715, -38.68163)
 
+[node name="Bookshelf17" parent="Geometry" instance=ExtResource("17_c4ay3")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -25.702246, 0.7154696, -88.44258)
+
 [node name="Bookshelf13" parent="Geometry" instance=ExtResource("13_0sclb")]
 transform = Transform3D(-0.34552753, 0, 0.9384086, 0, 1, 0, -0.9384086, 0, -0.34552753, 2.9912758, 0, -36.067635)
+
+[node name="Bookshelf18" parent="Geometry" instance=ExtResource("13_0sclb")]
+transform = Transform3D(-0.8035764, 0, -0.5952016, 0, 1, 0, 0.5952016, 0, -0.8035764, -25.04556, 0, -61.823154)
+
+[node name="wall_gltf" parent="Geometry" instance=ExtResource("14_sxkr1")]
+transform = Transform3D(0.8537799, -0.2139187, 0.18787925, 0, 0.59390706, 0.67622066, -0.28471008, -0.6414929, 0.5634066, -21.994364, 0, -74.5633)
+
+[node name="Bookshelf14" parent="Geometry" instance=ExtResource("18_0sclb")]
+transform = Transform3D(0.90144, 0.3049693, 0.30724525, 0, 0.7097306, -0.7044732, -0.43290406, 0.63504034, 0.63977957, -23.572687, 0, -79.78413)
 
 [node name="Border" type="Node3D" parent="."]
 
@@ -26800,6 +26818,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.421448, 0.2883258, -15.50
 [node name="Bookshelf9" parent="Border" instance=ExtResource("12_2w5on")]
 transform = Transform3D(0.9549889, 0, 0.2966416, 0, 1, 0, -0.2966416, 0, 0.9549889, -26.090286, 0, -33.649292)
 
+[node name="Bookshelf11" parent="Border" instance=ExtResource("12_2w5on")]
+transform = Transform3D(0.7667508, 0, 0.64194494, 0, 1, 0, -0.64194494, 0, 0.7667508, -9.814734, -1.9073486e-06, -85.49668)
+
 [node name="Bookshelf10" parent="Border" instance=ExtResource("13_0sclb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.5146847, -0.04877329, -36.016167)
 
@@ -26833,6 +26854,9 @@ transform = Transform3D(-0.7424321, 0, -0.6699214, 0, 1, 0, 0.6699214, 0, -0.742
 
 [node name="Bookshelf2" parent="." instance=ExtResource("18_0sclb")]
 transform = Transform3D(1, 0, 0, 0, 0.84357893, -0.5370052, 0, 0.5370052, 0.84357893, 12.771425, 0.21200323, -11.476295)
+
+[node name="Bookshelf5" parent="." instance=ExtResource("18_0sclb")]
+transform = Transform3D(-0.99890786, -0.025090467, -0.0394145, 0, 0.84357893, -0.5370052, 0.046722952, -0.5364187, -0.8426576, -6.098543, 0.21200323, -64.77284)
 
 [node name="Gate" parent="." instance=ExtResource("15_0sclb")]
 transform = Transform3D(0.52376384, -0.61646616, 0.58791226, -0.38066244, 0.4480368, 0.80892456, -0.762081, -0.6474815, -2.8302317e-08, -16.186872, 0.5861316, -14.306345)
