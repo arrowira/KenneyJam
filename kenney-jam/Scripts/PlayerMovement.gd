@@ -17,7 +17,7 @@ var Speed = 1
 
 
 func _ready():
-	get_tree().tree_changed.connect(SceneChange)
+	get_tree().scene_changed.connect(SceneChange)
 	SceneChange()
 	CTorch = MaxTorch
 
