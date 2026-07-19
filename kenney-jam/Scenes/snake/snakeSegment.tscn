@@ -1,11 +1,8 @@
 [gd_scene load_steps=2 format=3 uid="uid://b0w2drwswdyoi"]
 
-[ext_resource type="PackedScene" uid="uid://ccno3oos65dna" path="res://KayKit Dungeon Pack 1.0/Models/gltf/chestTop_common_empty.gltf.glb" id="1_owv8p"]
+[ext_resource type="PackedScene" uid="uid://d0n4hm82p78qx" path="res://Scenes/shield_common_gltf.tscn" id="1_m51fw"]
 
 [node name="SnakeSegment" type="Node3D"]
 
-[node name="chestTop_common_empty_gltf" parent="." instance=ExtResource("1_owv8p")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.055877447, 1.0329219, -0.51498747)
-
-[node name="chestTop_common_empty_gltf2" parent="." instance=ExtResource("1_owv8p")]
-transform = Transform3D(1, 0, 0, 0, -1, 8.742278e-08, 0, -8.742278e-08, -1, 0.04897821, 1.0196834, 0.43892604)
+[node name="shield_common_gltf" parent="." instance=ExtResource("1_m51fw")]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0)
