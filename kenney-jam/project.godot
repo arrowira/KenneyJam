@@ -18,6 +18,7 @@ config/icon="res://Sprites/icon.svg"
 [autoload]
 
 MusicManager="*res://Scenes/music_manager.tscn"
+Player="*res://Scenes/Player.tscn"
 
 [input]
 
