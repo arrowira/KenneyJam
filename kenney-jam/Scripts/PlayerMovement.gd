@@ -22,7 +22,12 @@ func _ready():
 	CTorch = MaxTorch
 
 func _physics_process(delta: float) -> void:
-	if(get_tree().current_scene.name == "Main"):
+	var checkable = false
+	if(get_tree().current_scene != null):
+		checkable = true
+	else:
+		checkable = false
+	if(checkable == true && get_tree().current_scene.name == "Main"):
 		if(CTorch <= 0):
 			print("Return By Death")
 		
@@ -78,7 +83,8 @@ func _physics_process(delta: float) -> void:
 		move_and_slide()
 
 func SceneChange():
-	if(get_tree().current_scene.name == "Main"):
-		DScale = $Model.scale
-		TPos = $Camera.position
-		global_position = Vector3(0.0, 0.127, -5.26)
+	if(get_tree().current_scene != null):
+		if(get_tree().current_scene.name == "Main"):
+			DScale = $Model.scale
+			TPos = $Camera.position
+			global_position = Vector3(0.0, 0.127, -5.26)
