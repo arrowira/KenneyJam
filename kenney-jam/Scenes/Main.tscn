@@ -26472,25 +26472,25 @@ transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, -2.8674564, 0, -100.837
 transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, -6.3269634, 0, -100.837616)
 
 [node name="wall_gltf412" parent="Geometry" instance=ExtResource("14_sxkr1")]
-transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, -17.86401, 0, -109.84063)
+transform = Transform3D(0.885948, 0, 0.15841767, 0, 0.9, 0, -0.15841767, 0, 0.885948, -17.86401, 0, -109.84063)
 
 [node name="wall_gltf413" parent="Geometry" instance=ExtResource("14_sxkr1")]
-transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, -4.4263887, 0, -121.817665)
+transform = Transform3D(0.8789781, 0, -0.19338451, 0, 0.9, 0, 0.19338451, 0, 0.8789781, -4.4263887, 0, -121.817665)
 
 [node name="wall_gltf414" parent="Geometry" instance=ExtResource("14_sxkr1")]
-transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, -19.426388, 0, -127.817665)
+transform = Transform3D(0.86648625, 0, -0.24331355, 0, 0.9, 0, 0.24331355, 0, 0.86648625, -19.426388, 0, -127.817665)
 
 [node name="wall_gltf415" parent="Geometry" instance=ExtResource("14_sxkr1")]
-transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 7.573612, 0, -130.81766)
+transform = Transform3D(0.87473166, 0, 0.2117653, 0, 0.9, 0, -0.2117653, 0, 0.87473166, 7.573612, 0, -130.81766)
 
 [node name="wall_gltf416" parent="Geometry" instance=ExtResource("14_sxkr1")]
-transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 20.573612, 0, -124.81766)
+transform = Transform3D(0.8629912, 0, 0.25543305, 0, 0.9, 0, -0.25543305, 0, 0.8629912, 20.573612, 0, -124.81766)
 
 [node name="wall_gltf417" parent="Geometry" instance=ExtResource("14_sxkr1")]
-transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 6.573612, 0, -115.81766)
+transform = Transform3D(0.72811526, 0, -0.5290067, 0, 0.9, 0, 0.5290067, 0, 0.72811526, 6.573612, 0, -115.81766)
 
 [node name="wall_gltf418" parent="Geometry" instance=ExtResource("14_sxkr1")]
-transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 19.573612, 0, -107.81766)
+transform = Transform3D(0.85886323, 0, 0.2689868, 0, 0.9, 0, -0.2689868, 0, 0.85886323, 19.573612, 0, -107.81766)
 
 [node name="wall_gltf232" parent="Geometry" instance=ExtResource("14_sxkr1")]
 transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, -9.930666, 0, -100.837616)
@@ -26726,6 +26726,18 @@ transform = Transform3D(0.49654248, 0, 0.33681685, 0, 0.6, 0, -0.33681685, 0, 0.
 [node name="Bookshelf15" parent="Geometry" instance=ExtResource("12_2w5on")]
 transform = Transform3D(0.32826626, 0, 0.5022363, 0, 0.59999996, 0, -0.5022363, 0, 0.32826626, -9.99281, 2.116774, -85.528725)
 
+[node name="Bookshelf24" parent="Geometry" instance=ExtResource("12_2w5on")]
+transform = Transform3D(0.32826626, 0, 0.5022363, 0, 0.59999996, 0, -0.5022363, 0, 0.32826626, 23.565178, 2.116774, -94.16573)
+
+[node name="Bookshelf25" parent="Geometry" instance=ExtResource("12_2w5on")]
+transform = Transform3D(0.32826626, 0, 0.5022363, 0, 0.59999996, 0, -0.5022363, 0, 0.32826626, 22.859236, 2.1167722, -116.61126)
+
+[node name="Bookshelf35" parent="Geometry" instance=ExtResource("12_2w5on")]
+transform = Transform3D(0.4017585, 0, -0.44563454, 0, 0.59999996, 0, 0.44563454, 0, 0.4017585, 13.6695175, 0.3498416, -115.259224)
+
+[node name="Bookshelf26" parent="Geometry" instance=ExtResource("12_2w5on")]
+transform = Transform3D(0.32826626, 0, 0.5022363, 0, 0.59999996, 0, -0.5022363, 0, 0.32826626, -7.93972, 2.1167722, -107.90448)
+
 [node name="Bookshelf8" parent="Geometry" instance=ExtResource("12_2w5on")]
 transform = Transform3D(0.49654248, 0, 0.33681685, 0, 0.6, 0, -0.33681685, 0, 0.49654248, 12.6106825, 0, 7.3179264)
 
@@ -26735,11 +26747,29 @@ transform = Transform3D(0.89882463, 0, 0.43830842, 0, 1, 0, -0.43830842, 0, 0.89
 [node name="Bookshelf3" parent="Geometry" instance=ExtResource("12_2w5on")]
 transform = Transform3D(0.9195748, 0, -0.39291498, 0, 1, 0, 0.39291498, 0, 0.9195748, 17.387484, 0.059748292, -36.449287)
 
+[node name="Bookshelf19" parent="Geometry" instance=ExtResource("12_2w5on")]
+transform = Transform3D(0.8054217, 0, 0.5927022, 0, 1, 0, -0.5927022, 0, 0.8054217, -14.117395, 0.059748292, -47.74752)
+
+[node name="Bookshelf20" parent="Geometry" instance=ExtResource("12_2w5on")]
+transform = Transform3D(0.8054217, 0, 0.5927022, 0, 1, 0, -0.5927022, 0, 0.8054217, 15.374113, 0.059748292, -62.635292)
+
+[node name="Bookshelf33" parent="Geometry" instance=ExtResource("12_2w5on")]
+transform = Transform3D(0.8054217, 0, 0.5927022, 0, 1, 0, -0.5927022, 0, 0.8054217, 23.215006, 0.059748292, -136.66418)
+
 [node name="Bookshelf4" parent="Geometry" instance=ExtResource("14_jyqft")]
 transform = Transform3D(0.77660745, 0, -0.6299848, 0, 1, 0, 0.6299848, 0, 0.77660745, 24.494778, 0, -24.175907)
 
 [node name="Bookshelf16" parent="Geometry" instance=ExtResource("14_jyqft")]
 transform = Transform3D(0.8379379, 0, 0.54576564, 0, 1, 0, -0.54576564, 0, 0.8379379, -10.23233, -1.9073486e-06, -72.56396)
+
+[node name="Bookshelf30" parent="Geometry" instance=ExtResource("14_jyqft")]
+transform = Transform3D(0.73234093, 0, -0.6809381, 0, 1, 0, 0.6809381, 0, 0.73234093, -19.061016, -1.9073486e-06, -119.184944)
+
+[node name="Bookshelf31" parent="Geometry" instance=ExtResource("14_jyqft")]
+transform = Transform3D(0.8074136, 0, 0.58998585, 0, 1, 0, -0.58998585, 0, 0.8074136, 5.7725315, -1.9073486e-06, -125.21331)
+
+[node name="Bookshelf22" parent="Geometry" instance=ExtResource("14_jyqft")]
+transform = Transform3D(0.6643177, 0, 0.74745035, 0, 1, 0, -0.74745035, 0, 0.6643177, 9.939743, -1.9073486e-06, -84.12232)
 
 [node name="Bookshelf6" parent="Geometry" instance=ExtResource("14_jyqft")]
 transform = Transform3D(0.931875, 0.36277935, 0.0004495335, 0, 0.0012391366, -0.9999992, -0.36277962, 0.9318743, 0.0011547203, 29.436348, 0.73832655, -4.234974)
@@ -26768,11 +26798,32 @@ transform = Transform3D(-0.34552753, 0, 0.9384086, 0, 1, 0, -0.9384086, 0, -0.34
 [node name="Bookshelf18" parent="Geometry" instance=ExtResource("13_0sclb")]
 transform = Transform3D(-0.8035764, 0, -0.5952016, 0, 1, 0, 0.5952016, 0, -0.8035764, -25.04556, 0, -61.823154)
 
+[node name="Bookshelf21" parent="Geometry" instance=ExtResource("13_0sclb")]
+transform = Transform3D(-0.85958475, 0, -0.5109931, 0, 1, 0, 0.5109931, 0, -0.85958475, 22.494297, 0, -60.211014)
+
 [node name="wall_gltf" parent="Geometry" instance=ExtResource("14_sxkr1")]
 transform = Transform3D(0.8537799, -0.2139187, 0.18787925, 0, 0.59390706, 0.67622066, -0.28471008, -0.6414929, 0.5634066, -21.994364, 0, -74.5633)
 
 [node name="Bookshelf14" parent="Geometry" instance=ExtResource("18_0sclb")]
 transform = Transform3D(0.90144, 0.3049693, 0.30724525, 0, 0.7097306, -0.7044732, -0.43290406, 0.63504034, 0.63977957, -23.572687, 0, -79.78413)
+
+[node name="Bookshelf23" parent="Geometry" instance=ExtResource("13_0sclb")]
+transform = Transform3D(-0.6448309, 0, -0.76432526, 0, 1, 0, 0.76432526, 0, -0.6448309, 14.606637, 0, -75.06073)
+
+[node name="Bookshelf29" parent="Geometry" instance=ExtResource("13_0sclb")]
+transform = Transform3D(0.611748, 0, -0.7910527, 0, 1, 0, 0.7910527, 0, 0.611748, 16.419048, 0, -96.70462)
+
+[node name="Bookshelf27" parent="Geometry" instance=ExtResource("15_3tgeq")]
+transform = Transform3D(0.71710527, 0, 0.69696486, 0, 1, 0, -0.69696486, 0, 0.71710527, 6.941343, 0, -91.43981)
+
+[node name="Bookshelf34" parent="Geometry" instance=ExtResource("15_3tgeq")]
+transform = Transform3D(0.5852407, 0, -0.81085956, 0, 1, 0, 0.81085956, 0, 0.5852407, -10.877428, -1.9073486e-06, -137.29688)
+
+[node name="Bookshelf28" parent="Geometry" instance=ExtResource("18_0sclb")]
+transform = Transform3D(0.91756046, 0.3975963, 1.7379486e-08, 0, -4.371138e-08, 0.9999999, 0.3975963, -0.91756034, -4.0107835e-08, -20.004482, 0.7566993, -96.0187)
+
+[node name="Bookshelf32" parent="Geometry" instance=ExtResource("13_0sclb")]
+transform = Transform3D(0.9172618, 0, 0.39828485, 0, 1, 0, -0.39828485, 0, 0.9172618, 11.535157, 0, -105.39504)
 
 [node name="Border" type="Node3D" parent="."]
 
@@ -26794,6 +26845,18 @@ transform = Transform3D(23.323862, 0, 0, 0, 1, 0, 0, 0, 184.35275, -40.921543, 3
 [node name="Bookshelf" parent="Border" instance=ExtResource("17_c4ay3")]
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 24.409246, 0.59373987, -30.923178)
 
+[node name="Bookshelf15" parent="Border" instance=ExtResource("17_c4ay3")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 21.528494, 0.5937418, -80.60069)
+
+[node name="Bookshelf16" parent="Border" instance=ExtResource("17_c4ay3")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 4.977562, 0.59373987, -111.39649)
+
+[node name="Bookshelf17" parent="Border" instance=ExtResource("17_c4ay3")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -22.954845, 0.59373987, -137.77226)
+
+[node name="Bookshelf18" parent="Border" instance=ExtResource("17_c4ay3")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -4.8266144, 0.59373987, -131.0769)
+
 [node name="Bookshelf3" parent="Border" instance=ExtResource("17_c4ay3")]
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 30.140053, 0.59373987, -12.523003)
 
@@ -26813,7 +26876,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.80611, -0.0127619505, 8.67
 transform = Transform3D(0.8685537, 0, -0.49559513, 0, 1, 0, 0.49559513, 0, 0.8685537, -26.625954, 0, 13.594452)
 
 [node name="Bookshelf8" parent="Border" instance=ExtResource("17_c4ay3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.421448, 0.2883258, -15.506256)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.494164, 0.2883258, -15.506256)
 
 [node name="Bookshelf9" parent="Border" instance=ExtResource("12_2w5on")]
 transform = Transform3D(0.9549889, 0, 0.2966416, 0, 1, 0, -0.2966416, 0, 0.9549889, -26.090286, 0, -33.649292)
@@ -26821,8 +26884,23 @@ transform = Transform3D(0.9549889, 0, 0.2966416, 0, 1, 0, -0.2966416, 0, 0.95498
 [node name="Bookshelf11" parent="Border" instance=ExtResource("12_2w5on")]
 transform = Transform3D(0.7667508, 0, 0.64194494, 0, 1, 0, -0.64194494, 0, 0.7667508, -9.814734, -1.9073486e-06, -85.49668)
 
+[node name="Bookshelf12" parent="Border" instance=ExtResource("12_2w5on")]
+transform = Transform3D(0.7667508, 0, 0.64194494, 0, 1, 0, -0.64194494, 0, 0.7667508, 23.743252, -1.9073486e-06, -94.13369)
+
+[node name="Bookshelf13" parent="Border" instance=ExtResource("12_2w5on")]
+transform = Transform3D(0.7667508, 0, 0.64194494, 0, 1, 0, -0.64194494, 0, 0.7667508, 23.03731, -3.8146973e-06, -116.579216)
+
+[node name="Bookshelf14" parent="Border" instance=ExtResource("12_2w5on")]
+transform = Transform3D(0.7667508, 0, 0.64194494, 0, 1, 0, -0.64194494, 0, 0.7667508, -7.7616463, -3.8146973e-06, -107.87244)
+
 [node name="Bookshelf10" parent="Border" instance=ExtResource("13_0sclb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.5146847, -0.04877329, -36.016167)
+
+[node name="WallCorner" parent="Border" instance=ExtResource("16_sxkr1")]
+transform = Transform3D(0.7792267, 0.4572793, 0.42860404, -0.5061241, 0.8624607, 0, -0.36965412, -0.21692683, 0.90349245, -2.7033772, 0, -58.70015)
+
+[node name="WallCorner2" parent="Border" instance=ExtResource("16_sxkr1")]
+transform = Transform3D(0.12539183, 0.94316304, 0.3077668, -0.9417763, 0.21071045, -0.26202703, -0.3119839, -0.25699148, 0.9146702, -13.9176655, 0.53588486, -124.43025)
 
 [node name="Audio" type="Node" parent="."]
 
@@ -26857,6 +26935,9 @@ transform = Transform3D(1, 0, 0, 0, 0.84357893, -0.5370052, 0, 0.5370052, 0.8435
 
 [node name="Bookshelf5" parent="." instance=ExtResource("18_0sclb")]
 transform = Transform3D(-0.99890786, -0.025090467, -0.0394145, 0, 0.84357893, -0.5370052, 0.046722952, -0.5364187, -0.8426576, -6.098543, 0.21200323, -64.77284)
+
+[node name="Bookshelf6" parent="." instance=ExtResource("18_0sclb")]
+transform = Transform3D(0.90199834, 0.23184636, 0.36420643, -2.0380867e-08, 0.84357893, -0.5370052, -0.43173954, 0.4843778, 0.7609067, 21.802662, 0.21200323, -45.024036)
 
 [node name="Gate" parent="." instance=ExtResource("15_0sclb")]
 transform = Transform3D(0.52376384, -0.61646616, 0.58791226, -0.38066244, 0.4480368, 0.80892456, -0.762081, -0.6474815, -2.8302317e-08, -16.186872, 0.5861316, -14.306345)
