@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://bn72f0sb2dvts"]
+
+[ext_resource type="PackedScene" uid="uid://c0iwu2n1uy06u" path="res://KayKit Dungeon Pack 1.0/Models/gltf/coinsSmall.gltf.glb" id="1_ajrnv"]
+
+[node name="Bookshelf" type="Node3D"]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="coinsSmall_gltf" parent="." instance=ExtResource("1_ajrnv")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)

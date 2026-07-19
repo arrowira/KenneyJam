@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://bdw6umyrsel36"]
+
+[ext_resource type="PackedScene" uid="uid://cxyf0346t7gj0" path="res://KayKit Dungeon Pack 1.0/Models/gltf/spellBook.gltf.glb" id="1_sx5gv"]
+
+[node name="Bookshelf" type="Node3D"]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="spellBook_gltf" parent="." instance=ExtResource("1_sx5gv")]
