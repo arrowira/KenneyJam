@@ -49,7 +49,6 @@ func _physics_process(delta: float) -> void:
 		dir.z+=Speed
 	
 	dir = dir.rotated(Vector3.UP, $Camera.global_rotation.y)
-	
 	if(Input.is_action_pressed("crouch")):
 		velocity*=0.5
 		$Model.scale.y = 0.25
@@ -62,6 +61,3 @@ func _physics_process(delta: float) -> void:
 	velocity += dir.normalized()
 	velocity-=velocity*0.2
 	move_and_slide()
-	
-	
-	
