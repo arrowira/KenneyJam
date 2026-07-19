@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://d0n4hm82p78qx"]
+
+[ext_resource type="PackedScene" uid="uid://cjooq1l86ldqv" path="res://KayKit Dungeon Pack 1.0/Models/gltf/shield_common.gltf.glb" id="1_da7ft"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_o1fmi"]
+
+[node name="shield_common_gltf" instance=ExtResource("1_da7ft")]
+
+[node name="shield_common" parent="." index="0"]
+material_override = SubResource("StandardMaterial3D_o1fmi")
