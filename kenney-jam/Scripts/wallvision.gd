@@ -7,7 +7,6 @@ func _process(delta: float) -> void:
 	pass
 
 func _physics_process(delta: float) -> void:
-	target_position = get_parent().get_parent().get_parent().playerPos
 	if is_colliding():
 		print(get_collider().name)
 		if get_collider().name == "wallBody":
@@ -18,5 +17,8 @@ func _physics_process(delta: float) -> void:
 				invisWall = get_collider().get_parent()
 				invisWall.invis()
 		else:
+			invisWall.deInvis()
+	else:
+		if invisWall != null:
 			invisWall.deInvis()
 			
