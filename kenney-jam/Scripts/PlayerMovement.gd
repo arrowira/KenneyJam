@@ -62,19 +62,23 @@ func _physics_process(delta: float) -> void:
 		
 		if(Input.is_action_pressed("left")):
 			dir.x-=Speed
+			$ModelPivot.rotation_degrees.y=90
 		if(Input.is_action_pressed("right")):
 			dir.x+=Speed
+			$ModelPivot.rotation_degrees.y=-90
 		if(Input.is_action_pressed("up")):
 			dir.z-=Speed
+			$ModelPivot.rotation_degrees.y=0
 		if(Input.is_action_pressed("down")):
 			dir.z+=Speed
+			$ModelPivot.rotation_degrees.y=180
 		
 		dir = dir.rotated(Vector3.UP, $Camera.global_rotation.y)
 		if(Input.is_action_pressed("crouch")):
 			velocity*=0.5
-			$Model.scale.y = 0.25
+			$ModelPivot/Model.scale.y = 0.25
 		else:
-			$Model.scale.y = DScale.y
+			$ModelPivot/Model.scale.y = DScale.y
 
 		if(Input.is_action_pressed("run") && !Input.is_action_pressed("crouch")):
 			dir = Vector3(dir.x*2, dir.y, dir.z*2)
@@ -86,6 +90,6 @@ func _physics_process(delta: float) -> void:
 func SceneChange():
 	if(get_tree().current_scene != null):
 		if(get_tree().current_scene.name == "Main"):
-			DScale = $Model.scale
+			DScale = $ModelPivot/Model.scale
 			TPos = $Camera.position
 			global_position = Vector3(0.0, 0.127, -5.26)
