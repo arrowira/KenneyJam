@@ -50,13 +50,13 @@ func _physics_process(delta: float) -> void:
 			if(CPivot >= 5):
 				CPivot=1
 			TPos = get_node("Pivot" + str(CPivot)).position
-			$Model.rotation_degrees.y+=90
+			$ModelPivot/Model.rotation_degrees.y+=90
 		if(Input.is_action_just_pressed("cleft")):
 			CPivot-=1
 			if(CPivot <= 0):
 				CPivot=4
 			TPos = get_node("Pivot" + str(CPivot)).position
-			$Model.rotation_degrees.y-=90
+			$ModelPivot/Model.rotation_degrees.y-=90
 		$Camera.position = $Camera.position.move_toward(TPos, 0.3)
 		$Camera.look_at(position)
 		
