@@ -12,7 +12,9 @@ func _physics_process(delta: float) -> void:
 		p = true
 		
 	if(StealthBuy==true):
-		if(p==true):
+		if(p==true && Player.Scales >= StealthCost):
+			StealthCost+=1
+			
 			$StealthButton/ButtonSprite.texture = DownT
 		else:
 			$StealthButton/ButtonSprite.texture = UpT

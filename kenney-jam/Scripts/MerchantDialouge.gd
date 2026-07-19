@@ -5,7 +5,7 @@ var DList = [
 	you'll find a white portal. But, that's just what they say.", 
 	"Never let your torch run out. Anything can get you in the dark. ", 
 	"Civilization collapsed long ago. This is all we have left.", 
-	"Watch the snakes. They will try to snuff out your torch. You can't let that happen.", 
+	"Watch the snakes. They'll try to snuff out your torch. You can't let that happen.", 
 	"Come back here if you ever need a torch refill. I got all the resources in the world. Literally."]
 
 func _ready():
