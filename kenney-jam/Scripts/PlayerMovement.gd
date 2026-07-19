@@ -15,6 +15,12 @@ func _ready():
 	TPos = $Camera.position
 
 func _physics_process(delta: float) -> void:
+	#animations
+	if velocity.length() > 0.9:
+		$AnimationPlayer.play("walk")
+	else:
+		$AnimationPlayer.play("idle")
+	
 	get_parent().get_node("CanvasLayer/ScaleCount").text = str(Scales)
 	
 	var dir = Vector3.ZERO
