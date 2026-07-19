@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://clr3454dgwo1i"]
+
+[ext_resource type="PackedScene" uid="uid://c8y1uwiafunhs" path="res://KayKit Dungeon Pack 1.0/Models/gltf/arrow.gltf.glb" id="1_740y7"]
+
+[node name="Bookshelf" type="Node3D"]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="arrow_gltf" parent="." instance=ExtResource("1_740y7")]

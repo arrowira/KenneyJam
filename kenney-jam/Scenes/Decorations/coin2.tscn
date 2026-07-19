@@ -1,17 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://bn72f0sb2dvts"]
+[gd_scene load_steps=2 format=3 uid="uid://bn72f0sb2dvts"]
 
 [ext_resource type="PackedScene" uid="uid://c0iwu2n1uy06u" path="res://KayKit Dungeon Pack 1.0/Models/gltf/coinsSmall.gltf.glb" id="1_ajrnv"]
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_syggo"]
-size = Vector3(0.4085846, 0.13426268, 0.4151491)
 
 [node name="Bookshelf" type="Node3D"]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.021746546, 0.062487423, -0.030411422)
-shape = SubResource("BoxShape3D_syggo")
 
 [node name="coinsSmall_gltf" parent="." instance=ExtResource("1_ajrnv")]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
