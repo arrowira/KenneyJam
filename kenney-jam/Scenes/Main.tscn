@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=3 uid="uid://bh2eknbs0py68"]
+[gd_scene load_steps=42 format=3 uid="uid://bh2eknbs0py68"]
 
 [ext_resource type="PackedScene" uid="uid://cbnglbm81uf2k" path="res://Scenes/Player.tscn" id="1_r150o"]
 [ext_resource type="Script" uid="uid://bios8bcaiuha6" path="res://Scripts/main.gd" id="1_sxkr1"]
@@ -35,6 +35,7 @@
 [ext_resource type="PackedScene" uid="uid://ble3ur1raqdsv" path="res://Scenes/Decorations/bigPotion.tscn" id="34_hpjjw"]
 [ext_resource type="PackedScene" uid="uid://qe55tuk8oplk" path="res://Scenes/Decorations/pot.tscn" id="35_off7b"]
 [ext_resource type="PackedScene" uid="uid://bdw6umyrsel36" path="res://Scenes/Decorations/book.tscn" id="36_lfh1j"]
+[ext_resource type="Script" uid="uid://cceff22orn8mh" path="res://Scripts/enemy_manager.gd" id="37_6ehlx"]
 [ext_resource type="PackedScene" uid="uid://cciqdprk13f8g" path="res://Scenes/Decorations/bucket.tscn" id="37_7sj7i"]
 [ext_resource type="PackedScene" uid="uid://clr3454dgwo1i" path="res://Scenes/Decorations/arrow.tscn" id="38_semxg"]
 [ext_resource type="Script" uid="uid://bmgpg0w28ab0c" path="res://Scripts/spawner.gd" id="38_vs04g"]
@@ -27083,6 +27084,7 @@ autoplay = true
 parameters/looping = false
 
 [node name="EnemyManager" type="Node3D" parent="."]
+script = ExtResource("37_6ehlx")
 
 [node name="snake" parent="EnemyManager" instance=ExtResource("18_346fj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.46373558, -14.299597)
@@ -27090,8 +27092,16 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.46373558, -14.299597)
 [node name="spawner" type="Node3D" parent="EnemyManager"]
 script = ExtResource("38_vs04g")
 
+[node name="Node3D" type="Node3D" parent="EnemyManager/spawner"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.611427, 0.5999658, -12.3642025)
+
+[node name="Timer" type="Timer" parent="EnemyManager"]
+autostart = true
+
 [node name="Portal" parent="." instance=ExtResource("39_vs04g")]
 transform = Transform3D(-1.5, 0, -2.2649371e-07, 0, 1.5, 0, 2.2649371e-07, 0, -1.5, -0.26459455, 1.5722858, 2.9799705)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_vs04g")
+
+[connection signal="timeout" from="EnemyManager/Timer" to="EnemyManager" method="_on_timer_timeout"]
