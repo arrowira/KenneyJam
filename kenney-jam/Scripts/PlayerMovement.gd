@@ -11,69 +11,74 @@ var Scales = 0
 var CTorch = 0
 var MaxTorch = 60
 var TickTime = 0
+var TorchIntensity = 1.0
 
-#Upgrades
 var Speed = 1 
 
 
 func _ready():
-	DScale = $Model.scale
-	TPos = $Camera.position
+	get_tree().tree_changed.connect(SceneChange)
+	SceneChange()
 	CTorch = MaxTorch
 
 func _physics_process(delta: float) -> void:
-	if(CTorch <= 0):
-		#Loose game
-		pass
-	
-	if(TickTime >= 60):
-		CTorch-=1
-	TickTime+=1
-	
-	
-	#animations
-	if velocity.length() > 0.9:
-		$AnimationPlayer.play("walk")
-	else:
-		$AnimationPlayer.play("idle")
-	
-	get_parent().get_node("CanvasLayer/ScaleCount").text = str(Scales)
-	
-	var dir = Vector3.ZERO
-	if(Input.is_action_just_pressed("cright")):
-		CPivot+=1
-		if(CPivot >= 5):
-			CPivot=1
-		TPos = get_node("Pivot" + str(CPivot)).position
-		$Model.rotation_degrees.y+=90
-	if(Input.is_action_just_pressed("cleft")):
-		CPivot-=1
-		if(CPivot <= 0):
-			CPivot=4
-		TPos = get_node("Pivot" + str(CPivot)).position
-		$Model.rotation_degrees.y-=90
-	$Camera.position = $Camera.position.move_toward(TPos, 0.3)
-	$Camera.look_at(position)
-	
-	if(Input.is_action_pressed("left")):
-		dir.x-=Speed
-	if(Input.is_action_pressed("right")):
-		dir.x+=Speed
-	if(Input.is_action_pressed("up")):
-		dir.z-=Speed
-	if(Input.is_action_pressed("down")):
-		dir.z+=Speed
-	
-	dir = dir.rotated(Vector3.UP, $Camera.global_rotation.y)
-	if(Input.is_action_pressed("crouch")):
-		velocity*=0.5
-		$Model.scale.y = 0.25
-	else:
-		$Model.scale.y = DScale.y
+	if(get_tree().current_scene.name == "Main"):
+		if(CTorch <= 0):
+			print("Return By Death")
+		
+		if(TickTime >= 60):
+			CTorch-=1
+		TickTime+=1
+		
+		#animations
+		if velocity.length() > 0.9:
+			$AnimationPlayer.play("walk")
+		else:
+			$AnimationPlayer.play("idle")
+		
+		get_tree().current_scene.get_node("CanvasLayer/ScaleCount").text = str(Scales)
+		
+		var dir = Vector3.ZERO
+		if(Input.is_action_just_pressed("cright")):
+			CPivot+=1
+			if(CPivot >= 5):
+				CPivot=1
+			TPos = get_node("Pivot" + str(CPivot)).position
+			$Model.rotation_degrees.y+=90
+		if(Input.is_action_just_pressed("cleft")):
+			CPivot-=1
+			if(CPivot <= 0):
+				CPivot=4
+			TPos = get_node("Pivot" + str(CPivot)).position
+			$Model.rotation_degrees.y-=90
+		$Camera.position = $Camera.position.move_toward(TPos, 0.3)
+		$Camera.look_at(position)
+		
+		if(Input.is_action_pressed("left")):
+			dir.x-=Speed
+		if(Input.is_action_pressed("right")):
+			dir.x+=Speed
+		if(Input.is_action_pressed("up")):
+			dir.z-=Speed
+		if(Input.is_action_pressed("down")):
+			dir.z+=Speed
+		
+		dir = dir.rotated(Vector3.UP, $Camera.global_rotation.y)
+		if(Input.is_action_pressed("crouch")):
+			velocity*=0.5
+			$Model.scale.y = 0.25
+		else:
+			$Model.scale.y = DScale.y
 
-	if(Input.is_action_pressed("run") && !Input.is_action_pressed("crouch")):
-		dir = Vector3(dir.x*2, dir.y, dir.z*2)
-	
-	velocity += dir.normalized()
-	velocity-=velocity*0.2
-	move_and_slide()
+		if(Input.is_action_pressed("run") && !Input.is_action_pressed("crouch")):
+			dir = Vector3(dir.x*2, dir.y, dir.z*2)
+		
+		velocity += dir.normalized()
+		velocity-=velocity*0.2
+		move_and_slide()
+
+func SceneChange():
+	if(get_tree().current_scene.name == "Main"):
+		DScale = $Model.scale
+		TPos = $Camera.position
+		global_position = Vector3(0.0, 0.127, -5.26)
