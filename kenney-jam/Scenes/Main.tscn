@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=3 uid="uid://bh2eknbs0py68"]
+[gd_scene load_steps=42 format=3 uid="uid://bh2eknbs0py68"]
 
 [ext_resource type="PackedScene" uid="uid://cbnglbm81uf2k" path="res://Scenes/Player.tscn" id="1_r150o"]
 [ext_resource type="Script" uid="uid://bios8bcaiuha6" path="res://Scripts/main.gd" id="1_sxkr1"]
@@ -28,15 +28,17 @@
 [ext_resource type="PackedScene" uid="uid://dntkejomni4yh" path="res://Scenes/Decorations/table.tscn" id="27_utia5"]
 [ext_resource type="PackedScene" uid="uid://ctdww5st0hijx" path="res://Scenes/Decorations/smallPotion.tscn" id="28_f7hdo"]
 [ext_resource type="PackedScene" uid="uid://crae6p7lgejn8" path="res://Scenes/Decorations/food.tscn" id="29_clvyn"]
-[ext_resource type="PackedScene" path="res://Scenes/Decorations/coin2.tscn" id="30_d8m2u"]
+[ext_resource type="PackedScene" uid="uid://bn72f0sb2dvts" path="res://Scenes/Decorations/coin2.tscn" id="30_d8m2u"]
 [ext_resource type="PackedScene" uid="uid://ccw7si56s81iv" path="res://Scenes/Decorations/stool.tscn" id="31_5psol"]
 [ext_resource type="PackedScene" uid="uid://wi8hrip8djmh" path="res://Scenes/Decorations/lootBag.tscn" id="32_m4llh"]
 [ext_resource type="PackedScene" uid="uid://u36b3qykgxq3" path="res://Scenes/Decorations/coin.tscn" id="33_lac6x"]
 [ext_resource type="PackedScene" uid="uid://ble3ur1raqdsv" path="res://Scenes/Decorations/bigPotion.tscn" id="34_hpjjw"]
 [ext_resource type="PackedScene" uid="uid://qe55tuk8oplk" path="res://Scenes/Decorations/pot.tscn" id="35_off7b"]
-[ext_resource type="PackedScene" path="res://Scenes/Decorations/book.tscn" id="36_lfh1j"]
+[ext_resource type="PackedScene" uid="uid://bdw6umyrsel36" path="res://Scenes/Decorations/book.tscn" id="36_lfh1j"]
+[ext_resource type="Script" uid="uid://cceff22orn8mh" path="res://Scripts/enemy_manager.gd" id="37_6ehlx"]
 [ext_resource type="PackedScene" uid="uid://cciqdprk13f8g" path="res://Scenes/Decorations/bucket.tscn" id="37_7sj7i"]
-[ext_resource type="PackedScene" path="res://Scenes/Decorations/arrow.tscn" id="38_semxg"]
+[ext_resource type="PackedScene" uid="uid://clr3454dgwo1i" path="res://Scenes/Decorations/arrow.tscn" id="38_semxg"]
+[ext_resource type="Script" uid="uid://bmgpg0w28ab0c" path="res://Scripts/spawner.gd" id="38_vs04g"]
 [ext_resource type="PackedScene" uid="uid://bxcxnhd2cdaap" path="res://Scenes/Portal.tscn" id="39_vs04g"]
 
 [sub_resource type="Environment" id="Environment_vs04g"]
@@ -27082,12 +27084,57 @@ autoplay = true
 parameters/looping = false
 
 [node name="EnemyManager" type="Node3D" parent="."]
+script = ExtResource("37_6ehlx")
 
 [node name="snake" parent="EnemyManager" instance=ExtResource("18_346fj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.46373558, -14.299597)
+
+[node name="spawner" type="Node3D" parent="EnemyManager"]
+script = ExtResource("38_vs04g")
+
+[node name="node" type="Node3D" parent="EnemyManager/spawner"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.611427, 0.5999658, -12.3642025)
+
+[node name="node2" type="Node3D" parent="EnemyManager/spawner"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.540508, 0.5999658, -17.20856)
+
+[node name="node3" type="Node3D" parent="EnemyManager/spawner"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.9526787, 0.5999658, 6.9765625)
+
+[node name="node4" type="Node3D" parent="EnemyManager/spawner"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.519428, 0.5999658, -39.334496)
+
+[node name="node5" type="Node3D" parent="EnemyManager/spawner"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.322178, 0.5999658, -53.38917)
+
+[node name="node6" type="Node3D" parent="EnemyManager/spawner"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.724667, 0.5999658, -54.58046)
+
+[node name="node7" type="Node3D" parent="EnemyManager/spawner"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.507774, 0.5999658, -93.211075)
+
+[node name="node9" type="Node3D" parent="EnemyManager/spawner"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.507774, 0.5999658, -112.864105)
+
+[node name="node10" type="Node3D" parent="EnemyManager/spawner"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.1787338, 0.5999658, -137.57632)
+
+[node name="node11" type="Node3D" parent="EnemyManager/spawner"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.025932, 0.5999658, -115.2964)
+
+[node name="node12" type="Node3D" parent="EnemyManager/spawner"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.025932, 0.5999658, -133.58734)
+
+[node name="node8" type="Node3D" parent="EnemyManager/spawner"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.511597, 0.5999658, -79.93347)
+
+[node name="Timer" type="Timer" parent="EnemyManager"]
+autostart = true
 
 [node name="Portal" parent="." instance=ExtResource("39_vs04g")]
 transform = Transform3D(-1.5, 0, -2.2649371e-07, 0, 1.5, 0, 2.2649371e-07, 0, -1.5, -0.26459455, 1.5722858, 2.9799705)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_vs04g")
+
+[connection signal="timeout" from="EnemyManager/Timer" to="EnemyManager" method="_on_timer_timeout"]
