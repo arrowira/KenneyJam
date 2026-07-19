@@ -15,6 +15,10 @@ run/main_scene="uid://bh2eknbs0py68"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://Sprites/icon.svg"
 
+[autoload]
+
+MusicManager="*res://Scenes/music_manager.tscn"
+
 [input]
 
 left={
