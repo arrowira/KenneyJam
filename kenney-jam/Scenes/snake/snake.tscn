@@ -1,7 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://b24m11ishcol7"]
+[gd_scene load_steps=10 format=3 uid="uid://b24m11ishcol7"]
 
-[ext_resource type="Texture2D" uid="uid://becxa8wiyjubp" path="res://Sprites/icon.svg" id="1_6voqi"]
 [ext_resource type="Script" uid="uid://c7fxmaeqc8ec7" path="res://Scripts/snake.gd" id="1_sprpx"]
+[ext_resource type="PackedScene" path="res://Scenes/snake/snakeHead.tscn" id="2_s8mkf"]
+[ext_resource type="PackedScene" path="res://Scenes/snake/snakeSegment.tscn" id="3_p5duu"]
 
 [sub_resource type="Animation" id="Animation_p5duu"]
 length = 0.001
@@ -141,20 +142,22 @@ script = ExtResource("1_sprpx")
 [node name="Node" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, -0.60025674, 0, 0)
 
-[node name="head" type="Sprite3D" parent="Node"]
-transform = Transform3D(0.42801765, 0, 0, 0, 0.855409, 0, 0, 0, 1, 0, 0.2, 0)
-modulate = Color(0.556953, 0.556953, 0.556953, 1)
-texture = ExtResource("1_6voqi")
+[node name="head" type="Node3D" parent="Node"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, 0)
 
-[node name="middle" type="Sprite3D" parent="Node"]
+[node name="SnakeHead" parent="Node/head" instance=ExtResource("2_s8mkf")]
+
+[node name="middle" type="Node3D" parent="Node"]
 transform = Transform3D(0.42801765, 0, 0, 0, 0.855409, 0, 0, 0, 1, 0.59833646, 0, 0)
-modulate = Color(0.5449743, 0.54497427, 0.54497427, 1)
-texture = ExtResource("1_6voqi")
 
-[node name="tail" type="Sprite3D" parent="Node"]
+[node name="SnakeSegment" parent="Node/middle" instance=ExtResource("3_p5duu")]
+transform = Transform3D(1, 0, 0, 0, 1.0000001, 0, 0, -3.5527137e-15, 1, 0, -1.0479934, 3.9185647e-08)
+
+[node name="tail" type="Node3D" parent="Node"]
 transform = Transform3D(0.42801765, 0, 0, 0, 0.855409, 0, 0, 0, 1, 1.214, 0.2, 0)
-modulate = Color(0.52906674, 0.5290667, 0.5290667, 1)
-texture = ExtResource("1_6voqi")
+
+[node name="SnakeSegment" parent="Node/tail" instance=ExtResource("3_p5duu")]
+transform = Transform3D(1, 0, 0, 0, 1.0000002, 0, 0, -1.0658141e-14, 1, 0, -1.0432771, 3.90093e-08)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
