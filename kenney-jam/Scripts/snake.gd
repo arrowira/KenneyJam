@@ -48,6 +48,9 @@ func _physics_process(delta: float) -> void:
 		rotation.y=dir.angle_to(Vector2(-1,0))
 
 func _on_mood_timeout() -> void:
+	if get_parent().get_parent().playerPos.distance_to(position)>150:
+		queue_free()
+	
 	#scale drop
 	if randf()<0.05:
 		var newScale = pScale.instantiate()
