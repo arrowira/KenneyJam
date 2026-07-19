@@ -37,7 +37,7 @@
 [ext_resource type="PackedScene" path="res://Scenes/Decorations/book.tscn" id="36_lfh1j"]
 [ext_resource type="PackedScene" uid="uid://cciqdprk13f8g" path="res://Scenes/Decorations/bucket.tscn" id="37_7sj7i"]
 [ext_resource type="PackedScene" path="res://Scenes/Decorations/arrow.tscn" id="38_semxg"]
-[ext_resource type="PackedScene" uid="uid://bxcxnhd2cdaap" path="res://Scenes/Decorations/Portal.tscn" id="39_vs04g"]
+[ext_resource type="PackedScene" uid="uid://bxcxnhd2cdaap" path="res://Scenes/Portal.tscn" id="39_vs04g"]
 
 [sub_resource type="Environment" id="Environment_vs04g"]
 glow_enabled = true

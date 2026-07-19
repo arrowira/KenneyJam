@@ -1,5 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://bxcxnhd2cdaap"]
+[gd_scene load_steps=7 format=3 uid="uid://bxcxnhd2cdaap"]
 
+[ext_resource type="Script" uid="uid://c3r7q472wap7v" path="res://Scripts/MPortal.gd" id="1_6ju5m"]
 [ext_resource type="PackedScene" uid="uid://dchmovs5yatty" path="res://kenney_prototype-kit/Models/GLB format/indicator-round-b.glb" id="1_y6qji"]
 [ext_resource type="Shader" uid="uid://dcspjks7vd5l5" path="res://Sprites/Portal.gdshader" id="2_ypi4r"]
 
@@ -11,7 +12,11 @@ shader = ExtResource("2_ypi4r")
 shader_parameter/portal_color = Color(0.2, 0.6, 1, 1)
 shader_parameter/glow = 5.0
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_ypi4r"]
+size = Vector3(1, 1.7259521, 0.111206055)
+
 [node name="Portal" type="Node3D"]
+script = ExtResource("1_6ju5m")
 
 [node name="indicator-round-b2" parent="." instance=ExtResource("1_y6qji")]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1.8, 0, 1, -7.86805e-08, 0, 0, 0)
@@ -25,3 +30,12 @@ surface_material_override/0 = SubResource("ShaderMaterial_6ju5m")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.19248766)
 light_color = Color(0, 0.39607844, 1, 1)
 shadow_enabled = true
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.018859863, 0.03387451)
+shape = SubResource("BoxShape3D_ypi4r")
+
+[connection signal="area_entered" from="Area3D" to="." method="_on_area_3d_area_entered"]
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
