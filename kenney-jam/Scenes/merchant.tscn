@@ -1,11 +1,15 @@
-[gd_scene load_steps=7 format=3 uid="uid://cmy851lk8mcm6"]
+[gd_scene load_steps=9 format=3 uid="uid://cmy851lk8mcm6"]
 
+[ext_resource type="Script" uid="uid://c3wm0c5lknm3g" path="res://Scripts/Shop.gd" id="1_1xyb1"]
 [ext_resource type="Texture2D" uid="uid://djtvjsug888fp" path="res://UI elements/PNG/panelInset_beige.png" id="1_82brx"]
 [ext_resource type="Texture2D" uid="uid://bjh82ndl32fmj" path="res://UI elements/PNG/buttonLong_grey.png" id="2_k41ok"]
 [ext_resource type="Texture2D" uid="uid://cnh870q88o1mh" path="res://UI elements/PNG/buttonLong_brown.png" id="3_1xyb1"]
 [ext_resource type="FontFile" uid="uid://c0q4ckw8qe8mh" path="res://UI elements/Fonts/Kenney Blocks.ttf" id="3_k41ok"]
 [ext_resource type="Texture2D" uid="uid://dstiomqhd203r" path="res://Sprites/Screenshot_2026-07-18_223330-removebg-preview.png" id="5_82brx"]
-[ext_resource type="Script" uid="uid://khr82n1752j1" path="res://Scenes/MerchantDialouge.gd" id="6_k41ok"]
+[ext_resource type="Script" uid="uid://khr82n1752j1" path="res://Scripts/MerchantDialouge.gd" id="6_k41ok"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1xyb1"]
+size = Vector2(191.53848, 44.615337)
 
 [node name="Merchant" type="Control"]
 layout_mode = 3
@@ -17,6 +21,7 @@ offset_left = 3.1760101
 offset_top = -0.27999878
 offset_right = 45.43994
 offset_bottom = 42.191956
+script = ExtResource("1_1xyb1")
 
 [node name="Background" type="Sprite2D" parent="."]
 position = Vector2(693.5, 391.00003)
@@ -94,6 +99,12 @@ text = "1
 vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
 
+[node name="Area" type="Area2D" parent="StealthButton"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StealthButton/Area"]
+position = Vector2(226.53853, 296.15393)
+shape = SubResource("RectangleShape2D_1xyb1")
+
 [node name="Torch Refill" type="Node2D" parent="."]
 position = Vector2(-24, 282)
 scale = Vector2(1.3, 1.3)
@@ -112,6 +123,13 @@ theme_override_fonts/normal_font = ExtResource("3_k41ok")
 text = "Refill Torch"
 vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
+
+[node name="Area" type="Area2D" parent="Torch Refill"]
+position = Vector2(0.7692108, -0.7692261)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Torch Refill/Area"]
+position = Vector2(226.53853, 296.15393)
+shape = SubResource("RectangleShape2D_1xyb1")
 
 [node name="ScaleButton" type="Node2D" parent="."]
 position = Vector2(-25, -4.9999847)
@@ -155,6 +173,13 @@ text = "1
 vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
 
+[node name="Area" type="Area2D" parent="ScaleButton"]
+position = Vector2(0.76922953, -0.7692566)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ScaleButton/Area"]
+position = Vector2(226.53853, 296.15393)
+shape = SubResource("RectangleShape2D_1xyb1")
+
 [node name="TorchFuelButton" type="Node2D" parent="."]
 position = Vector2(-26, 108.000015)
 scale = Vector2(1.3, 1.3)
@@ -196,6 +221,13 @@ text = "1
 "
 vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
+
+[node name="Area" type="Area2D" parent="TorchFuelButton"]
+position = Vector2(3.076929, 1.5384521)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TorchFuelButton/Area"]
+position = Vector2(226.53853, 296.15393)
+shape = SubResource("RectangleShape2D_1xyb1")
 
 [node name="SpeedButton" type="Node2D" parent="."]
 position = Vector2(287, -129)
@@ -239,6 +271,13 @@ text = "1
 vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
 
+[node name="Area" type="Area2D" parent="SpeedButton"]
+position = Vector2(0.76924133, -0.76924133)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SpeedButton/Area"]
+position = Vector2(226.53853, 296.15393)
+shape = SubResource("RectangleShape2D_1xyb1")
+
 [node name="LightButton" type="Node2D" parent="."]
 position = Vector2(285.00003, -3)
 scale = Vector2(1.3, 1.3)
@@ -281,6 +320,13 @@ text = "1
 vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
 
+[node name="Area" type="Area2D" parent="LightButton"]
+position = Vector2(0.76920485, 7.6293945e-06)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LightButton/Area"]
+position = Vector2(226.53853, 296.15393)
+shape = SubResource("RectangleShape2D_1xyb1")
+
 [node name="ShortcutButton" type="Node2D" parent="."]
 position = Vector2(283.00003, 109.000015)
 scale = Vector2(1.3, 1.3)
@@ -300,15 +346,22 @@ text = "Shortcut Acesss"
 vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
 
-[node name="ShortcutButton2" type="Node2D" parent="."]
+[node name="Area" type="Area2D" parent="ShortcutButton"]
+position = Vector2(2.307663, 0.7692261)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ShortcutButton/Area"]
+position = Vector2(226.53853, 296.15393)
+shape = SubResource("RectangleShape2D_1xyb1")
+
+[node name="LeaveButton" type="Node2D" parent="."]
 position = Vector2(286.00003, 282)
 scale = Vector2(1.3, 1.3)
 
-[node name="ButtonSprite" type="Sprite2D" parent="ShortcutButton2"]
+[node name="ButtonSprite" type="Sprite2D" parent="LeaveButton"]
 position = Vector2(228.74994, 297)
 texture = ExtResource("3_1xyb1")
 
-[node name="Text" type="RichTextLabel" parent="ShortcutButton2"]
+[node name="Text" type="RichTextLabel" parent="LeaveButton"]
 offset_left = 165.38461
 offset_top = 269.23077
 offset_right = 352.3846
@@ -318,6 +371,13 @@ theme_override_fonts/normal_font = ExtResource("3_k41ok")
 text = "Leave Shop"
 vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
+
+[node name="Area" type="Area2D" parent="LeaveButton"]
+position = Vector2(3.8461313, -0.7692261)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LeaveButton/Area"]
+position = Vector2(226.53853, 296.15393)
+shape = SubResource("RectangleShape2D_1xyb1")
 
 [node name="MerchantSprite2" type="Sprite2D" parent="."]
 position = Vector2(996, 583)
@@ -342,3 +402,6 @@ text = "Let's start from one no from zero."
 horizontal_alignment = 1
 vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
+
+[connection signal="mouse_entered" from="StealthButton/Area" to="." method="MEnterStealth"]
+[connection signal="mouse_exited" from="StealthButton/Area" to="." method="MExitStealth"]
