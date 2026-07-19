@@ -16,14 +16,7 @@ var color
 var rarity = 3
 
 func _ready() -> void:
-	color = Color.WHITE
-	color.r = randf()
-	color.b = randf()
-	color.g = randf()
-	#for piece in $Node.get_children():
-		#piece.get_child(0)
-	$Node/middle/shield_common_gltf/shield_common.material_override.albedo_color = Color.BLUE
-	
+	color = Color.GREEN
 func _physics_process(delta: float) -> void:
 	if byPlayer:
 		$eyes/RayCast3D.target_position=player.position

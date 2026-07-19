@@ -4,11 +4,13 @@
 [ext_resource type="Texture2D" uid="uid://dvcnqja6pw45p" path="res://Sprites/SnakeHeadSprite.png" id="2_sprpx"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gdknt"]
+albedo_color = Color(0.32243937, 0.65323913, 0.19505844, 1)
 albedo_texture = ExtResource("2_sprpx")
 
 [sub_resource type="BoxMesh" id="BoxMesh_3ouvc"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_o1fmi"]
+albedo_color = Color(0.42801282, 0.7627811, 0.43628877, 1)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pdiep"]
 resource_name = "BrownDark"
