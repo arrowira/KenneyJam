@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://qe55tuk8oplk"]
+
+[ext_resource type="PackedScene" uid="uid://dxbqpukh7icb7" path="res://KayKit Dungeon Pack 1.0/Models/gltf/potB_decorated.gltf.glb" id="1_xakfu"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_syggo"]
+size = Vector3(0.8243904, 1.6838086, 0.83220834)
+
+[node name="Bookshelf" type="Node3D"]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.006827444, 0.83726037, 0.008684605)
+shape = SubResource("BoxShape3D_syggo")
+
+[node name="potB_decorated_gltf" parent="." instance=ExtResource("1_xakfu")]

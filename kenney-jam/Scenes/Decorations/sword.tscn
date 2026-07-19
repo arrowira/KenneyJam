@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://glvhhn24khte"]
+
+[ext_resource type="PackedScene" uid="uid://cro1c287mhm0h" path="res://KayKit Dungeon Pack 1.0/Models/gltf/sword_rare.gltf.glb" id="1_74aa8"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_syggo"]
+size = Vector3(0.57193756, 1.8584448, 0.14824235)
+
+[node name="Bookshelf" type="Node3D"]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.022574335, 0.72735924, 0.013369262)
+shape = SubResource("BoxShape3D_syggo")
+
+[node name="sword_rare_gltf" parent="." instance=ExtResource("1_74aa8")]
