@@ -7,5 +7,4 @@ func _on_body_entered(body: Node3D) -> void:
 		queue_free()
 
 func configure(color, r):
-	$Sprite.modulate = color
 	rarity = r
