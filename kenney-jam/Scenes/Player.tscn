@@ -1,18 +1,17 @@
 [gd_scene load_steps=4 format=3 uid="uid://cbnglbm81uf2k"]
 
 [ext_resource type="Script" uid="uid://cdx4ccr3h73g5" path="res://Scripts/PlayerMovement.gd" id="1_kyqiw"]
-[ext_resource type="Texture2D" uid="uid://becxa8wiyjubp" path="res://Sprites/icon.svg" id="2_gntrk"]
+[ext_resource type="PackedScene" uid="uid://c1uukuilcglu" path="res://KayKit Dungeon Pack 1.0/Models/Characters/gltf/character_knight.gltf" id="2_kyqiw"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_rpqav"]
-size = Vector3(1, 1.8738098, 0.14172363)
+size = Vector3(0.5803833, 0.98737335, 0.6234436)
 
 [node name="Player" type="CharacterBody3D"]
 script = ExtResource("1_kyqiw")
 
-[node name="Sprite" type="Sprite3D" parent="."]
-transform = Transform3D(0.42801765, 0, 0, 0, 0.855409, 0, 0, 0, 1, 0, 0, 0)
-texture = ExtResource("2_gntrk")
-
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.026153684, -0.38664764, 0.050466985)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.006408572, 0.5064531, 0.012579411)
 shape = SubResource("BoxShape3D_rpqav")
+
+[node name="Model" parent="." instance=ExtResource("2_kyqiw")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
