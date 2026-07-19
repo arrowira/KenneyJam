@@ -1,10 +1,99 @@
-[gd_scene load_steps=4 format=3 uid="uid://cbnglbm81uf2k"]
+[gd_scene load_steps=8 format=3 uid="uid://cbnglbm81uf2k"]
 
 [ext_resource type="Script" uid="uid://cdx4ccr3h73g5" path="res://Scripts/PlayerMovement.gd" id="1_kyqiw"]
 [ext_resource type="PackedScene" uid="uid://c1uukuilcglu" path="res://KayKit Dungeon Pack 1.0/Models/Characters/gltf/character_knight.gltf" id="2_kyqiw"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_rpqav"]
 size = Vector3(0.5803833, 0.98737335, 0.6234436)
+
+[sub_resource type="Animation" id="Animation_kyqiw"]
+resource_name = "walk"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Model:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25, 0.5, 0.75, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, -3.1415925, 0), Vector3(0, -3.1415927, 0.17453292), Vector3(0, -3.1415925, 0), Vector3(0, -3.1415927, -0.17453292), Vector3(0, -3.1415927, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Model:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.25, 0.5, 0.75),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 0.049259424, 0), Vector3(0, 0, 0), Vector3(0, 0.05, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_gntrk"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Model:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, -3.1415925, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Model:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_dewec"]
+resource_name = "idle"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Model:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, -3.1415925, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Model:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_5ixxa"]
+_data = {
+&"RESET": SubResource("Animation_gntrk"),
+&"idle": SubResource("Animation_dewec"),
+&"walk": SubResource("Animation_kyqiw")
+}
 
 [node name="Player" type="CharacterBody3D"]
 script = ExtResource("1_kyqiw")
@@ -14,4 +103,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.006408572, 0.5064531, 0.01
 shape = SubResource("BoxShape3D_rpqav")
 
 [node name="Model" parent="." instance=ExtResource("2_kyqiw")]
-transform = Transform3D(-0.5, 0, -4.371139e-08, 0, 0.5, 0, 4.371139e-08, 0, -0.5, 0, 0, 0)
+transform = Transform3D(-0.49999994, 0, -7.54979e-08, 0, 0.49999994, 0, 7.5497894e-08, 0, -0.5, 0, 0, 0)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_5ixxa")
+}
+speed_scale = 2.0

@@ -20,8 +20,8 @@ func _ready() -> void:
 	color.r = randf()
 	color.b = randf()
 	color.g = randf()
-	for piece in $Node.get_children():
-		piece.modulate = color
+	#for piece in $Node.get_children():
+		#piece.modulate = color
 	
 
 func _physics_process(delta: float) -> void:

@@ -15,6 +15,12 @@ func _ready():
 	TPos = $Camera.position
 
 func _physics_process(delta: float) -> void:
+	#animations
+	if velocity.length() > 0.9:
+		$AnimationPlayer.play("walk")
+	else:
+		$AnimationPlayer.play("idle")
+	
 	get_parent().get_node("CanvasLayer/ScaleCount").text = str(Scales)
 	
 	var dir = Vector3.ZERO
@@ -43,7 +49,6 @@ func _physics_process(delta: float) -> void:
 		dir.z+=Speed
 	
 	dir = dir.rotated(Vector3.UP, $Camera.global_rotation.y)
-	
 	if(Input.is_action_pressed("crouch")):
 		velocity*=0.5
 		$Model.scale.y = 0.25
@@ -56,6 +61,3 @@ func _physics_process(delta: float) -> void:
 	velocity += dir.normalized()
 	velocity-=velocity*0.2
 	move_and_slide()
-	
-	
-	
