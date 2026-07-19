@@ -19,7 +19,8 @@ func _ready() -> void:
 	color = Color.GREEN
 func _physics_process(delta: float) -> void:
 	if byPlayer:
-		$eyes/RayCast3D.target_position=player.position
+		#$eyes/RayCast3D.target_position=player.position
+		pass
 	if byPlayer:
 		if !$eyes/RayCast3D.is_colliding():
 			behavior = "angry"
@@ -81,7 +82,7 @@ func _on_wall_detection_body_entered(body: Node3D) -> void:
 func _on_eyes_body_entered(body: Node3D) -> void:
 	if body.name == "Player":
 		byPlayer = true
-		player = Player
+		player = body.get_parent()
 
 
 
