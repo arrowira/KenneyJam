@@ -81,7 +81,7 @@ func _on_wall_detection_body_entered(body: Node3D) -> void:
 func _on_eyes_body_entered(body: Node3D) -> void:
 	if body.name == "Player":
 		byPlayer = true
-		player = body.get_parent()
+		player = Player
 
 
 
