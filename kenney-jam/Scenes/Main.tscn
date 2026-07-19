@@ -4,7 +4,6 @@
 [ext_resource type="Script" uid="uid://bios8bcaiuha6" path="res://Scripts/main.gd" id="1_sxkr1"]
 [ext_resource type="Script" uid="uid://dgovh7333uys2" path="res://Scripts/LightFlicker.gd" id="2_50glp"]
 [ext_resource type="PackedScene" uid="uid://b067qgc3gnf4l" path="res://KayKit Dungeon Pack 1.0/Models/gltf/torch.gltf.glb" id="3_fq0cl"]
-[ext_resource type="PackedScene" uid="uid://x8b7eyub7idr" path="res://Scenes/Scale.tscn" id="3_kln2b"]
 [ext_resource type="Script" uid="uid://c0w3au876ibcu" path="res://Scripts/wallvision.gd" id="3_sxkr1"]
 [ext_resource type="PackedScene" uid="uid://bctxnf3prktpb" path="res://KayKit Dungeon Pack 1.0/Models/gltf/tileBrickA_small.gltf.glb" id="4_pbw6q"]
 [ext_resource type="PackedScene" uid="uid://cout26yjaa0hs" path="res://Scenes/CameraBorder.tscn" id="5_pbw6q"]
@@ -39,6 +38,9 @@
 [ext_resource type="PackedScene" uid="uid://cciqdprk13f8g" path="res://Scenes/Decorations/bucket.tscn" id="37_7sj7i"]
 [ext_resource type="PackedScene" path="res://Scenes/Decorations/arrow.tscn" id="38_semxg"]
 [ext_resource type="PackedScene" uid="uid://bxcxnhd2cdaap" path="res://Scenes/Decorations/Portal.tscn" id="39_vs04g"]
+
+[sub_resource type="Environment" id="Environment_vs04g"]
+glow_enabled = true
 
 [node name="Main" type="Node3D"]
 script = ExtResource("1_sxkr1")
@@ -77,18 +79,6 @@ shadow_enabled = true
 script = ExtResource("2_50glp")
 
 [node name="Fl" type="Timer" parent="Player/OmniLight3D"]
-
-[node name="Preplaced Scales" type="Node3D" parent="."]
-transform = Transform3D(0.4811589, 0.13596378, 5.9431686e-09, 0, -2.1855694e-08, 0.5, 0.13596378, -0.4811589, -2.1032122e-08, -1.2528763, 0.13876212, -1.6621348)
-
-[node name="Scale" parent="Preplaced Scales" instance=ExtResource("3_kln2b")]
-transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 0, 0, -3.5527137e-15, 1, 0, 0, 0)
-
-[node name="Scale6" parent="Preplaced Scales" instance=ExtResource("3_kln2b")]
-transform = Transform3D(0.99999976, 0, 0, 0, 0.99999976, 0, 1.7763568e-15, -1.7763568e-14, 1, -8.384012, 25.748114, 1.1324883e-06)
-
-[node name="Scale2" parent="Preplaced Scales" instance=ExtResource("3_kln2b")]
-transform = Transform3D(0.57165897, -0.82049114, -3.5864815e-08, 0.82049114, 0.57165897, -1.8723373e-08, 3.5864808e-08, -1.872338e-08, 1, 2.5690618, 4.845622, 2.0861626e-07)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -27098,3 +27088,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.46373558, -14.299597)
 
 [node name="Portal" parent="." instance=ExtResource("39_vs04g")]
 transform = Transform3D(-1.5, 0, -2.2649371e-07, 0, 1.5, 0, 2.2649371e-07, 0, -1.5, -0.26459455, 1.5722858, 2.9799705)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_vs04g")
