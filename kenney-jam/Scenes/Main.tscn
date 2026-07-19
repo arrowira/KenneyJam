@@ -27092,8 +27092,41 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.46373558, -14.299597)
 [node name="spawner" type="Node3D" parent="EnemyManager"]
 script = ExtResource("38_vs04g")
 
-[node name="Node3D" type="Node3D" parent="EnemyManager/spawner"]
+[node name="node" type="Node3D" parent="EnemyManager/spawner"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.611427, 0.5999658, -12.3642025)
+
+[node name="node2" type="Node3D" parent="EnemyManager/spawner"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.540508, 0.5999658, -17.20856)
+
+[node name="node3" type="Node3D" parent="EnemyManager/spawner"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.9526787, 0.5999658, 6.9765625)
+
+[node name="node4" type="Node3D" parent="EnemyManager/spawner"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.519428, 0.5999658, -39.334496)
+
+[node name="node5" type="Node3D" parent="EnemyManager/spawner"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.322178, 0.5999658, -53.38917)
+
+[node name="node6" type="Node3D" parent="EnemyManager/spawner"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.724667, 0.5999658, -54.58046)
+
+[node name="node7" type="Node3D" parent="EnemyManager/spawner"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.507774, 0.5999658, -93.211075)
+
+[node name="node9" type="Node3D" parent="EnemyManager/spawner"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.507774, 0.5999658, -112.864105)
+
+[node name="node10" type="Node3D" parent="EnemyManager/spawner"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.1787338, 0.5999658, -137.57632)
+
+[node name="node11" type="Node3D" parent="EnemyManager/spawner"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.025932, 0.5999658, -115.2964)
+
+[node name="node12" type="Node3D" parent="EnemyManager/spawner"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.025932, 0.5999658, -133.58734)
+
+[node name="node8" type="Node3D" parent="EnemyManager/spawner"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.511597, 0.5999658, -79.93347)
 
 [node name="Timer" type="Timer" parent="EnemyManager"]
 autostart = true
