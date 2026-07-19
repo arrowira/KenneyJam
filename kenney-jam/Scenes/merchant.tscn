@@ -1,10 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://cmy851lk8mcm6"]
+[gd_scene load_steps=5 format=3 uid="uid://cmy851lk8mcm6"]
 
 [ext_resource type="Texture2D" uid="uid://djtvjsug888fp" path="res://UI elements/PNG/panelInset_beige.png" id="1_82brx"]
 [ext_resource type="Texture2D" uid="uid://bjh82ndl32fmj" path="res://UI elements/PNG/buttonLong_grey.png" id="2_k41ok"]
 [ext_resource type="Texture2D" uid="uid://cnh870q88o1mh" path="res://UI elements/PNG/buttonLong_brown.png" id="3_1xyb1"]
 [ext_resource type="FontFile" uid="uid://c0q4ckw8qe8mh" path="res://UI elements/Fonts/Kenney Blocks.ttf" id="3_k41ok"]
-[ext_resource type="Texture2D" uid="uid://blchv0gxt4cgo" path="res://UI elements/PNG/arrowBeige_right.png" id="4_hc42i"]
 
 [node name="Merchant" type="Control"]
 layout_mode = 3
@@ -14,16 +13,17 @@ anchor_right = 1.0300001
 anchor_bottom = 0.79600006
 offset_left = 3.1760101
 offset_top = -0.27999878
-offset_right = 3.4399414
-offset_bottom = 0.19195557
+offset_right = 45.43994
+offset_bottom = 42.191956
 
 [node name="Background" type="Sprite2D" parent="."]
-position = Vector2(327.00003, 205)
-scale = Vector2(4.295699, 2.5744681)
+position = Vector2(693.5, 391.00003)
+scale = Vector2(14.806452, 8.723405)
 texture = ExtResource("1_82brx")
 
 [node name="Title" type="Sprite2D" parent="."]
-position = Vector2(330, 123)
+position = Vector2(697, 151)
+scale = Vector2(2, 2)
 texture = ExtResource("2_k41ok")
 
 [node name="merchant" type="RichTextLabel" parent="Title"]
@@ -37,115 +37,233 @@ theme_override_font_sizes/normal_font_size = 20
 text = "Merchant"
 horizontal_alignment = 1
 vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
 
-[node name="speedButton" type="Node2D" parent="."]
+[node name="StealthButton" type="Node2D" parent="."]
+position = Vector2(-24, -128.99998)
+scale = Vector2(1.3, 1.3)
 
-[node name="speed" type="Sprite2D" parent="speedButton"]
-position = Vector2(429.75, 174.99998)
-texture = ExtResource("3_1xyb1")
-
-[node name="speed_Text" type="RichTextLabel" parent="speedButton"]
-offset_left = 337.0
-offset_top = 146.0
-offset_right = 524.0
-offset_bottom = 199.0
-theme_override_fonts/normal_font = ExtResource("3_k41ok")
-text = "Speed                1        2"
-vertical_alignment = 1
-
-[node name="ArrowBeigeRight3" type="Sprite2D" parent="speedButton"]
-position = Vector2(488, 173)
-texture = ExtResource("4_hc42i")
-
-[node name="stealthButton" type="Node2D" parent="."]
-
-[node name="stealth" type="Sprite2D" parent="stealthButton"]
-position = Vector2(227.74994, 174.99998)
-texture = ExtResource("3_1xyb1")
-
-[node name="stealth_Text" type="RichTextLabel" parent="stealthButton"]
-offset_left = 135.0
-offset_top = 146.0
-offset_right = 322.0
-offset_bottom = 199.0
-theme_override_fonts/normal_font = ExtResource("3_k41ok")
-text = "Stealth          1       2"
-vertical_alignment = 1
-
-[node name="ArrowBeigeRight" type="Sprite2D" parent="stealthButton"]
-position = Vector2(285, 173)
-texture = ExtResource("4_hc42i")
-
-[node name="scaleButton" type="Node2D" parent="."]
-
-[node name="scale_Dupe_Button" type="Sprite2D" parent="scaleButton"]
-position = Vector2(228.24994, 235.99998)
-scale = Vector2(0.99473685, 1)
-texture = ExtResource("3_1xyb1")
-
-[node name="more_Scale_Text" type="RichTextLabel" parent="scaleButton"]
-offset_left = 135.0
-offset_top = 209.0
-offset_right = 322.0
-offset_bottom = 262.0
-theme_override_fonts/normal_font = ExtResource("3_k41ok")
-text = " Scales +        1       2"
-vertical_alignment = 1
-
-[node name="ArrowBeigeRight2" type="Sprite2D" parent="scaleButton"]
-position = Vector2(284, 235)
-texture = ExtResource("4_hc42i")
-
-[node name="torchLightButton" type="Node2D" parent="."]
-
-[node name="torch_Light_Button" type="Sprite2D" parent="torchLightButton"]
-position = Vector2(428.75, 236.99998)
-texture = ExtResource("3_1xyb1")
-
-[node name="torch_Intensity_Text" type="RichTextLabel" parent="torchLightButton"]
-offset_left = 336.0
-offset_top = 208.0
-offset_right = 523.0
-offset_bottom = 261.0
-theme_override_fonts/normal_font = ExtResource("3_k41ok")
-text = "Torch light 1      2"
-vertical_alignment = 1
-
-[node name="ArrowBeigeRight4" type="Sprite2D" parent="torchLightButton"]
-position = Vector2(487, 235)
-texture = ExtResource("4_hc42i")
-
-[node name="openShortcutButton" type="Node2D" parent="."]
-
-[node name="open_Shorcut_Button" type="Sprite2D" parent="openShortcutButton"]
-position = Vector2(430.75, 297)
-texture = ExtResource("3_1xyb1")
-
-[node name="shortcutAccessButton" type="RichTextLabel" parent="openShortcutButton"]
-offset_left = 337.0
-offset_top = 268.0
-offset_right = 524.0
-offset_bottom = 321.0
-theme_override_fonts/normal_font = ExtResource("3_k41ok")
-text = "Shortcut Access"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="torchTimeButton" type="Node2D" parent="."]
-
-[node name="torch_Time_Button" type="Sprite2D" parent="torchTimeButton"]
+[node name="ButtonSprite" type="Sprite2D" parent="StealthButton"]
 position = Vector2(228.74994, 297)
 texture = ExtResource("3_1xyb1")
 
-[node name="torch_Time_Text" type="RichTextLabel" parent="torchTimeButton"]
-offset_left = 135.0
-offset_top = 268.0
-offset_right = 322.0
-offset_bottom = 321.0
+[node name="Text" type="RichTextLabel" parent="StealthButton"]
+offset_left = 140.76923
+offset_top = 269.23077
+offset_right = 327.76923
+offset_bottom = 322.23077
+theme_override_colors/default_color = Color(0.69803923, 0, 0.16078432, 1)
 theme_override_fonts/normal_font = ExtResource("3_k41ok")
-text = "Torch Fuel  1        2"
+text = "Stealth            ->"
 vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
 
-[node name="ArrowBeigeRight6" type="Sprite2D" parent="torchTimeButton"]
-position = Vector2(283, 296)
-texture = ExtResource("4_hc42i")
+[node name="Current" type="RichTextLabel" parent="StealthButton"]
+offset_left = 256.9231
+offset_top = 269.23077
+offset_right = 443.9231
+offset_bottom = 322.23077
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_fonts/normal_font = ExtResource("3_k41ok")
+text = "0"
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Next" type="RichTextLabel" parent="StealthButton"]
+offset_left = 298.46155
+offset_top = 269.23077
+offset_right = 485.46155
+offset_bottom = 322.23077
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_fonts/normal_font = ExtResource("3_k41ok")
+text = "1
+"
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="ScaleButton" type="Node2D" parent="."]
+position = Vector2(-25, -4.9999847)
+scale = Vector2(1.3, 1.3)
+
+[node name="ButtonSprite" type="Sprite2D" parent="ScaleButton"]
+position = Vector2(228.74994, 297)
+texture = ExtResource("3_1xyb1")
+
+[node name="Text" type="RichTextLabel" parent="ScaleButton"]
+offset_left = 140.76923
+offset_top = 269.23077
+offset_right = 327.76923
+offset_bottom = 322.23077
+theme_override_colors/default_color = Color(0.26666668, 0.30980393, 1, 1)
+theme_override_fonts/normal_font = ExtResource("3_k41ok")
+text = "Scales +           ->"
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Current" type="RichTextLabel" parent="ScaleButton"]
+offset_left = 256.9231
+offset_top = 269.23077
+offset_right = 443.9231
+offset_bottom = 322.23077
+theme_override_colors/default_color = Color(0.9289386, 0.9463889, 1, 1)
+theme_override_fonts/normal_font = ExtResource("3_k41ok")
+text = "0"
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Next" type="RichTextLabel" parent="ScaleButton"]
+offset_left = 298.46155
+offset_top = 269.23077
+offset_right = 485.46155
+offset_bottom = 322.23077
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_fonts/normal_font = ExtResource("3_k41ok")
+text = "1
+"
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="TorchFuelButton" type="Node2D" parent="."]
+position = Vector2(-26, 108.000015)
+scale = Vector2(1.3, 1.3)
+
+[node name="ButtonSprite" type="Sprite2D" parent="TorchFuelButton"]
+position = Vector2(228.74994, 297)
+texture = ExtResource("3_1xyb1")
+
+[node name="Text" type="RichTextLabel" parent="TorchFuelButton"]
+offset_left = 140.76923
+offset_top = 269.23077
+offset_right = 327.76923
+offset_bottom = 322.23077
+theme_override_colors/default_color = Color(0, 0.5019608, 0.49411765, 1)
+theme_override_fonts/normal_font = ExtResource("3_k41ok")
+text = "Torch Fuel     ->"
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Current" type="RichTextLabel" parent="TorchFuelButton"]
+offset_left = 256.9231
+offset_top = 269.23077
+offset_right = 443.9231
+offset_bottom = 322.23077
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_fonts/normal_font = ExtResource("3_k41ok")
+text = "0"
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Next" type="RichTextLabel" parent="TorchFuelButton"]
+offset_left = 298.46155
+offset_top = 269.23077
+offset_right = 485.46155
+offset_bottom = 322.23077
+theme_override_colors/default_color = Color(0.8538517, 0.9999997, 0.9927129, 1)
+theme_override_fonts/normal_font = ExtResource("3_k41ok")
+text = "1
+"
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="SpeedButton" type="Node2D" parent="."]
+position = Vector2(287, -129)
+scale = Vector2(1.3, 1.3)
+
+[node name="ButtonSprite" type="Sprite2D" parent="SpeedButton"]
+position = Vector2(228.74994, 297)
+texture = ExtResource("3_1xyb1")
+
+[node name="Text" type="RichTextLabel" parent="SpeedButton"]
+offset_left = 140.76923
+offset_top = 269.23077
+offset_right = 327.76923
+offset_bottom = 322.23077
+theme_override_colors/default_color = Color(0.47058824, 0.35686275, 0.7058824, 1)
+theme_override_fonts/normal_font = ExtResource("3_k41ok")
+text = "Speed                  ->"
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Current" type="RichTextLabel" parent="SpeedButton"]
+offset_left = 256.9231
+offset_top = 269.23077
+offset_right = 443.9231
+offset_bottom = 322.23077
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_fonts/normal_font = ExtResource("3_k41ok")
+text = "0"
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Next" type="RichTextLabel" parent="SpeedButton"]
+offset_left = 298.46155
+offset_top = 269.23077
+offset_right = 485.46155
+offset_bottom = 322.23077
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_fonts/normal_font = ExtResource("3_k41ok")
+text = "1
+"
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="LightButton" type="Node2D" parent="."]
+position = Vector2(285.00003, -3)
+scale = Vector2(1.3, 1.3)
+
+[node name="ButtonSprite" type="Sprite2D" parent="LightButton"]
+position = Vector2(228.74994, 297)
+texture = ExtResource("3_1xyb1")
+
+[node name="Text" type="RichTextLabel" parent="LightButton"]
+offset_left = 140.76923
+offset_top = 269.23077
+offset_right = 327.76923
+offset_bottom = 322.23077
+theme_override_colors/default_color = Color(0, 0.52156866, 0.30588236, 1)
+theme_override_fonts/normal_font = ExtResource("3_k41ok")
+text = "Light                  ->"
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Current" type="RichTextLabel" parent="LightButton"]
+offset_left = 256.9231
+offset_top = 269.23077
+offset_right = 443.9231
+offset_bottom = 322.23077
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_fonts/normal_font = ExtResource("3_k41ok")
+text = "0"
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Next" type="RichTextLabel" parent="LightButton"]
+offset_left = 298.46155
+offset_top = 269.23077
+offset_right = 485.46155
+offset_bottom = 322.23077
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_fonts/normal_font = ExtResource("3_k41ok")
+text = "1
+"
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="ShortcutButton" type="Node2D" parent="."]
+position = Vector2(283.00003, 109.000015)
+scale = Vector2(1.3, 1.3)
+
+[node name="ButtonSprite" type="Sprite2D" parent="ShortcutButton"]
+position = Vector2(228.74994, 297)
+texture = ExtResource("3_1xyb1")
+
+[node name="Text" type="RichTextLabel" parent="ShortcutButton"]
+offset_left = 140.76923
+offset_top = 269.23077
+offset_right = 327.76923
+offset_bottom = 322.23077
+theme_override_colors/default_color = Color(0.8424641, 0.41967097, 9.62615e-07, 1)
+theme_override_fonts/normal_font = ExtResource("3_k41ok")
+text = "Shortcut Acesss"
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true

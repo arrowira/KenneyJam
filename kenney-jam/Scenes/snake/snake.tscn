@@ -1,8 +1,8 @@
 [gd_scene load_steps=10 format=3 uid="uid://b24m11ishcol7"]
 
 [ext_resource type="Script" uid="uid://c7fxmaeqc8ec7" path="res://Scripts/snake.gd" id="1_sprpx"]
-[ext_resource type="PackedScene" path="res://Scenes/snake/snakeHead.tscn" id="2_s8mkf"]
-[ext_resource type="PackedScene" path="res://Scenes/snake/snakeSegment.tscn" id="3_p5duu"]
+[ext_resource type="PackedScene" uid="uid://tt1588bgvm5y" path="res://Scenes/snake/snakeHead.tscn" id="2_s8mkf"]
+[ext_resource type="PackedScene" uid="uid://b0w2drwswdyoi" path="res://Scenes/snake/snakeSegment.tscn" id="3_p5duu"]
 
 [sub_resource type="Animation" id="Animation_p5duu"]
 length = 0.001
@@ -146,18 +146,19 @@ transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, -0.6
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, 0)
 
 [node name="SnakeHead" parent="Node/head" instance=ExtResource("2_s8mkf")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0.32630384, -0.41258162, -0.40207195)
 
 [node name="middle" type="Node3D" parent="Node"]
 transform = Transform3D(0.42801765, 0, 0, 0, 0.855409, 0, 0, 0, 1, 0.59833646, 0, 0)
 
 [node name="SnakeSegment" parent="Node/middle" instance=ExtResource("3_p5duu")]
-transform = Transform3D(1, 0, 0, 0, 1.0000001, 0, 0, -3.5527137e-15, 1, 0, -1.0479934, 3.9185647e-08)
+transform = Transform3D(1, 0, 0, 0, 0.5100001, 3.5527137e-15, 0, -1.0658141e-14, 0.645, 1.0042543, -0.7619741, 2.8491064e-08)
 
 [node name="tail" type="Node3D" parent="Node"]
 transform = Transform3D(0.42801765, 0, 0, 0, 0.855409, 0, 0, 0, 1, 1.214, 0.2, 0)
 
 [node name="SnakeSegment" parent="Node/tail" instance=ExtResource("3_p5duu")]
-transform = Transform3D(1, 0, 0, 0, 1.0000002, 0, 0, -1.0658141e-14, 1, 0, -1.0432771, 3.90093e-08)
+transform = Transform3D(1, 0, 0, 0, 0.51, 1.14575004e-14, 0, -9.059419e-15, 0.645, 1.3603255, -1.0432775, 3.9009315e-08)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
