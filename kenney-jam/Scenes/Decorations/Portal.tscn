@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://bxcxnhd2cdaap"]
+
+[ext_resource type="PackedScene" uid="uid://dchmovs5yatty" path="res://kenney_prototype-kit/Models/GLB format/indicator-round-b.glb" id="1_y6qji"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_ypi4r"]
+
+[node name="Portal" type="Node3D"]
+
+[node name="indicator-round-b2" parent="." instance=ExtResource("1_y6qji")]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1.8, 0, 1, -7.86805e-08, 0, 0, 0)
+
+[node name="Surface" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.01, 0, 0, -0.021284789)
+mesh = SubResource("CapsuleMesh_ypi4r")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.19248766)
+light_color = Color(0, 0.39607844, 1, 1)
