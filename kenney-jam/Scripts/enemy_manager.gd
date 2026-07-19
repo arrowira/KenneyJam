@@ -1,7 +1,7 @@
 extends Node3D
 
 @export var frequency = 1
-var maxEnemies = 3
+var maxEnemies = 20
 var enemies = 1
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
