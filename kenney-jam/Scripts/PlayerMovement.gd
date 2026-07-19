@@ -11,7 +11,7 @@ var TPos = Vector3.ZERO
 var COff = Vector3.ZERO
 
 func _ready():
-	DScale = $Sprite.scale
+	DScale = $Model.scale
 	TPos = $Camera.position
 
 func _physics_process(delta: float) -> void:
@@ -23,13 +23,13 @@ func _physics_process(delta: float) -> void:
 		if(CPivot >= 5):
 			CPivot=1
 		TPos = get_node("Pivot" + str(CPivot)).position
-		$Sprite.rotation_degrees.y+=90
+		$Model.rotation_degrees.y+=90
 	if(Input.is_action_just_pressed("cleft")):
 		CPivot-=1
 		if(CPivot <= 0):
 			CPivot=4
 		TPos = get_node("Pivot" + str(CPivot)).position
-		$Sprite.rotation_degrees.y-=90
+		$Model.rotation_degrees.y-=90
 	$Camera.position = $Camera.position.move_toward(TPos, 0.3)
 	$Camera.look_at(position)
 	
@@ -46,9 +46,9 @@ func _physics_process(delta: float) -> void:
 	
 	if(Input.is_action_pressed("crouch")):
 		velocity*=0.5
-		$Sprite.scale.y = 0.5
+		$Model.scale.y = 0.25
 	else:
-		$Sprite.scale.y = DScale.y
+		$Model.scale.y = DScale.y
 
 	if(Input.is_action_pressed("run") && !Input.is_action_pressed("crouch")):
 		dir = Vector3(dir.x*2, dir.y, dir.z*2)

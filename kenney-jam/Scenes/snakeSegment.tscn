@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://cbona2us5wwlv"]
+
+[ext_resource type="PackedScene" uid="uid://ccno3oos65dna" path="res://KayKit Dungeon Pack 1.0/Models/gltf/chestTop_common_empty.gltf.glb" id="1_owv8p"]
+
+[node name="SnakeSegment" type="Node3D"]
+
+[node name="chestTop_common_empty_gltf" parent="." instance=ExtResource("1_owv8p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.055877447, 1.0329219, -0.51498747)
+
+[node name="chestTop_common_empty_gltf2" parent="." instance=ExtResource("1_owv8p")]
+transform = Transform3D(1, 0, 0, 0, -1, 8.742278e-08, 0, -8.742278e-08, -1, 0.04897821, 1.0196834, 0.43892604)
