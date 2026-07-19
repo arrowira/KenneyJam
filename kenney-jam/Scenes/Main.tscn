@@ -31,7 +31,7 @@
 [ext_resource type="PackedScene" uid="uid://ble3ur1raqdsv" path="res://Scenes/Decorations/bigPotion.tscn" id="34_hpjjw"]
 [ext_resource type="PackedScene" uid="uid://qe55tuk8oplk" path="res://Scenes/Decorations/pot.tscn" id="35_off7b"]
 [ext_resource type="PackedScene" path="res://Scenes/Decorations/book.tscn" id="36_lfh1j"]
-[ext_resource type="Script" path="res://Scripts/enemy_manager.gd" id="37_6ehlx"]
+[ext_resource type="Script" uid="uid://cceff22orn8mh" path="res://Scripts/enemy_manager.gd" id="37_6ehlx"]
 [ext_resource type="PackedScene" uid="uid://cciqdprk13f8g" path="res://Scenes/Decorations/bucket.tscn" id="37_7sj7i"]
 [ext_resource type="PackedScene" path="res://Scenes/Decorations/arrow.tscn" id="38_semxg"]
 [ext_resource type="Script" path="res://Scripts/spawner.gd" id="38_vs04g"]
