@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://n85n8vu77c31"]
+[gd_scene load_steps=7 format=3 uid="uid://n85n8vu77c31"]
 
 [ext_resource type="Texture2D" uid="uid://djtvjsug888fp" path="res://UI elements/PNG/panelInset_beige.png" id="1_82brx"]
 [ext_resource type="Texture2D" uid="uid://bjh82ndl32fmj" path="res://UI elements/PNG/buttonLong_grey.png" id="2_k41ok"]
 [ext_resource type="Texture2D" uid="uid://cnh870q88o1mh" path="res://UI elements/PNG/buttonLong_brown.png" id="3_1xyb1"]
+[ext_resource type="FontFile" uid="uid://c0q4ckw8qe8mh" path="res://UI elements/Fonts/Kenney Blocks.ttf" id="3_k41ok"]
 [ext_resource type="Texture2D" uid="uid://blchv0gxt4cgo" path="res://UI elements/PNG/arrowBeige_right.png" id="4_hc42i"]
 [ext_resource type="Texture2D" uid="uid://bot37ybrbqek5" path="res://UI elements/PNG/panelInset_blue.png" id="5_vegbm"]
 
@@ -141,13 +142,16 @@ position = Vector2(330, 123)
 texture = ExtResource("2_k41ok")
 
 [node name="merchant_Shop" type="RichTextLabel" parent="Title"]
-offset_left = -73.0
-offset_top = -17.0
-offset_right = 100.0
-offset_bottom = 23.0
+offset_left = -96.0
+offset_top = -25.0
+offset_right = 95.0
+offset_bottom = 20.0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("3_k41ok")
 theme_override_font_sizes/normal_font_size = 20
-text = "Merchant Shop"
+text = "Merchant"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="speed" type="Sprite2D" parent="."]
 position = Vector2(429.75, 174.99998)
@@ -159,7 +163,8 @@ offset_left = 337.0
 offset_top = 146.0
 offset_right = 524.0
 offset_bottom = 199.0
-text = "Speed                   1        2"
+theme_override_fonts/normal_font = ExtResource("3_k41ok")
+text = "Speed                1        2"
 vertical_alignment = 1
 
 [node name="stealth" type="Sprite2D" parent="."]
@@ -171,7 +176,8 @@ offset_left = -92.74994
 offset_top = -28.999985
 offset_right = 94.25006
 offset_bottom = 24.000015
-text = "Stealth                 1        2"
+theme_override_fonts/normal_font = ExtResource("3_k41ok")
+text = "Stealth          1       2"
 vertical_alignment = 1
 
 [node name="scale_Dupe_Button" type="Sprite2D" parent="."]
@@ -185,7 +191,8 @@ offset_left = 135.0
 offset_top = 209.0
 offset_right = 322.0
 offset_bottom = 262.0
-text = "More Scales        1        2"
+theme_override_fonts/normal_font = ExtResource("3_k41ok")
+text = " Scales +        1       2"
 vertical_alignment = 1
 
 [node name="torch_Light_Button" type="Sprite2D" parent="."]
@@ -198,7 +205,8 @@ offset_left = 336.0
 offset_top = 208.0
 offset_right = 523.0
 offset_bottom = 261.0
-text = "Torch Intensity  1        2"
+theme_override_fonts/normal_font = ExtResource("3_k41ok")
+text = "Torch light 1      2"
 vertical_alignment = 1
 
 [node name="torch_Time_Button" type="Sprite2D" parent="."]
@@ -211,7 +219,8 @@ offset_left = 135.0
 offset_top = 268.0
 offset_right = 322.0
 offset_bottom = 321.0
-text = "Torch Fuel          1        2"
+theme_override_fonts/normal_font = ExtResource("3_k41ok")
+text = "Torch Fuel  1        2"
 vertical_alignment = 1
 
 [node name="open_Shorcut_Button" type="Sprite2D" parent="."]
@@ -224,6 +233,7 @@ offset_left = 337.0
 offset_top = 268.0
 offset_right = 524.0
 offset_bottom = 321.0
+theme_override_fonts/normal_font = ExtResource("3_k41ok")
 text = "Shortcut Access"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -233,7 +243,7 @@ position = Vector2(285, 173)
 texture = ExtResource("4_hc42i")
 
 [node name="ArrowBeigeRight2" type="Sprite2D" parent="."]
-position = Vector2(287, 237)
+position = Vector2(284, 235)
 texture = ExtResource("4_hc42i")
 
 [node name="ArrowBeigeRight3" type="Sprite2D" parent="."]
