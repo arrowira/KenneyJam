@@ -1,8 +1,9 @@
-[gd_scene load_steps=21 format=3 uid="uid://bh2eknbs0py68"]
+[gd_scene load_steps=22 format=3 uid="uid://bh2eknbs0py68"]
 
 [ext_resource type="PackedScene" uid="uid://cbnglbm81uf2k" path="res://Scenes/Player.tscn" id="1_r150o"]
 [ext_resource type="Script" uid="uid://bios8bcaiuha6" path="res://Scripts/main.gd" id="1_sxkr1"]
 [ext_resource type="Script" uid="uid://dgovh7333uys2" path="res://Scripts/LightFlicker.gd" id="2_50glp"]
+[ext_resource type="PackedScene" uid="uid://b067qgc3gnf4l" path="res://KayKit Dungeon Pack 1.0/Models/gltf/torch.gltf.glb" id="3_fq0cl"]
 [ext_resource type="PackedScene" uid="uid://x8b7eyub7idr" path="res://Scenes/Scale.tscn" id="3_kln2b"]
 [ext_resource type="Script" path="res://Scripts/wallvision.gd" id="3_sxkr1"]
 [ext_resource type="PackedScene" uid="uid://bctxnf3prktpb" path="res://KayKit Dungeon Pack 1.0/Models/gltf/tileBrickA_small.gltf.glb" id="4_pbw6q"]
@@ -25,7 +26,10 @@
 script = ExtResource("1_sxkr1")
 
 [node name="Player" parent="." instance=ExtResource("1_r150o")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.97557783, -5.2597756)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.12739038, -5.2597756)
+
+[node name="Torch" parent="Player" instance=ExtResource("3_fq0cl")]
+transform = Transform3D(0.4, 0, 0, 0, 0.3539105, 0.18640643, 0, -0.18640643, 0.3539105, -0.23747674, 0.31050682, -0.41203308)
 
 [node name="Pivot1" type="Node3D" parent="Player"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.3399992, 3.3899999)
@@ -47,7 +51,7 @@ target_position = Vector3(0, 0, -3)
 script = ExtResource("3_sxkr1")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Player"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.17572367, -0.7470374)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.23500386, 0.5803241, -0.5623722)
 light_color = Color(0.959099, 0.67127705, 5.2366257e-05, 1)
 light_energy = 0.8
 light_size = 2.0
