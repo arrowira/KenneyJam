@@ -15,6 +15,7 @@ var TorchIntensity = 1.0
 
 var Speed = 1 
 
+var NStealth = 1.0
 
 func _ready():
 	get_tree().scene_changed.connect(SceneChange)
