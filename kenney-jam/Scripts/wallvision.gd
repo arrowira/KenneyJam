@@ -17,7 +17,8 @@ func _physics_process(delta: float) -> void:
 				invisWall = get_collider().get_parent()
 				invisWall.invis()
 		else:
-			invisWall.deInvis()
+			if invisWall != null:
+				invisWall.deInvis()
 	else:
 		if invisWall != null:
 			invisWall.deInvis()
