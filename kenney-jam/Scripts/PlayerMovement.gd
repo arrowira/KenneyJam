@@ -2,19 +2,35 @@ extends CharacterBody3D
 
 var DScale #Default sprite scale
 
-var Speed = 1
-
-var Scales = 0
-
 var CPivot = 1
 var TPos = Vector3.ZERO
 var COff = Vector3.ZERO
 
+var Scales = 0
+
+var CTorch = 0
+var MaxTorch = 60
+var TickTime = 0
+
+#Upgrades
+var Speed = 1 
+
+
 func _ready():
 	DScale = $Model.scale
 	TPos = $Camera.position
+	CTorch = MaxTorch
 
 func _physics_process(delta: float) -> void:
+	if(CTorch <= 0):
+		#Loose game
+		pass
+	
+	if(TickTime >= 60):
+		CTorch-=1
+	TickTime+=1
+	
+	
 	#animations
 	if velocity.length() > 0.9:
 		$AnimationPlayer.play("walk")

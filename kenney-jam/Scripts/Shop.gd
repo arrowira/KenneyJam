@@ -3,16 +3,25 @@ extends Control
 var DownT = load("res://UI elements/PNG/buttonLong_brown_pressed.png")
 var UpT = load("res://UI elements/PNG/buttonLong_brown.png")
 
+var StealthBuy = false
 
 func _physics_process(delta: float) -> void:
-	pass
-
-
+	var p = false
+	if(Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT)):
+		p = true
+		
+	if(StealthBuy==true):
+		if(p==true):
+			$StealthButton/ButtonSprite.texture = DownT
+		else:
+			$StealthButton/ButtonSprite.texture = UpT
+	else:
+		$StealthButton/ButtonSprite.texture = UpT
 
 func MEnterStealth() -> void:
-	print("yes")
-	$StealthButton/ButtonSprite.texture = DownT
+	StealthBuy = true
+	$StealthButton/ButtonSprite.modulate = Color(1.3, 1.3, 1.3)
 
 func MExitStealth() -> void:
-	print("yes")
-	$StealthButton/ButtonSprite.texture = UpT
+	StealthBuy = false
+	$StealthButton/ButtonSprite.modulate = Color.WHITE
