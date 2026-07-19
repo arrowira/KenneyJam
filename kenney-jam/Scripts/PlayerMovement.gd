@@ -33,6 +33,7 @@ func _physics_process(delta: float) -> void:
 		
 		if(TickTime >= 60):
 			CTorch-=1
+			TickTime = 0
 		TickTime+=1
 		
 		#animations
